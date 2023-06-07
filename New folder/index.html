@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Origin - Software Development</title>
+    <!--Mega Tags-->
+    <meta
+      name="description"
+      content="Creative Agency, Marketing Agency Template" />
+    <meta name="keywords" content="Creative Agency, Marketing Agency" />
+    <meta name="author" content="SeparateWeb" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#111" />
+    <!--Website Favicon Logo-->
+    <link href="Resources/images/shape/logov2.png" rel="icon" />
+    <!--Plugin CSS Files-->
+    <link href="Resources/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Resources/css/blueket.plugin.css" rel="stylesheet" />
+    <!-- google font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet" />
+    <!--Custom CSS File-->
+    <link href="Resources/css/style.css" rel="stylesheet" />
+    <link href="Resources/css/responsive.css" rel="stylesheet" />
+    <link href="Resources/css/colormode.css" rel="stylesheet" />
+    <style>
+      .container-SiteBanner {
+        position: relative;
+        text-align: center;
+        color: white;
+      }
+
+      /* Centered text */
+      .centered-bannerText {
+        font-size: calc(12px + 1.5vw);
+
+        color: #ffed38;
+      }
+
+      .bannerTextDiv {
+        position: absolute;
+        top: 40%;
+        left: 0%;
+        background-color: rgba(0, 0, 0, 0.4);
+        width: 100%;
+        height: auto;
+      }
+
+      .bannerText {
+        color: white;
+        font-size: 20px;
+        font-family: "Nova Flat";
+        font-style: italic;
+      }
+
+      .glowChurch {
+        font-family: "Poiret One";
+
+        font-weight: 600;
+        color: white;
+      }
+
+      .glowBakery {
+        font-family: "Lucida Handwriting";
+        color: #fff;
+        animation: glowBakery 1s ease-in-out infinite alternate;
+      }
+
+      @-webkit-keyframes glowBakery {
+        from {
+          text-shadow: 0 0 5px black, 0 0 15px black, 0 0 25px #f250ff,
+            0 0 35px #f250ff, 0 0 45px #f250ff, 0 0 55px #f250ff,
+            0 0 65px #f250ff;
+        }
+
+        to {
+          text-shadow: 0 0 15px black, 0 0 25px black, 0 0 35px #f3a4f9,
+            0 0 45px #f3a4f9, 0 0 55px #f3a4f9, 0 0 65px #f3a4f9,
+            0 0 75px #f3a4f9;
+        }
+      }
+
+      .glowRealEstate {
+        font-family: "Times New Roman";
+        color: #fff;
+        animation: glowRealEstate 1s ease-in-out infinite alternate;
+      }
+
+      @-webkit-keyframes glowRealEstate {
+        from {
+          text-shadow: 0 0 5px black, 0 0 15px black, 0 0 25px #8c1f09,
+            0 0 35px #8c1f09, 0 0 45px #8c1f09, 0 0 55px #8c1f09,
+            0 0 65px #8c1f09;
+        }
+
+        to {
+          text-shadow: 0 0 15px black, 0 0 25px black, 0 0 35px #4f1306,
+            0 0 45px #4f1306, 0 0 55px #4f1306, 0 0 65px #4f1306,
+            0 0 75px #4f1306;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- preloader code -->
+    <div class="preloader">
+      <div class="preloader_inner">0%</div>
+      <div class="loaderlogo"
+        ><img
+          src="Resources/images/logo-white.svg"
+          alt="logo"
+          style="height: 100px"
+      /></div>
+    </div>
+    <!-- preloader code -->
+    <!--Start header -->
+    <header class="header animation">
+      <div class="container">
+        <div class="wrapper">
+          <!-- header logo -->
+          <div class="header-item-left">
+            <a href="index.html" class="brandlogo">
+              <img
+                src="Resources/images/logo-white.svg"
+                alt="logo"
+                class="light" />
+              <img
+                src="Resources/images/logo-black.svg"
+                alt="logo"
+                class="dark" />
+            </a>
+          </div>
+          <!-- header nav -->
+          <div class="header-item-center">
+            <div class="overlay"></div>
+            <nav class="menu animation" id="menu">
+              <div class="menu-mobile-header">
+                <button type="button" class="menu-mobile-arrow"
+                  ><i class="fa-solid fa-angle-left"></i
+                ></button>
+                <div class="menu-mobile-title"></div>
+                <button type="button" class="menu-mobile-close"
+                  ><i class="fa-solid fa-xmark"></i
+                ></button>
+              </div>
+              <ul class="menu-section"> </ul>
+            </nav>
+          </div>
+          <!-- header action -->
+          <div class="header-item-right headeraction">
+            <ul>
+              <li
+                ><a
+                  href="#"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasRight"
+                  aria-controls="offcanvasRight"
+                  class="menu-icon"
+                  ><i class="fa-solid fa-phone"></i
+                ></a>
+              </li>
+              <li
+                ><a
+                  href="#contact-origin"
+                  class="sw-btn sw-orange-btn header-btn"
+                  >Get Started <i class="fa-solid fa-arrow-trend-up"></i></a
+              ></li>
+              <li
+                ><button type="button" class="menu-mobile-toggle">
+                  <span></span> <span></span> <span></span> <span></span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--End header -->
+    <!-- sidebar menu -->
+    <div
+      class="offcanvas offcanvas-end sidebar-offcanvas"
+      tabindex="-1"
+      id="offcanvasRight">
+      <div class="offcanvas-header">
+        <div class="sidebarlogooff">
+          <img
+            src="Resources/images/logo-white.svg"
+            alt="logo"
+            class="sidewhitelogo" />
+          <img
+            src="Resources/images/logo-black.svg"
+            alt="logo"
+            class="sidedarklogo" />
+        </div>
+        <div class="cbtn">
+          <div class="btnclose">
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"></button
+          ></div>
+        </div>
+      </div>
+      <div class="offcanvas-body">
+        <div class="sidebarbody">
+          <h4 class="mb10">Get In Touch</h4>
+          <!-- <p>Please fill out the form below if you have a plan or project in mind that you'd like to share with us.</p> -->
+          <div class="sidebarcontactblock mt50">
+            <div class="contactnumberdiv mt30">
+              <p class="mb5 linktitle">Send Us an Email:</p>
+              <a href="mailto:Origin@originsoftware.dev"
+                ><i class="fa-solid fa-envelope mr10"></i>
+                origin@originSoftware.dev</a
+              >
+            </div>
+            <div class="social-link-sw mt30">
+              <span class="linktitle">Follow Us</span>
+              <ul class="footer-social-sw mt10 sw-hover-2">
+                <li
+                  ><a href="#"
+                    ><i class="fab fa-twitter" aria-hidden="true"></i></a
+                ></li>
+                <!-- <li> <a href="#" ><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li> -->
+                <li
+                  ><a href="#"
+                    ><i class="fab fa-youtube" aria-hidden="true"></i></a
+                ></li>
+                <!-- <li><a href="#" ><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li> -->
+                <li>
+                  <a href="#"
+                    ><i class="fab fa-instagram" aria-hidden="true"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- sidebar menu -->
+
+    <!--Salman Muhammad - COMPLETE THIS SECTION BELOW ACCORDING TO THE GOOGLE DRIVE DESIGN YOU CAN REMOVE THE SECTION BELOW BUT LEAVE THE REST-->
+    <!--Feel free to reuse the font and text and button icons as is below to adjust and meet the design-->
+    <!--Drive Informatino for this section: https://drive.google.com/drive/folders/1sKfPJtwsOb-GDlTfJGIQPDhBpQU2r1Qa?usp=share_link-->
+
+    <!--start sw-hero-section -->
+    <section class="demo-3-hero bkbg0">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <div class="sw-shape-1 sws1" style="top: 80%; left: 70px"
+              ><img src="Resources/images/shape/sw-1.svg" alt="img"
+            /></div>
+            <div class="sw-shape-1 sws2" style="top: 80%; right: 570px"
+              ><img src="Resources/images/shape/sw-2.svg" alt="img"
+            /></div>
+            <div
+              class="sw-shape-1 sws3 floating-x"
+              style="top: 20%; right: 670px"
+              ><img src="Resources/images/shape/sw-3.svg" alt="img"
+            /></div>
+            <div class="sw-shape-1 sws4"
+              ><img src="Resources/images/shape/sw-4.svg" alt="img"
+            /></div>
+            <div class="sw-shape-1 sws5" style="top: 20%; left: 500px"
+              ><img src="Resources/images/shape/sw-5.svg" alt="img"
+            /></div>
+            <div class="sw-shape-1 sws6 floating-y"
+              ><img src="Resources/images/shape/sw-6.svg" alt="img"
+            /></div>
+            <div
+              class="sw-shape-1 sws7"
+              style="top: 75%; width: 130px; right: 65px"
+              ><img src="Resources/images/shape/sw-7.svg" alt="img"
+            /></div>
+            <div class="demo-1-hero-part mb-0">
+              <div class="hero-a-demo- sideimg1"
+                ><img src="Resources/images/hero/uidesign1.gif" alt="img"
+              /></div>
+              <div class="hero-content text-center">
+                <h1
+                  class="mb20 text-gradient-1 h1 wow fadeInUp"
+                  data-wow-delay=".2s"
+                  >Visualize your website. We Design. We Develop.
+                </h1>
+                <p class="wow fadeInUp" data-wow-delay=".4s"
+                  >Let your website or App creativity meet functionality. Your
+                  vision, our expertise. Let us transform your ideas into
+                  powerful software at a low cost.</p
+                >
+                <div class="mt40">
+                  <a
+                    href="#contact-origin"
+                    class="sw-btn sw-orange-btn bg-dark wow fadeInUp"
+                    data-wow-delay=".6s"
+                    >Let's do this ! <i class="fa-solid fa-arrow-trend-up"></i
+                  ></a>
+
+                  <p class="bottombtn wow fadeInUp" data-wow-delay=".6s"
+                    >Website and App Developement Quality ✨ Guaranteed</p
+                  >
+                </div>
+              </div>
+
+              <div class="hero-a-demo- sideimg2"
+                ><img src="Resources/images/shape/app.gif" alt="img"
+              /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Salman Muhammad - COMPLETE THIS SECTION ABOVE ACCORDING TO THE GOOGLE DRIVE DESIGN YOU CAN REMOVE THE SECTION ABOVE BUT LEAVE THE REST-->
+    <!-- start sw-about block -->
+
+    <!-- /block -->
+
+    <section class="demo-5-hero">
+      <div class="container index-up">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="hero-content text-center">
+              <h1
+                class="mb20 text-gradient-1 h1 wow fadeInUp"
+                data-wow-delay=".2s"
+                >Don't Stress in creating your website, let our team stress for
+                you ;)</h1
+              >
+              <p class="wow fadeInUp" data-wow-delay=".4s"
+                >Building your website or app may seem intimidating, but our
+                trusted developers have hundreds of hours and experience in
+                ensuring your vision becomes a reality</p
+              >
+              <div class="mt40">
+                <a
+                  href="#contact-origin"
+                  class="sw-btn sw-orange-btn bg-dark wow fadeInUp"
+                  >Get a free quote</a
+                >
+                <p class="bottombtn wow fadeInUp" data-wow-delay=".6s"
+                  >Money Back Guaranteed
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wide-block-scroll index-up">
+        <div class="service-card-row scrollonmove">
+          <div class="our-works">
+            <div class="work-imags container-SiteBanner"
+              ><a href="#">
+                <img
+                  src="Resources/images/salonThumbnail2.png"
+                  alt="work"
+                  class="card-img-round" />
+                <div class="bannerTextDiv">
+                  <div class="centered centered-bannerText glowChurch"
+                    ><h1 class="bannerText">Beauty Salon</h1></div
+                  >
+                </div>
+              </a></div
+            >
+          </div>
+
+          <div class="our-works">
+            <div class="work-imags container-SiteBanner"
+              ><a href="https://haitianbaptistchurchofri.com/">
+                <img
+                  src="Resources/images/hcoriThumbnail3.png"
+                  alt="work"
+                  class="card-img-round" />
+                <div class="bannerTextDiv">
+                  <div class="centered centered-bannerText glowChurch"
+                    ><h1 class="bannerText">Churches</h1></div
+                  >
+                </div>
+              </a></div
+            >
+          </div>
+          <div class="our-works">
+            <div class="work-imags container-SiteBanner"
+              ><a href="#">
+                <img
+                  src="Resources/images/bakeryThumbnail2.png"
+                  alt="work"
+                  class="card-img-round" />
+                <div class="bannerTextDiv">
+                  <div class="centered centered-bannerText glowBakery"
+                    ><h1 class="bannerText">Bakery</h1></div
+                  >
+                </div>
+              </a></div
+            >
+          </div>
+          <div class="our-works">
+            <div class="work-imags container-SiteBanner"
+              ><a href="#">
+                <img
+                  src="Resources/images/realestateThumbnail.png"
+                  alt="work"
+                  class="card-img-round" />
+                <div class="bannerTextDiv">
+                  <div class="centered centered-bannerText glowRealEstate"
+                    ><h1 class="bannerText">Real Estate</h1></div
+                  >
+                </div>
+              </a></div
+            >
+          </div>
+          <div class="our-works">
+            <div class="work-imags container-SiteBanner"
+              ><a href="#">
+                <img
+                  src="Resources/images/portfolioThumbnail2.png"
+                  alt="work"
+                  class="card-img-round" />
+                <div class="bannerTextDiv">
+                  <div class="centered centered-bannerText glowChurch"
+                    ><h1 class="bannerText">Porfolios</h1></div
+                  >
+                </div>
+              </a></div
+            >
+          </div>
+          <div class="our-works">
+            <div class="work-imags container-SiteBanner"
+              ><a href="#">
+                <img
+                  src="Resources/images/salonThumbnail2.png"
+                  alt="work"
+                  class="card-img-round" />
+                <div class="bannerTextDiv">
+                  <div class="centered centered-bannerText glowChurch"
+                    ><h1 class="bannerText">Beauty Salon</h1></div
+                  >
+                </div>
+              </a></div
+            >
+          </div>
+
+          <div class="our-works">
+            <div class="work-imags container-SiteBanner"
+              ><a href="#">
+                <img
+                  src="Resources/images/hcoriThumbnail3.png"
+                  alt="work"
+                  class="card-img-round" />
+                <div class="bannerTextDiv">
+                  <div class="centered centered-bannerText glowChurch"
+                    ><h1 class="bannerText">Churches</h1></div
+                  >
+                </div>
+              </a></div
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--end sw-hero-section -->
+
+    <!--service block -->
+    <section class="word-block-div section-space">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-xl-7 col-lg-8">
+            <h2 class="text-gradient-1 mb15 wow fadeIn" data-wow-delay=".2s"
+              >Services We Provide</h2
+            >
+            <p class="wow fadeIn" data-wow-delay=".4s"
+              >Our team focuses on managing and delivering quality services. We
+              selectively chose technologies to provide the best experiences in
+              Websites and App Development aswell as programmatic services.</p
+            >
+          </div>
+        </div>
+        <div class="row mt30 dm4">
+          <div class="col-lg-3 col-sm-6 mt60 wow fadeIn" data-wow-delay=".1s">
+            <div class="sw-card sw-cl-5">
+              <div class="cardicon-out shadow"
+                ><img src="Resources/images//icons/websiteIcon4.png" alt="icon"
+              /></div>
+              <div class="sw-cardinfo">
+                <h3 class="swbttitlex"
+                  >Website<br />
+                  Development</h3
+                >
+                <p
+                  >Our team is your team. We design and organize websites to
+                  your liking. If you approve or decide you want additional
+                  changes. We can make it happen !</p
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 mt60 wow fadeIn" data-wow-delay=".4s">
+            <div class="sw-card sw-cl-5">
+              <div class="cardicon-out shadow"
+                ><img src="Resources/images//icons/app.png" alt="icon"
+              /></div>
+              <div class="sw-cardinfo">
+                <h3 class="swbttitlex"
+                  >App<br />
+                  Development</h3
+                >
+                <p
+                  >We can create Android or iOS mobile applications to meet your
+                  needs. This is a great way to grow to different platforms and
+                  reaches.</p
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6 mt60 wow fadeIn" data-wow-delay=".6s">
+            <div class="sw-card sw-cl-5">
+              <div class="cardicon-out shadow"
+                ><img
+                  src="Resources/images//icons/softwareTesting2.png"
+                  alt="icon"
+              /></div>
+              <div class="sw-cardinfo">
+                <h3 class="swbttitlex"
+                  >Software<br />
+                  QA/Testing</h3
+                >
+                <p
+                  >To ensure our designs meet our agreed expectations, we work
+                  with trusted Software Quality Testers to proof test the
+                  results. This is the icing on the cake to ensure the project
+                  works as intended.</p
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 mt60 wow fadeIn" data-wow-delay=".8s">
+            <div class="sw-card sw-cl-5">
+              <div class="cardicon-out shadow"
+                ><img
+                  src="Resources/images//icons/programmingIcon2.png"
+                  alt="icon"
+                  style="min-height: 70px"
+              /></div>
+              <div class="sw-cardinfo">
+                <h3 class="swbttitlex"
+                  >Software<br />
+                  Programming</h3
+                >
+                <p
+                  >We also provide support to external and third party
+                  software/business logic. No program is too complicated, no
+                  software is too old. If you want to adapt and improve, we will
+                  be happy to help !</p
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/ service block -->
+
+    <!-- start sw-about block -->
+    <section class="aboutblocks section-space bkbg3 darkbg2">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-7">
+            <div class="about-conent paragraph">
+              <span
+                class="scriptheading dashbefore mb15 wow fadeIn"
+                data-wow-delay=".2s"
+                data-wow-duration="1500ms"
+                >WHO WE ARE & WHAT ARE WE ABOUT</span
+              >
+              <h2
+                class="mb20 wow fadeIn"
+                data-wow-delay=".4s"
+                data-wow-duration="1500ms"
+                >Hire Quality and Experienced Web and App Developers for your
+                Business Goals</h2
+              >
+              <p
+                class="wow fadeIn"
+                data-wow-delay=".6s"
+                data-wow-duration="1500ms"
+                >Origin works with partnered engineers and top experienced
+                freelancers to plan and execute quality software. We work and
+                test our products to ensure our services perform smoothly and
+                complete your expectations.</p
+              >
+              <p
+                class="wow fadeIn"
+                data-wow-delay=".8s"
+                data-wow-duration="1500ms"
+                >Our team works for you and will do their best to ensure your
+                software vision is created. For more information, get a free
+                consultation from our team or reach out to our support team with
+                any questions.</p
+              >
+              <p
+                class="wow fadeIn"
+                data-wow-delay=".8s"
+                data-wow-duration="1500ms"
+                >- <i>Origin Development Team</i></p
+              >
+              <!-- button pair -->
+              <div
+                class="item-pair mt40 wow fadeIn"
+                data-wow-delay=".6s"
+                data-wow-duration="1500ms">
+                <a href="#contact-origin" class="sw-btn sw-blue-btn"
+                  >Get Started</a
+                >
+                <div class="videobutton">
+                  <a
+                    class="video-play"
+                    href="Resources/images/videos/Origin-Software-Announcement-COMPLETED.mp4"
+                    ><span class="button-play"></span
+                  ></a>
+                  <span>Watch Video</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 mmt40">
+            <div
+              class="img-collage-set row wow fadeIn"
+              data-wow-delay=".2s"
+              data-wow-duration="1500ms">
+              <div class="blueketshape1 shapesw shapecontrol-1"></div>
+              <div class="col-4 index-up">
+                <div class="imgcover roundimg">
+                  <img
+                    src="Resources/images/teampic3.jpg"
+                    alt="img"
+                    class="w-100"
+                /></div>
+              </div>
+              <div class="col-6 index-up flex-end">
+                <div class="imgcover roundimg">
+                  <img src="Resources/images/teampic2.jpg" alt="img"
+                /></div>
+              </div>
+              <div class="col-6 index-up offset-md-1 mt30">
+                <div class="imgcover roundimg">
+                  <img src="Resources/images/teampic4.jpg" alt="img"
+                /></div>
+              </div>
+              <div class="col-4 index-up align-self-start mt30">
+                <div class="imgcover roundimg">
+                  <img
+                    src="Resources/images/teampic5.jpg"
+                    alt="img"
+                    class="w-100"
+                /></div>
+              </div>
+              <div class="blueketshape2 shapesw shapecontrol-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end sw-about block -->
+
+    <!-- /block-->
+    <!-- block -->
+
+    <!-- contact us block -->
+    <section class="contactblock section-space" id="contact-origin">
+      <div class="container">
+        <div class="row justify-content-between v-center">
+          <div class="col-lg-5">
+            <div class="continfoblck">
+              <h3 class="mb10 text-gradient-1">Let's get in touch!</h3>
+              <p
+                >Your information is safe with us. We guarantees 100% data
+                security. We don’t use emails for spamming.</p
+              >
+              <div class="contactinkediv contactblk shadow mt20">
+                <span class="scriptheading mb5"
+                  ><i class="fa-solid fa-envelope mr10"></i> Send Us an
+                  Email:</span
+                >
+                <p class="f15 mb10"
+                  >Our support team will get back to you within 24 hours
+                  standard business hours or sooner.</p
+                >
+                <a href="mailto:Origin@originsoftware.dev" class="d-block"
+                  >Origin@originsoftware.dev</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mmt40">
+            <div class="blueketcotactform-sw">
+              <h4 class="mb30">Hey! there :)</h4>
+              <form class="row" method="post" action="send-email.php">
+                <div class="col-lg-6 mb20">
+                  <div class="form-inputs">
+                    <label for="forminput1">Your Name</label>
+                    <input
+                      type="text"
+                      class="form-controls"
+                      id="forminput1"
+                      name="name" />
+                  </div>
+                </div>
+                <div class="col-lg-6 mb20">
+                  <div class="form-inputs">
+                    <label for="forminput2">Contact Number</label>
+                    <input
+                      type="tel"
+                      class="form-controls"
+                      id="forminput2"
+                      name="phone" />
+                  </div>
+                </div>
+                <div class="col-lg-6 mb20">
+                  <div class="form-inputs">
+                    <label for="forminput3">Email Address</label>
+                    <input
+                      type="email"
+                      class="form-controls"
+                      id="forminput3"
+                      name="email" />
+                  </div>
+                </div>
+                <div class="col-lg-6 mb20">
+                  <div class="form-inputs">
+                    <label for="forminputSelect">Select Service Type</label>
+                    <select
+                      class="form-controls"
+                      id="forminputSelect"
+                      aria-label="select example"
+                      name="service">
+                      <option selected>&nbsp;</option>
+                      <option value="web_design">Web Design</option>
+                      <option value="graphic_design">Graphic Design</option>
+                      <option value="app_development">App Development</option>
+                      <option value="digital_marketing"
+                        >Digital Marketing</option
+                      >
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-12 mb20">
+                  <div class="form-inputs">
+                    <label for="textarea-sw" class="form-label"
+                      >Enter Your Message</label
+                    >
+                    <textarea
+                      class="form-controls sw-textarea"
+                      id="textarea-sw"
+                      rows="3"
+                      name="message"></textarea>
+                  </div>
+                </div>
+                <div class="col-lg-12 mb20 mt20">
+                  <div class="form-inputs plus-terms">
+                    <button type="submit" class="sw-btn sw-orange-btn"
+                      >Get Started <i class="fa-solid fa-arrow-trend-up"></i
+                    ></button>
+                    <p class="sw-form-term"
+                      >By submitting this, you agree to our
+                      <a href="#">Terms and Conditions</a> &
+                      <a href="#">Privacy Policy</a>.</p
+                    >
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /contact us block -->
+    <!-- sw-blueket-footer -->
+    <footer class="footer-design-sw pt80 pb30 bkbg2 footerbg1 black-bg-1">
+      <div class="container index-up">
+        <center></center>
+        <div class="row justify-content-between">
+          <div class="col-lg-4">
+            <div class="footer-brand-info">
+              <div class="footer-logo-sw">
+                <a href="#"
+                  ><img
+                    src="Resources/images/logo-white.svg"
+                    alt="logo"
+                    class="light"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="Resources/images/logo-black.svg"
+                    alt="logo"
+                    class="dark"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-brand-info">
+              <!-- contact -->
+              <div class="contactinkediv">
+                <span class="linktitle">Send Us an Email:</span>
+                <a href="mailto:info@yourwebsite.com"
+                  >Origin@originsoftware.dev</a
+                >
+              </div>
+            </div>
+            <!-- /contact -->
+          </div>
+        </div>
+        <!-- /footer links column -->
+        <div class="footercreditandrevielinks swhr pt20 mt60">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="footercreditnote sw-hover-1">
+                <div>
+                  <p
+                    >© 2023 All Rights Reserved By
+                    <a href="#"> Origin Software Development</a></p
+                  >
+                </div>
+                <div class="linkftsw">
+                  <!-- <ul class="list-h-styled">
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                  </ul> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- /sw-blueket-footer -->
+    <!--Plugin Js Files -->
+    <script src="Resources/js/jquery.min.js"></script>
+    <script src="Resources/js/bootstrap.bundle.min.js"></script>
+    <script src="Resources/js/blueket.plugin.js"></script>
+    <script src="Resources/js/theme.darkmode.js"></script>
+    <script src="Resources/js/preloader.js"></script>
+    <!--Custom Js File -->
+    <script src="Resources/js/custom.js"></script>
+
+    <script src="Resources/js/inviewscroll.js"></script>
+
+    <script src="Resources/js/noframework.waypoints.min.js"></script>
+    <script src="Resources/js/progressbar.min.js"></script>
+    <!-- form Js Files -->
+    <script src="Resources/assets/js/jquery.validate.min.js"></script>
+    <script src="Resources/assets/js/sweetalert2.all.min.js"></script>
+    <script src="Resources/assets/js/main.js"></script>
+  </body>
+</html>
