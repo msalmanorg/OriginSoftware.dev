@@ -700,7 +700,215 @@ prevQuestionBtn.addEventListener("click", () => {
 // ---------------------------------------------------------------------
 // Part 2 starting...
 
-function startPart2() {
-  alert("Part 2 started!");
-  window.location.reload();
+const developersTeamElem = document.getElementById("developers_team");
+const basicDevsElem = document.querySelectorAll(
+  ".developers-team-container > .details > ul.basic > li"
+);
+const advanceDevsElem = document.querySelectorAll(
+  ".developers-team-container > .details > ul.advance > li"
+);
+const fastDeliveryBtn = document.getElementById(
+  "super-fast-delivery-toggle-btn"
+);
+const timelineElem = document.querySelector(
+  ".part-2-content > .timeline-container"
+);
+const extraCharges = Number(
+  document
+    .querySelector(".developers-team-container > .details > ul.advance")
+    .getAttribute("extra-charges")
+);
+const newBudgetElems = document.querySelectorAll(".part-2 .next-monthlyCost");
+
+const pricingLoader = document.querySelector(".price-loader");
+
+const part1 = document.querySelector(".part-1");
+const part2 = document.querySelector(".part-2");
+
+const prevBtn = document.querySelector(".part-3-buttons > .prev-btn");
+const endBtn = document.querySelector(".part-3-buttons > .start-btn");
+
+const questionRendeners = document.querySelectorAll(
+  ".part-2 .features-container .feature-cate ul"
+);
+
+const basicDevs = [];
+const advanceDevs = [];
+let superFastDelivery = false;
+
+basicDevsElem.forEach((dev) => {
+  basicDevs.push(dev.textContent.trim().toLowerCase());
+});
+advanceDevsElem.forEach((dev) => {
+  advanceDevs.push(dev.textContent.trim().toLowerCase());
+});
+
+function renderQuestions() {
+  questionRendeners.forEach((rendener, r_index) => {
+    rendener.innerHTML = "";
+    const cateQuestions = document.querySelectorAll(
+      `li.pricing-question-li[cate-index='${r_index}']`
+    );
+    cateQuestions.forEach((cateQuestion, q_index) => {
+      let question_title = document.querySelector(
+        `.pricing-cate-li[data-question='${cateQuestion.getAttribute("id")}']`
+      );
+
+      let icon_classes =
+        question_title.querySelector("div.item-name > i").classList.value;
+
+      let question_heading = question_title.querySelector(
+        "div.item-name > span"
+      ).textContent;
+
+      let queston_price = question_title.querySelector(
+        "div.price-action > .price > p"
+      ).textContent;
+      queston_price = queston_price.slice(1);
+      queston_price = queston_price.substring(0, queston_price.length - 1);
+
+      let questionAdded = question_title.classList.contains("added");
+
+      rendener.innerHTML += `
+      <li>
+        <div>
+          <i class="${icon_classes}"></i>
+          <p>${question_heading}</p>
+        </div>
+        <i class="fa-solid ${questionAdded ? "fa-check" : "fa-xmark"}"></i>
+        <span> $${questionAdded ? queston_price : 0} </span>
+      </li>
+      `;
+    });
+  });
 }
+
+function renderDevs() {
+  const devs = superFastDelivery ? advanceDevs : basicDevs;
+  developersTeamElem.innerHTML = "";
+  const degree_div = 360 / devs.length;
+
+  devs.forEach((dev, dev_index) => {
+    const rotate_deg = degree_div * dev_index;
+    developersTeamElem.innerHTML += `
+    <div class="developer-circle" data-rotate='${rotate_deg}' style='transform: rotate(${rotate_deg}deg)'>
+      <div style='transform: rotate(${360 - rotate_deg}deg)' >
+        <img src="Resources/images/${dev}-demi-img.png" alt="" />
+        <span>${dev}</span>
+      </div>
+    </div>
+    `;
+  });
+
+  if (superFastDelivery) {
+    timelineElem.classList.remove("basic");
+    timelineElem.classList.add("advance");
+  } else {
+    timelineElem.classList.add("basic");
+    timelineElem.classList.remove("advance");
+  }
+
+  updateBudget();
+}
+
+function updateBudget() {
+  let a = superFastDelivery ? extraCharges : 0;
+  newBudgetElems.forEach((elem) => {
+    const span = elem.querySelector("span");
+    span.innerHTML = `${monthlyCost + a}<sup>$</sup>`;
+  });
+}
+
+fastDeliveryBtn.addEventListener("change", () => {
+  superFastDelivery = fastDeliveryBtn.checked;
+  renderDevs();
+});
+
+function startPart2() {
+  pricingLoader.classList.add("show");
+  setTimeout(() => {
+    pricingLoader.classList.remove("show");
+  }, 3000);
+  part2.style.display = "block";
+  part1.style.display = "none";
+  renderQuestions();
+  renderDevs();
+}
+
+prevBtn.addEventListener("click", () => {
+  pricingLoader.classList.add("show");
+  setTimeout(() => {
+    pricingLoader.classList.remove("show");
+  }, 3000);
+  part2.style.display = "none";
+  part1.style.display = "block";
+});
+
+endBtn.addEventListener("click", () => {
+  const information = [];
+  serviceCategories.forEach((cate, c_index) => {
+    const title = cate.querySelector(
+      ".pricing-cate-title > div > span"
+    ).textContent;
+    let service_category = {};
+    service_category.service_category = title;
+
+    service_category.questions = [];
+    const cate_questions = document.querySelectorAll(
+      `li.pricing-question-li[cate-index='${c_index}']`
+    );
+
+    cate_questions.forEach((cate_question, q_index) => {
+      const question = {};
+      const question_title = cate_question.querySelector(
+        ".question-category-feature > span"
+      ).textContent;
+
+      question.question_title = question_title;
+
+      const question_price = document
+        .querySelector(
+          `li.pricing-cate-li[data-question='${cate_question.getAttribute(
+            "id"
+          )}']`
+        )
+        .querySelector(".price-action > .price").textContent;
+      question.question_price = question_price;
+
+      question.question_options = [];
+
+      const options = cate_question.querySelectorAll(
+        ".question-content > .question-options > label"
+      );
+
+      options.forEach((opt, o_index) => {
+        const question_option = {};
+
+        question_option.option_title =
+          opt.querySelector(".index-name > p").textContent;
+
+        question_option.option_price = opt
+          .querySelector(".price-desc > span")
+          .textContent.slice(4);
+
+        question_option.is_option_selected = opt.querySelector("input").checked;
+
+        question.question_options.push(question_option);
+      });
+      service_category.questions.push(question);
+    });
+    information.push(service_category);
+  });
+
+  const totalBudget = {};
+  totalBudget.totalBudget = superFastDelivery
+    ? monthlyCost + extraCharges
+    : monthlyCost;
+  information.push(totalBudget);
+  console.log(information);
+  alert("Please check the console");
+  pricingLoader.classList.add("show", "thank-you");
+  setTimeout(() => {
+    location.reload();
+  }, 3000);
+});
