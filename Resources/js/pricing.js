@@ -700,6 +700,7 @@ prevQuestionBtn.addEventListener("click", () => {
 // ---------------------------------------------------------------------
 // Part 2 starting...
 
+// Getting the elemenets from the HTML Doc
 const developersTeamElem = document.getElementById("developers_team");
 const basicDevsElem = document.querySelectorAll(
   ".developers-team-container > .details > ul.basic > li"
@@ -728,10 +729,11 @@ const part2 = document.querySelector(".part-2");
 const prevBtn = document.querySelector(".part-3-buttons > .prev-btn");
 const endBtn = document.querySelector(".part-3-buttons > .start-btn");
 
-const questionRendeners = document.querySelectorAll(
+let questionRendeners = document.querySelectorAll(
   ".part-2 .features-container .feature-cate ul"
 );
 
+// Global Variables
 const basicDevs = [];
 const advanceDevs = [];
 let superFastDelivery = false;
@@ -743,7 +745,12 @@ advanceDevsElem.forEach((dev) => {
   advanceDevs.push(dev.textContent.trim().toLowerCase());
 });
 
+// Rendering Selected Questions
 function renderQuestions() {
+  questionRendeners = document.querySelectorAll(
+    ".part-2 .features-container .feature-cate ul"
+  );
+
   questionRendeners.forEach((rendener, r_index) => {
     rendener.innerHTML = "";
     const cateQuestions = document.querySelectorAll(
@@ -783,6 +790,7 @@ function renderQuestions() {
   });
 }
 
+// Rendering Super Fast devlivery funcationality
 function renderDevs() {
   const devs = superFastDelivery ? advanceDevs : basicDevs;
   developersTeamElem.innerHTML = "";
@@ -811,6 +819,7 @@ function renderDevs() {
   updateBudget();
 }
 
+// Updating budget on super fast delivery
 function updateBudget() {
   let a = superFastDelivery ? extraCharges : 0;
   newBudgetElems.forEach((elem) => {
@@ -819,53 +828,65 @@ function updateBudget() {
   });
 }
 
+// Super fast delivery toggle button
 fastDeliveryBtn.addEventListener("change", () => {
   superFastDelivery = fastDeliveryBtn.checked;
   renderDevs();
 });
 
+// Starting part 2
 function startPart2() {
+  part1.style.display = "none";
   pricingLoader.classList.add("show");
   setTimeout(() => {
     pricingLoader.classList.remove("show");
   }, 3000);
   part2.style.display = "block";
-  part1.style.display = "none";
-  renderQuestions();
+  document.querySelector("body").style.background = "white";
   renderDevs();
+  renderQuestions();
 }
 
+// Moving from part 2 to part 1
 prevBtn.addEventListener("click", () => {
+  part2.style.display = "none";
   pricingLoader.classList.add("show");
+  document.querySelector("body").style.background = "#eceeff";
   setTimeout(() => {
     pricingLoader.classList.remove("show");
   }, 3000);
-  part2.style.display = "none";
   part1.style.display = "block";
 });
 
+// Final Button, which get the data and send to the backend
 endBtn.addEventListener("click", () => {
   const information = [];
+  // categories
   serviceCategories.forEach((cate, c_index) => {
+    // Category title ex. Design
     const title = cate.querySelector(
       ".pricing-cate-title > div > span"
     ).textContent;
     let service_category = {};
     service_category.service_category = title;
 
+    // Category Questions
     service_category.questions = [];
     const cate_questions = document.querySelectorAll(
       `li.pricing-question-li[cate-index='${c_index}']`
     );
 
+    // Category each Question
     cate_questions.forEach((cate_question, q_index) => {
       const question = {};
+
+      // Question title
       const question_title = cate_question.querySelector(
         ".question-category-feature > span"
       ).textContent;
-
       question.question_title = question_title;
 
+      //  Question price
       const question_price = document
         .querySelector(
           `li.pricing-cate-li[data-question='${cate_question.getAttribute(
@@ -875,22 +896,26 @@ endBtn.addEventListener("click", () => {
         .querySelector(".price-action > .price").textContent;
       question.question_price = question_price;
 
+      // Questions Options
       question.question_options = [];
 
       const options = cate_question.querySelectorAll(
         ".question-content > .question-options > label"
       );
-
+      // Question each option
       options.forEach((opt, o_index) => {
         const question_option = {};
 
+        // Option title
         question_option.option_title =
           opt.querySelector(".index-name > p").textContent;
 
+        // Option Price
         question_option.option_price = opt
           .querySelector(".price-desc > span")
           .textContent.slice(4);
 
+        // Is option selected?
         question_option.is_option_selected = opt.querySelector("input").checked;
 
         question.question_options.push(question_option);
@@ -900,13 +925,24 @@ endBtn.addEventListener("click", () => {
     information.push(service_category);
   });
 
+  // Budget + Super Fasts delivery charges
   const totalBudget = {};
   totalBudget.totalBudget = superFastDelivery
     ? monthlyCost + extraCharges
     : monthlyCost;
+
+  // Fast delivery
+  const superFastDel = {};
+  superFastDel.superFastDelivery = superFastDelivery;
+
   information.push(totalBudget);
+  information.push(superFastDel);
+
+  // showing information
   console.log(information);
-  alert("Please check the console");
+  alert("Please check the Console, Before Clickon 'OK' ");
+
+  // showing thank-you page
   pricingLoader.classList.add("show", "thank-you");
   setTimeout(() => {
     location.reload();

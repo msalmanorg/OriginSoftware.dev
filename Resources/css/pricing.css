@@ -1,5 +1,4 @@
 body {
-  background: #f6f7ff;
   background: #eceeff;
 }
 .pricing-section {
@@ -634,9 +633,6 @@ label.question-option:has(input:checked) .index-name > div {
     "developers developers timeline features features"
     "developers developers timeline features features"
     "additional_notes additional_notes additional_notes features features";
-}
-body {
-  background: white;
 }
 
 .part-2-content .developers-container {
