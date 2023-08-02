@@ -31,7 +31,7 @@ const questionsHeading = document.querySelector(
 const priceElem = document.querySelectorAll(".price-per-month > .price");
 
 // Global reusable veriables
-const alphabets = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
+const alphabets = ["A", "B", "C", "D", "E", "F", "G", "H"];
 
 let monthlyCost = 0;
 const questions = [];
@@ -329,18 +329,8 @@ serviceCategories.forEach((serviceCategory, c_index) => {
     // Adding margin and z-index for category collapse
     requirement.style.zIndex = requirementList.length - q_index;
     requirement.setAttribute("index", q_index);
-    if (q_index != 0) {
-      if (q_index < 3) {
-        requirement.style.marginTop = `-${35 + q_index}px`;
-        requirement.style.marginLeft = `${10 * q_index}px`;
-        requirement.style.marginRight = `-${10 * q_index}px`;
-      } else {
-        requirement.style.marginTop = `-${43 + q_index}px`;
-        requirement.style.marginLeft = `${20}px`;
-        requirement.style.marginRight = `-${20}px`;
-        requirement.style.boxShadow = `none`;
-      }
-    }
+
+    requirement.style.marginTop = `-${43 + q_index}px`;
 
     // Creating an unique identifier for interlinking question and its title
     const uniqueID = `c-${question.question_cate_index}_q-${question.question_index}`;
@@ -361,9 +351,9 @@ questions.forEach((question, q_index) => {
   // Getting the question Type
   let choice_text = "";
   if (question.question_type === "multiple") {
-    choice_text = `Can choose multiple options`;
+    choice_text = `Multiple Options`;
   } else if (question.question_type === "single") {
-    choice_text = `Can choose only 1 option `;
+    choice_text = `Only One option`;
   } else if (question.question_type === "optional") {
     choice_text = `Optional`;
   }
@@ -395,12 +385,17 @@ questions.forEach((question, q_index) => {
           <i class="fa-solid fa-check"></i>
         </div>
         <div class="index-name">
-          <div>${alphabets[key]}</div>
-          <p> ${option.title} </p>
+        <div>${alphabets[key]}</div>
+        -
+          <p>${option.title} </p>
         </div>
         <div class="price-desc">
-          <span> + $${option.price} </span>
-          <i class="fa-solid fa-circle-info"></i>
+          <span> 
+            + 
+            <i class="fa-regular fa-dollar-sign"></i> 
+            ${option.price} 
+          </span>
+          <i class="fa-light fa-circle-info"></i>
         </div>
         <div class="desc">${option.desc}</div>
       </label>
@@ -428,9 +423,12 @@ questions.forEach((question, q_index) => {
               ${
                 question.question_desc === null
                   ? ""
-                  : `<div class="question-desc"> ${question.question_desc} </div>`
+                  : `<div class="question-desc"> 
+                    <span>Description</span>
+                    <p> ${question.question_desc} </p> 
+                  </div>`
               } 
-            <div class="choose">${choice_text}</div>
+            <div class="choose">(${choice_text})</div>
             <div class="question-options">
               ${optionsHTML}
             </div>
@@ -528,7 +526,7 @@ questionsContainer
 
         activeQuestionBtn.querySelector(
           ".price"
-        ).innerHTML = `<p>+${price}<sup>$</sup></p>`;
+        ).innerHTML = `+ <i class="fa-regular fa-dollar-sign"></i> ${price} `;
       });
     });
   });
@@ -726,8 +724,8 @@ const pricingLoader = document.querySelector(".price-loader");
 const part1 = document.querySelector(".part-1");
 const part2 = document.querySelector(".part-2");
 
-const prevBtn = document.querySelector(".part-3-buttons > .prev-btn");
-const endBtn = document.querySelector(".part-3-buttons > .start-btn");
+const prevBtn = document.querySelector(".part2-btns > button.edit-btn");
+const endBtn = document.querySelector(".part2-btns > button.confirm-btn");
 
 let questionRendeners = document.querySelectorAll(
   ".part-2 .features-container .feature-cate ul"
@@ -739,10 +737,16 @@ const advanceDevs = [];
 let superFastDelivery = false;
 
 basicDevsElem.forEach((dev) => {
-  basicDevs.push(dev.textContent.trim().toLowerCase());
+  basicDevs.push([
+    dev.textContent.trim().toLowerCase(),
+    dev.getAttribute("img"),
+  ]);
 });
 advanceDevsElem.forEach((dev) => {
-  advanceDevs.push(dev.textContent.trim().toLowerCase());
+  advanceDevs.push([
+    dev.textContent.trim().toLowerCase(),
+    dev.getAttribute("img"),
+  ]);
 });
 
 // Rendering Selected Questions
@@ -769,22 +773,38 @@ function renderQuestions() {
       ).textContent;
 
       let queston_price = question_title.querySelector(
-        "div.price-action > .price > p"
+        "div.price-action > .price"
       ).textContent;
-      queston_price = queston_price.slice(1);
+      queston_price = queston_price.slice(3);
+      console.log(queston_price);
       queston_price = queston_price.substring(0, queston_price.length - 1);
 
       let questionAdded = question_title.classList.contains("added");
 
-      rendener.innerHTML += `
+      rendener.innerHTML +=
+        //  `
+        // <li>
+        //   <div>
+        //     <i class="${icon_classes}"></i>
+        //     <p>${question_heading}</p>
+        //   </div>
+        //   <i class="fa-solid ${questionAdded ? "fa-check" : "fa-xmark"}"></i>
+        //   <span> $${questionAdded ? queston_price : 0} </span>
+        // </li>
+        // `
+
+        `
       <li>
         <div>
           <i class="${icon_classes}"></i>
           <p>${question_heading}</p>
         </div>
-        <i class="fa-solid ${questionAdded ? "fa-check" : "fa-xmark"}"></i>
-        <span> $${questionAdded ? queston_price : 0} </span>
-      </li>
+        <span>
+          <i class="fa-solid fa-dollar-sign"></i>
+          <div> ${questionAdded ? queston_price : 0}</div>
+        </span>
+        <i class="fa-solid  ${questionAdded ? "fa-check" : "fa-xmark"}"></i>
+      </li> 
       `;
     });
   });
@@ -801,8 +821,8 @@ function renderDevs() {
     developersTeamElem.innerHTML += `
     <div class="developer-circle" data-rotate='${rotate_deg}' style='transform: rotate(${rotate_deg}deg)'>
       <div style='transform: rotate(${360 - rotate_deg}deg)' >
-        <img src="Resources/images/${dev}-demi-img.png" alt="" />
-        <span>${dev}</span>
+        <img src="${dev[1]}" alt="" />
+        <span>${dev[0]}</span>
       </div>
     </div>
     `;
@@ -842,7 +862,8 @@ function startPart2() {
     pricingLoader.classList.remove("show");
   }, 3000);
   part2.style.display = "block";
-  document.querySelector("body").style.background = "white";
+  document.querySelector("body").classList.toggle("part1");
+  document.querySelector("body").classList.toggle("part2");
   renderDevs();
   renderQuestions();
 }
@@ -851,7 +872,8 @@ function startPart2() {
 prevBtn.addEventListener("click", () => {
   part2.style.display = "none";
   pricingLoader.classList.add("show");
-  document.querySelector("body").style.background = "#eceeff";
+  document.querySelector("body").classList.toggle("part1");
+  document.querySelector("body").classList.toggle("part2");
   setTimeout(() => {
     pricingLoader.classList.remove("show");
   }, 3000);

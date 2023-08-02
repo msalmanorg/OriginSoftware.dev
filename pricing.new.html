@@ -22,14 +22,19 @@
     <!-- Pricing Style Sheet (for pricing.html) -->
     <link rel="stylesheet" href="Resources/css/pricing.css" />
 
-    <!--  -->
+    <!-- fontawesome icons -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
       rel="stylesheet" />
 
+    <!-- fontawesome 6 pro link -->
+    <link
+      rel="stylesheet"
+      href="Resources/fontawesome-pro-6.0.0-web/css/all.css" />
+
     <title>Document</title>
   </head>
-  <body>
+  <body class="part1">
     <!-- PreLoader Starts -->
     <!-- <div class="preloader">
       <div class="preloader_inner">0%</div>
@@ -52,47 +57,48 @@
         <div class="pricing-container">
           <div class="pricing-header">
             <div class="pricing-title">
-              <span>Pricing Control</span>
-              <h1> Take control of your Project Budget </h1>
-              <p>
-                Fill the sections below to your needs and get an idea of your
-                vision pricel Plus Enjoy a discounted price for beging awesome !
-              </p>
+              <h1> Control your project budget </h1>
             </div>
-            <div class="price-per-month">
-              <div class="price">
-                $<span class="charges">0</span>
-                <span class="increase">+$110</span>
-                <span class="decrease">-$5</span>
+            <div class="price-title">
+              <div class="cate-title">Design</div>
+              <div class="price-per-month">
+                <div class="price">
+                  <i class="fa-solid fa-dollar-sign"></i>
+                  <span class="charges">0</span>
+                  <span class="increase">+$110</span>
+                  <span class="decrease">-$5</span>
+                </div>
+                <p> Total cost per month </p>
               </div>
-              <p> Cost Per Month </p>
             </div>
           </div>
           <div class="pricing-body">
             <div class="pricing-sidebar">
               <div class="pricing-category closed">
-                <div class="opener"></div>
+                <div class="opener" title="Click to Expand"></div>
                 <div
                   class="pricing-cate-title"
                   title="Click to Close the section">
-                  <span>1.</span>
                   <div>
-                    <span>Design</span>
-                    <i class="fa-solid fa-images"></i>
+                    <p>Design</p>
+                    <span>
+                      Software Need - Business Type - Domain Handle - Design -
+                      Responsive
+                    </span>
                   </div>
+                  <i class="fa-regular fa-chevron-down"></i>
                 </div>
                 <ul class="pricing-cate-ul">
-                  <div class="pricing-cate-title-toggle">Design</div>
                   <li class="pricing-cate-li" title="Click to Edit">
                     <div class="item-name">
-                      <i class="fa-solid fa-lightbulb"></i>
+                      <i class="fa-regular fa-lightbulb"></i>
                       <span>Software Need</span>
                     </div>
                     <div class="price-action">
                       <div class="price">+$10</div>
                       <div class="action">
-                        <i class="fa-solid fa-arrow-right"></i>
-                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-regular fa-chevron-right"></i>
+                        <i class="fa-light fa-pen"></i>
                       </div>
                     </div>
                     <div class="checkmark">
@@ -101,10 +107,15 @@
                     <!-- details -->
                     <div class="details" style="display: none">
                       <div class="question">questio no 1.</div>
-                      <div class="desc">This is the description</div>
+                      <!-- can leave no-desc attr in below .desc if need no description -->
+                      <div class="desc"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Nemo voluptatum ullam dolore earum velit autem
+                        consequuntur numquam?</div
+                      >
                       <ul class="options" question-type="optional">
                         <li class="option">
-                          <div class="text">option no 1</div>
+                          <div class="text">Option no 1</div>
                           <div class="price">200</div>
                           <div class="desc">
                             this is the description of the specific option
@@ -120,14 +131,14 @@
                   </li>
                   <li class="pricing-cate-li" title="Click to Edit">
                     <div class="item-name">
-                      <i class="fa-solid fa-hashtag"></i>
+                      <i class="fa-regular fa-hashtag"></i>
                       <span>Business Type</span>
                     </div>
                     <div class="price-action">
                       <div class="price">+$10</div>
                       <div class="action">
-                        <i class="fa-solid fa-arrow-right"></i>
-                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-regular fa-chevron-right"></i>
+                        <i class="fa-light fa-pen"></i>
                       </div>
                     </div>
                     <div class="checkmark">
@@ -136,10 +147,14 @@
                     <!-- details -->
                     <div class="details" style="display: none">
                       <div class="question">questio no 2.</div>
-                      <div class="desc" no-desc>This is the description</div>
+                      <div class="desc"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Nemo voluptatum ullam dolore earum velit autem
+                        consequuntur numquam?</div
+                      >
                       <ul class="options" question-type="single-choice">
                         <li class="option">
-                          <div class="text">option no 1</div>
+                          <div class="text">Option no 1</div>
                           <div class="price">50</div>
                           <div class="desc">
                             this is the description of the specific option
@@ -155,14 +170,14 @@
                   </li>
                   <li class="pricing-cate-li" title="Click to Edit">
                     <div class="item-name">
-                      <i class="fa-solid fa-earth-americas"></i>
+                      <i class="fa-regular fa-earth-americas"></i>
                       <span>Domain Handle</span>
                     </div>
                     <div class="price-action">
                       <div class="price">+$10</div>
                       <div class="action">
-                        <i class="fa-solid fa-arrow-right"></i>
-                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-regular fa-chevron-right"></i>
+                        <i class="fa-light fa-pen"></i>
                       </div>
                     </div>
                     <div class="checkmark">
@@ -171,10 +186,13 @@
                     <!-- details -->
                     <div class="details" style="display: none">
                       <div class="question">questio no 3.</div>
-                      <div class="desc" no-desc>This is the description</div>
+                      <div class="desc"
+                        >This is the descriptionThis is the description This is
+                        the description This is the description</div
+                      >
                       <ul class="options" question-type="multiple-choice">
                         <li class="option">
-                          <div class="text">option no 1</div>
+                          <div class="text">Option no 1</div>
                           <div class="price">150</div>
                           <div class="desc">
                             this is the description of the specific option
@@ -190,14 +208,14 @@
                   </li>
                   <li class="pricing-cate-li" title="Click to Edit">
                     <div class="item-name">
-                      <i class="fa-solid fa-droplet"></i>
+                      <i class="fa-regular fa-droplet"></i>
                       <span>Design</span>
                     </div>
                     <div class="price-action">
                       <div class="price">+$10</div>
                       <div class="action">
-                        <i class="fa-solid fa-arrow-right"></i>
-                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-regular fa-chevron-right"></i>
+                        <i class="fa-light fa-pen"></i>
                       </div>
                     </div>
                     <div class="checkmark">
@@ -209,7 +227,7 @@
                       <div class="desc">This is the description</div>
                       <ul class="options" question-type="single-choice">
                         <li class="option">
-                          <div class="text">option no 1</div>
+                          <div class="text">Option no 1</div>
                           <div class="price">150</div>
                           <div class="desc">
                             this is the description of the specific option
@@ -230,14 +248,14 @@
                   </li>
                   <li class="pricing-cate-li" title="Click to Edit">
                     <div class="item-name">
-                      <i class="fa-solid fa-tablet-screen-button"></i>
+                      <i class="fa-regular fa-tablet-screen-button"></i>
                       <span>Responsive</span>
                     </div>
                     <div class="price-action">
                       <div class="price">+$10</div>
                       <div class="action">
-                        <i class="fa-solid fa-arrow-right"></i>
-                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-regular fa-chevron-right"></i>
+                        <i class="fa-light fa-pen"></i>
                       </div>
                     </div>
                     <div class="checkmark">
@@ -246,10 +264,14 @@
                     <!-- details -->
                     <div class="details" style="display: none">
                       <div class="question">questio no. 5</div>
-                      <div class="desc" no-desc>This is the description</div>
+                      <div class="desc"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Nemo voluptatum ullam dolore earum velit autem
+                        consequuntur numquam?</div
+                      >
                       <ul class="options" question-type="multiple-choice">
                         <li class="option">
-                          <div class="text">option no 1</div>
+                          <div class="text">Option no 1</div>
                           <div class="price">150</div>
                           <div class="desc">
                             this is the description of the specific option
@@ -276,28 +298,30 @@
               </div>
 
               <div class="pricing-category closed">
-                <div class="opener"></div>
+                <div class="opener" title="Click to Expand"></div>
                 <div
                   class="pricing-cate-title"
                   title="Click to Close the section">
-                  <span>2.</span>
                   <div>
-                    <span>Performance</span>
-                    <i class="fa-solid fa-gears"></i>
+                    <p> Performance </p>
+                    <span>
+                      Internet Space Hosting - Database - Security - Email - SEO
+                      Toolkit
+                    </span>
                   </div>
+                  <i class="fa-regular fa-chevron-down"></i>
                 </div>
                 <ul class="pricing-cate-ul">
-                  <div class="pricing-cate-title-toggle">Performance</div>
                   <li class="pricing-cate-li" title="Click to Edit">
                     <div class="item-name">
-                      <i class="fa-solid fa-globe"></i>
+                      <i class="fa-regular fa-globe"></i>
                       <span>Internet Space Hosting</span>
                     </div>
                     <div class="price-action">
                       <div class="price">+$10</div>
                       <div class="action">
-                        <i class="fa-solid fa-arrow-right"></i>
-                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-regular fa-chevron-right"></i>
+                        <i class="fa-light fa-pen"></i>
                       </div>
                     </div>
                     <div class="checkmark">
@@ -306,10 +330,14 @@
                     <!-- Details -->
                     <div class="details" style="display: none">
                       <div class="question">This is a question...</div>
-                      <div class="desc">This is the description</div>
+                      <div class="desc"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Nemo voluptatum ullam dolore earum velit autem
+                        consequuntur numquam?</div
+                      >
                       <ul class="options" question-type="optional">
                         <li class="option">
-                          <div class="text">this is a single option </div>
+                          <div class="text">This is a single option </div>
                           <div class="price">80</div>
                           <div class="desc">
                             this is the description of the specific option
@@ -325,14 +353,14 @@
                   </li>
                   <li class="pricing-cate-li" title="Click to Edit">
                     <div class="item-name">
-                      <i class="fa-solid fa-database"></i>
+                      <i class="fa-regular fa-database"></i>
                       <span>Database</span>
                     </div>
                     <div class="price-action">
                       <div class="price">+$10</div>
                       <div class="action">
-                        <i class="fa-solid fa-arrow-right"></i>
-                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-regular fa-chevron-right"></i>
+                        <i class="fa-light fa-pen"></i>
                       </div>
                     </div>
                     <div class="checkmark">
@@ -341,10 +369,14 @@
                     <!-- Details -->
                     <div class="details" style="display: none">
                       <div class="question">This is a question...</div>
-                      <div class="desc">This is the description</div>
+                      <div class="desc"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Nemo voluptatum ullam dolore earum velit autem
+                        consequuntur numquam?</div
+                      >
                       <ul class="options" question-type="single-choice">
                         <li class="option">
-                          <div class="text">this is a single option </div>
+                          <div class="text">This is a single option </div>
                           <div class="price">90</div>
                           <div class="desc">
                             this is the description of the specific option
@@ -365,14 +397,14 @@
                   </li>
                   <li class="pricing-cate-li" title="Click to Edit">
                     <div class="item-name">
-                      <i class="fa-solid fa-lock"></i>
+                      <i class="fa-regular fa-lock"></i>
                       <span>Security</span>
                     </div>
                     <div class="price-action">
                       <div class="price">+$10</div>
                       <div class="action">
-                        <i class="fa-solid fa-arrow-right"></i>
-                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-regular fa-chevron-right"></i>
+                        <i class="fa-light fa-pen"></i>
                       </div>
                     </div>
                     <div class="checkmark">
@@ -384,7 +416,7 @@
                       <div class="desc">This is the description</div>
                       <ul class="options" question-type="optional">
                         <li class="option">
-                          <div class="text">this is a single option </div>
+                          <div class="text">This is a single option </div>
                           <div class="price">130</div>
                           <div class="desc">
                             this is the description of the specific option this
@@ -420,14 +452,14 @@
                   </li>
                   <li class="pricing-cate-li" title="Click to Edit">
                     <div class="item-name">
-                      <i class="fa-solid fa-envelopes-bulk"></i>
+                      <i class="fa-regular fa-envelopes-bulk"></i>
                       <span>Email</span>
                     </div>
                     <div class="price-action">
                       <div class="price">+$10</div>
                       <div class="action">
-                        <i class="fa-solid fa-arrow-right"></i>
-                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-regular fa-chevron-right"></i>
+                        <i class="fa-light fa-pen"></i>
                       </div>
                     </div>
                     <div class="checkmark">
@@ -436,10 +468,14 @@
                     <!-- Details -->
                     <div class="details" style="display: none">
                       <div class="question">This is a question...</div>
-                      <div class="desc" no-desc>This is the description</div>
+                      <div class="desc"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Nemo voluptatum ullam dolore earum velit autem
+                        consequuntur numquam?</div
+                      >
                       <ul class="options" question-type="single-choice">
                         <li class="option">
-                          <div class="text">this is a single option </div>
+                          <div class="text">This is a single option </div>
                           <div class="price">35</div>
                           <div class="desc">
                             this is the description of the specific option
@@ -455,14 +491,14 @@
                   </li>
                   <li class="pricing-cate-li" title="Click to Edit">
                     <div class="item-name">
-                      <i class="fa-solid fa-magnifying-glass"></i>
+                      <i class="fa-regular fa-magnifying-glass"></i>
                       <span>SEO toolkit</span>
                     </div>
                     <div class="price-action">
                       <div class="price">+$10</div>
                       <div class="action">
-                        <i class="fa-solid fa-arrow-right"></i>
-                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-regular fa-chevron-right"></i>
+                        <i class="fa-light fa-pen"></i>
                       </div>
                     </div>
                     <div class="checkmark">
@@ -471,10 +507,14 @@
                     <!-- Details -->
                     <div class="details" style="display: none">
                       <div class="question">This is a question...</div>
-                      <div class="desc" no-desc>This is the description</div>
+                      <div class="desc"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Nemo voluptatum ullam dolore earum velit autem
+                        consequuntur numquam?</div
+                      >
                       <ul class="options" question-type="multiple-choice">
                         <li class="option">
-                          <div class="text">this is a single option </div>
+                          <div class="text">This is a single option </div>
                           <div class="price">35</div>
                           <div class="desc">
                             this is the description of the specific option
@@ -498,7 +538,7 @@
             <div class="pricing-question-placeholder-container">
               <!-- Placeholder -->
               <div class="pricing-placeholder-container">
-                <i class="fa-solid fa-pen-ruler"></i>
+                <i class="fa-light fa-pen-ruler"></i>
                 <h1>We've got the tools to help you get job done.</h1>
                 <p>Order them in a few clicks</p>
                 <button>Get Started</button>
@@ -646,34 +686,31 @@
       <section class="part-2-section">
         <div class="part-2-content">
           <div class="developers-container">
-            <div class="pricing-logo">
-              <img src="Resources/images/logo-black.svg" alt="" />
-              <div class="next-monthlyCost">
-                <div>
-                  <span>150<sup>$</sup> </span>
-                  <p>Cost Per Month</p>
-                </div>
-              </div>
+            <div class="part2-title">
+              Free Engineers <br />
+              given by us to help you
             </div>
-
             <div class="developers-team-container">
               <!-- details -->
               <div class="details" style="display: none">
                 <ul class="basic">
-                  <li>Manager</li>
-                  <li>Designer</li>
-                  <li>Developer</li>
-                  <li>Engineer</li>
-                  <li>Tester</li>
+                  <li img="Resources/images/team/team-member-musa.png">Musa</li>
+                  <li img="Resources/images/team/team-member-nick.png">Nick</li>
+                  <li img="Resources/images/team/team-member-awais.jpg"
+                    >Awais</li
+                  >
                 </ul>
                 <ul class="advance" extra-charges="150">
-                  <li>Manager</li>
-                  <li>Designer</li>
-                  <li>Developer</li>
-                  <li>Developer</li>
-                  <li>Engineer</li>
-                  <li>Engineer</li>
-                  <li>Tester</li>
+                  <li img="Resources/images/team/team-member-musa.png">Musa</li>
+                  <li img="Resources/images/team/team-member-nick.png">Nick</li>
+                  <li img="Resources/images/team/team-member-awais.jpg"
+                    >Awais</li
+                  >
+                  <li img="Resources/images/team/team-member-musa.png">Musa</li>
+                  <li img="Resources/images/team/team-member-nick.png">Nick</li>
+                  <li img="Resources/images/team/team-member-awais.jpg"
+                    >Awais</li
+                  >
                 </ul>
               </div>
               <div class="developers-team">
@@ -684,7 +721,7 @@
                         src="Resources/images/developer-manager-demi-img.png"
                         alt="" />
                       <span>Manager</span>
-                    </div>
+                    </div>  
                   </div>
                   <div class="developer-circle">
                     <div>
@@ -697,7 +734,7 @@
                   <div class="developer-circle">
                     <div>
                       <img
-                        src="Resources/images/developer-demi-img-2.png"
+                        src="Resources/images/developer-demi-img.png"
                         alt="" />
                       <span>Developer</span>
                     </div>
@@ -720,7 +757,9 @@
                   </div> -->
                 </div>
                 <div class="more-info">
-                  <span>Get this done faster with a bigger team (+$150)</span>
+                  <span
+                    >Get faster with a bigger team <span>(+$150)</span></span
+                  >
                   <label
                     class="toggle-btn"
                     for="super-fast-delivery-toggle-btn">
@@ -731,26 +770,50 @@
                   </label>
                 </div>
               </div>
-              <div class="developers-heading">
-                Free Engineers given by us to help you
-              </div>
+            </div>
+            <div class="part2-commitments">
+              <div class="commitments-title">Our Commitments with you</div>
+              <ul>
+                <li>
+                  <i class="fa-regular fa-clipboard-check"></i>
+                  <span>No Credit Card needed</span>
+                </li>
+                <li>
+                  <i class="fa-regular fa-clipboard-check"></i>
+                  <span>Cancel any time</span>
+                </li>
+                <li>
+                  <i class="fa-regular fa-clipboard-check"></i>
+                  <span>1 month of Free Trial</span>
+                </li>
+                <li>
+                  <i class="fa-regular fa-clipboard-check"></i>
+                  <span>No Hidden Fees </span>
+                </li>
+              </ul>
             </div>
           </div>
           <div class="timeline-container basic">
             <div>
-              <div class="timeline-title">Time Frame</div>
+              <div class="part2-title">Time Frame</div>
               <ul class="timeline-ul">
                 <li>
                   <div class="circle">
                     <div class="content">
                       <div class="basic">
-                        <span> Day 1 - 5 </span>
+                        <span>
+                          <small>Day </small>
+                          <span> 1-5</span>
+                        </span>
                         <div class="hover">
                           This is the description of basic package.
                         </div>
                       </div>
                       <div class="advance">
-                        <span> Day 1 - 3 </span>
+                        <span>
+                          <small>Day </small>
+                          <span> 1-3</span>
+                        </span>
                         <div class="hover">
                           This is the description of advanced & super fast
                           delivery package.
@@ -763,13 +826,19 @@
                   <div class="circle">
                     <div class="content">
                       <div class="basic">
-                        <span> Day 6 - 10 </span>
+                        <span>
+                          <small>Day </small>
+                          <span> 6-10</span>
+                        </span>
                         <div class="hover">
                           This is the description of basic package.
                         </div>
                       </div>
                       <div class="advance">
-                        <span> Day 4 - 5 </span>
+                        <span>
+                          <small>Day </small>
+                          <span> 4-5</span>
+                        </span>
                         <div class="hover">
                           This is the description of advanced & super fast
                           delivery package.
@@ -782,13 +851,19 @@
                   <div class="circle">
                     <div class="content">
                       <div class="basic">
-                        <span> Day 11 - 12</span>
+                        <span>
+                          <small>Day </small>
+                          <span> 11-12</span>
+                        </span>
                         <div class="hover">
                           This is the description of basic package.
                         </div>
                       </div>
                       <div class="advance">
-                        <span> Day 6 - 7 </span>
+                        <span>
+                          <small>Day </small>
+                          <span> 6-7</span>
+                        </span>
                         <div class="hover">
                           This is the description of advanced & super fast
                           delivery package.
@@ -801,13 +876,19 @@
                   <div class="circle">
                     <div class="content">
                       <div class="basic">
-                        <span> Day 13 - 14 </span>
+                        <span>
+                          <small>Day </small>
+                          <span> 13-14</span>
+                        </span>
                         <div class="hover">
                           This is the description of basic package.
                         </div>
                       </div>
                       <div class="advance">
-                        <span> Day 8 - 9 </span>
+                        <span>
+                          <small>Day </small>
+                          <span> 8-9</span>
+                        </span>
                         <div class="hover">
                           This is the description of advanced & super fast
                           delivery package.
@@ -823,152 +904,54 @@
               </div>
             </div>
           </div>
-          <div class="features-container">
-            <div class="next-monthlyCost">
+          <div class="features-budget-container">
+            <div class="feature-monthly-cost">
               <div>
-                <span>150<sup>$</sup> </span>
-                <p>Cost Per Month</p>
+                <i class="fa-regular fa-dollar-sign"></i>
+                <span>544</span>
               </div>
+              <span> Total cost per month </span>
             </div>
-            <!--  -->
-            <div class="features-title">Included Features</div>
-            <div class="feature-cate">
-              <div class="feature-title">Your Design Needs</div>
-              <ul class="features-ul">
-                <!-- <li>
-                  <div>
-                    <i class="fa-solid fa-database"></i>
-                    <p>Option 1</p>
-                  </div>
-                  <i class="fa-solid fa-check"></i>
-                  <span> $10 </span>
-                </li>
-                <li>
-                  <div>
-                    <i class="fa-solid fa-database"></i>
-                    <p>Option 2</p>
-                  </div>
-                  <i class="fa-solid fa-check"></i>
-                  <span> $10 </span>
-                </li>
-                <li>
-                  <div>
-                    <i class="fa-solid fa-database"></i>
-                    <p>Option 3</p>
-                  </div>
-                  <i class="fa-solid fa-xmark"></i>
-                  <span> $10 </span>
-                </li>
-                <li>
-                  <div>
-                    <i class="fa-solid fa-database"></i>
-                    <p>Option 4</p>
-                  </div>
-                  <i class="fa-solid fa-check"></i>
-                  <span> $10 </span>
-                </li>
-                <li>
-                  <div>
-                    <i class="fa-solid fa-database"></i>
-                    <p>Option 5</p>
-                  </div>
-                  <i class="fa-solid fa-xmark"></i>
-                  <span> $10 </span>
-                </li> -->
-              </ul>
-            </div>
-            <div class="feature-cate">
-              <div class="feature-title">Your Performance Needs</div>
-              <ul class="features-ul">
-                <!-- <li>
-                  <div>
-                    <i class="fa-solid fa-database"></i>
-                    <p>Option 1</p>
-                  </div>
-                  <i class="fa-solid fa-check"></i>
-                  <span> $10 </span>
-                </li>
-                <li>
-                  <div>
-                    <i class="fa-solid fa-database"></i>
-                    <p>Option 2</p>
-                  </div>
-                  <i class="fa-solid fa-check"></i>
-                  <span> $10 </span>
-                </li>
-                <li>
-                  <div>
-                    <i class="fa-solid fa-database"></i>
-                    <p>Option 3</p>
-                  </div>
-                  <i class="fa-solid fa-xmark"></i>
-                  <span> $10 </span>
-                </li>
-                <li>
-                  <div>
-                    <i class="fa-solid fa-database"></i>
-                    <p>Option 4</p>
-                  </div>
-                  <i class="fa-solid fa-check"></i>
-                  <span> $10 </span>
-                </li>
-                <li>
-                  <div>
-                    <i class="fa-solid fa-database"></i>
-                    <p>Option 5</p>
-                  </div>
-                  <i class="fa-solid fa-xmark"></i>
-                  <span> $10 </span>
-                </li> -->
-              </ul>
-            </div>
-          </div>
-          <div class="additional-notes-container">
-            <div>
-              <div class="additional-notes-title">
-                Our Commitments with You ;)
+            <div class="features-container">
+              <div class="features-title">Included Features</div>
+              <div class="feature-cate">
+                <div class="feature-title">Your Design Needs</div>
+                <ul class="features-ul">
+                  <!-- <li>
+                    <div>
+                      <i class="fa-regular fa-database"></i>
+                      <p>Option 1</p>
+                    </div>
+                    <span>
+                      <i class="fa-regular fa-dollar-sign"></i>
+                      <div> 10 </div>
+                    </span>
+                    <i class="fa-solid fa-check"></i>
+                  </li>  -->
+                </ul>
               </div>
-              <ul>
-                <li>
-                  <i>
-                    <img src="Resources/images/atm-card-2.png" alt="" />
-                  </i>
-                  <p
-                    >No Credit card needed! Until you approve the project
-                    plan</p
-                  >
-                </li>
-                <li>
-                  <i>
-                    <img src="Resources/images/happy-face.png" alt="" />
-                  </i>
-                  <p>No Obglistions, you can cancel any time</p>
-                </li>
-                <li>
-                  <i>
-                    <img src="Resources/images/no-hidden-charges.png" alt="" />
-                  </i>
-                  <p>No Hidden Fees</p>
-                </li>
-                <li>
-                  <i>
-                    <img src="Resources/images/free-trial.png" alt="" />
-                  </i>
-                  <p>1 month of free trial</p>
-                </li>
-              </ul>
-            </div>
-            <div class="next-monthlyCost">
-              <div>
-                <span>150<sup>$</sup> </span>
-                <p>Cost Per Month</p>
+              <div class="feature-cate">
+                <div class="feature-title">Your Performance Needs</div>
+                <ul class="features-ul">
+                  <!-- <li>
+                    <div>
+                      <i class="fa-regular fa-database"></i>
+                      <p>Option 1</p>
+                    </div>
+                    <span>
+                      <i class="fa-regular fa-dollar-sign"></i>
+                      <div> 10 </div>
+                    </span>
+                    <i class="fa-solid fa-check"></i>
+                  </li>  -->
+                </ul>
+              </div>
+              <div class="part2-btns">
+                <button class="edit-btn">Edit Plan</button>
+                <button class="confirm-btn">Confirm Plan</button>
               </div>
             </div>
           </div>
-        </div>
-        <div class="part-3-buttons">
-          <button class="prev-btn">Edit My Plan</button>
-          <button class="start-btn">Start My Project with this Plan !</button>
         </div>
       </section>
     </div>
