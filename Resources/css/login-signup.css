@@ -437,4 +437,15 @@ body {
   .double-input-group .input-group {
     width: 100%;
   }
+  .code-inputs-container .code {
+    width: 50px;
+    font-size: 18px;
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .form-container .form-title {
+    font-size: 27px;
+  }
 }
