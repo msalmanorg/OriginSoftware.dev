@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Website Favicon Logo-->
+    <link href="Resources/images/shape/logov2.png" rel="icon" />
+
+    <!-- Styles for login, signup, varification forms -->
+    <link rel="stylesheet" href="Resources/css/login-signup.css" />
+
+    <!-- Local Font Awesome Pro Icons link -->
+    <link
+      rel="stylesheet"
+      href="Resources/fontawesome-pro-6.0.0-web/css/all.min.css" />
+
+    <title>Login Form | Origin Software </title>
+  </head>
+  <body>
+    <section class="forms-section">
+      <div class="forms-container">
+        <form class="form-container" id="login-form">
+          <h3 class="form-title">Login</h3>
+          <p class="form-title-desc">
+            Welcome back, fill details to login your account
+          </p>
+          <div class="invalid-data-message">Invalid Email OR Password</div>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input
+              title="Email"
+              type="text"
+              id="email"
+              placeholder="Enter your email" />
+
+            <div class="error">
+              <i class="fa-regular fa-circle-info"></i>
+              Enter a valid email
+            </div>
+          </div>
+          <div class="input-group password-input-group">
+            <label for="password">Password</label>
+            <input
+              title="Password"
+              type="password"
+              id="password"
+              placeholder="Enter your password" />
+            <div class="error">
+              <i class="fa-regular fa-circle-info"></i>Enter a valid password
+              with mimimam 8 digits</div
+            >
+            <i class="fa-regular fa-eye" title="Show Password"></i>
+          </div>
+          <div class="check-input-group">
+            <div class="check-input">
+              <input type="checkbox" id="remember-me" />
+              <i class="fa-solid fa-check"></i>
+              <label for="remember-me">Remember me</label>
+            </div>
+            <a href="#"> Forgot Password? </a>
+          </div>
+          <!-- <div
+            class="g-recaptcha"
+            data-sitekey="6LeW630nAAAAAGJwQ8ZRsrQIFCytyX6hQhmXtYx-"></div> -->
+          <div class="form-buttons" style="margin-top: 10vh">
+            <button type="submit">Login</button>
+            <div class="new-txt">
+              <p>Don't have an account?</p>
+              <a href="signup.html">Sign Up</a>
+            </div>
+          </div>
+        </form>
+        <div class="form-logo-img-container">
+          <img class="form-logo" src="Resources/images/origin-blue-logo.png" />
+          <img
+            class="slash-img"
+            src="Resources/images/slashs-bg-img.png"
+            alt="" />
+          <img class="sign-img" src="Resources/images/horizontal-+-signs.png" />
+          <div>
+            <img
+              class="form-img"
+              src="Resources/images/login-signup-forms-images/login-form-img.png" />
+          </div>
+          <img
+            class="triangle-img"
+            src="Resources/images/multiple-triangle-left-to-right.png" />
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+  <script>
+    const pswrdFields = document.querySelectorAll(".password-input-group");
+    pswrdFields.forEach((field) => {
+      const input = field.querySelector("input");
+      const eyeIcon = field.querySelector("i.fa-eye");
+
+      eyeIcon.addEventListener("click", () => {
+        input.type = input.type === "password" ? "text" : "password";
+        input.focus();
+        eyeIcon.classList.toggle("fa-eye");
+        eyeIcon.classList.toggle("fa-eye-slash");
+        eyeIcon.title =
+          input.type === "password" ? "Show Password" : "Hide Password";
+      });
+    });
+
+    // Function for checking email address valid or not
+    function isValidEmail(email) {
+      const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      return emailRegex.test(email);
+    }
+
+    // Login Form
+    const form = document.querySelector("form#login-form");
+    const emailGroup = form.querySelector(".input-group:has(input#email)");
+    const email = form.querySelector("input#email");
+
+    const passwordGroup = form.querySelector(
+      ".input-group:has(input#password)"
+    );
+    const password = passwordGroup.querySelector("input#password");
+
+    function checkEmail() {
+      // Checking email address
+      if (isValidEmail(email.value)) {
+        emailGroup.classList.add("success");
+        return true;
+      } else {
+        emailGroup.classList.add("error");
+        email.focus();
+        return false;
+      }
+    }
+
+    function checkPassword() {
+      if (password.value.length < 8) {
+        passwordGroup.classList.add("error");
+        password.focus();
+        return false;
+      } else {
+        passwordGroup.classList.add("success");
+        return true;
+      }
+    }
+
+    function removePasswordClasses() {
+      passwordGroup.classList.remove("success");
+      passwordGroup.classList.remove("error");
+    }
+
+    function removeEmailClasses() {
+      emailGroup.classList.remove("success");
+      emailGroup.classList.remove("error");
+    }
+
+    email.addEventListener("input", () => removeEmailClasses());
+    email.addEventListener("change", checkEmail);
+
+    password.addEventListener("input", () => removePasswordClasses());
+    password.addEventListener("change", () => checkPassword());
+
+    form.addEventListener("submit", (e) => {
+      // Prevents form to submit
+      checkEmail();
+      checkPassword();
+      removeEmailClasses();
+
+      if (checkEmail()) {
+        if (!checkPassword()) e.preventDefault();
+      } else {
+        e.preventDefault();
+      }
+    });
+  </script>
+</html>

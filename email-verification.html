@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Website Favicon Logo-->
+    <link href="Resources/images/shape/logov2.png" rel="icon" />
+
+    <!-- Styles for login, signup, varification forms -->
+    <link rel="stylesheet" href="Resources/css/login-signup.css" />
+
+    <!-- Local Font Awesome Pro Icons link -->
+    <link
+      rel="stylesheet"
+      href="Resources/fontawesome-pro-6.0.0-web/css/all.min.css" />
+
+    <title>Email Verification | Origin Software </title>
+  </head>
+  <body>
+    <section class="forms-section">
+      <div class="forms-container">
+        <form class="form-container">
+          <a href="signup.html" class="prev-page-btn">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back</span>
+          </a>
+          <h3 class="form-title">Email Varification</h3>
+          <p class="form-title-desc">
+            We sent a verification code to your email. Enter the code from the
+            email in the field below.
+          </p>
+          <div class="code-inputs-container">
+            <input type="number" class="code" />
+            <input type="number" class="code" />
+            <input type="number" class="code" />
+            <input type="number" class="code" />
+            <input type="hidden" id="verification-code" />
+            <div class="error">
+              <i class="fa-regular fa-circle-info"></i>
+              Enter the verification code
+            </div>
+          </div>
+          <div class="form-buttons" style="margin-top: 10vh">
+            <button type="submit">Continue</button>
+            <div class="new-txt">
+              <p>Didn't get the code?</p>
+              <a href="#">Send again</a>
+            </div>
+          </div>
+        </form>
+        <div class="form-logo-img-container">
+          <img class="form-logo" src="Resources/images/origin-blue-logo.png" />
+          <img
+            class="slash-img"
+            src="Resources/images/slashs-bg-img.png"
+            alt="" />
+          <img class="sign-img" src="Resources/images/horizontal-+-signs.png" />
+          <div>
+            <img
+              class="form-img"
+              src="Resources/images/login-signup-forms-images/verification-form-img.png" />
+          </div>
+          <img
+            class="triangle-img"
+            src="Resources/images/multiple-triangle-left-to-right.png" />
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    // Elements from the DOM
+    const form = document.querySelector("form.form-container");
+    const formBox = document.querySelector(".code-inputs-container");
+    const codes = form.querySelectorAll(".code-inputs-container > input.code");
+    const verificationCode = form.querySelector("input#verification-code");
+
+    // Focus the first Box when window starts
+    codes[0].focus();
+
+    // Loop every input box
+    codes.forEach((code, idx) => {
+      // events on input
+      code.addEventListener("input", (e) => {
+        formBox.classList.remove("error");
+        let value = code.value;
+        if (value) {
+          if (value.length > 0 && value.length < 3) {
+            let lastDigit = value.charAt(value.length - 1);
+            code.value = lastDigit;
+            code.nextElementSibling.focus();
+          } else if (value.length === 4) {
+            ("pasted !");
+            value;
+            codes[0].value = value[0];
+            codes[1].value = value[1];
+            codes[2].value = value[2];
+            codes[3].value = value[3];
+            codes[3].focus();
+          }
+        }
+      });
+
+      // event when backspace button pressed
+      let check = 0;
+      code.addEventListener("keyup", (e) => {
+        if (e.key === "Backspace") {
+          check++;
+          idx;
+          if (codes[idx].value === "" && check === 2) {
+            codes[idx - 1].focus();
+            check = 0;
+          }
+        }
+      });
+    });
+
+    // checking password and updating it to the form
+    form.addEventListener("submit", (e) => {
+      formBox.classList.remove("error");
+      let pwrd = "";
+      codes.forEach((code) => {
+        if (code.value === "") {
+          formBox.classList.add("error");
+          e.preventDefault();
+        }
+        pwrd += code.value;
+      });
+      verificationCode.value = pwrd;
+    });
+  </script>
+</html>

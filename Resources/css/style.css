@@ -5423,13 +5423,16 @@ a.btgs {
   width: 100%;
 }
 .hero-section-desktop .sw-shape-1 {
-  width: 40%;
-  transform: rotateY(180deg) translate(-86%, -10%);
+  width: 20%;
+  right: 0;
+  transform: rotateY(180deg);
 }
 .hero-section-desktop .sw-shape-2 {
   width: 50%;
   position: absolute;
-  transform: translate(-8%, 88%) rotateY(180deg);
+  transform: rotateY(180deg);
+  top: 90vh;
+  left: 0;
 }
 .hero-section-desktop .hero-title {
   width: max-content;
