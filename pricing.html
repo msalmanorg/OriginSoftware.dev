@@ -1,344 +1,988 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Origin - Software Development</title>
-    <!--Mega Tags-->
-    <meta name="description" content="Creative Agency, Marketing Agency Template">
-    <meta name="keywords" content="Creative Agency, Marketing Agency">
-    <meta name="author" content="SeparateWeb">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="theme-color" content="#111">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!--Website Favicon Logo-->
-    <link href="Resources/images/shape/logov2.png" rel="icon">
+    <link href="Resources/images/logos/favicon.png" rel="icon" />
+
     <!--Plugin CSS Files-->
-    <link href="Resources/css/bootstrap.min.css" rel="stylesheet">
-    <link href="Resources/css/blueket.plugin.css" rel="stylesheet">
+    <link href="Resources/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Resources/css/blueket.plugin.css" rel="stylesheet" />
+
     <!-- google font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <!--Custom CSS File-->   
-    <link href="Resources/css/style.css" rel="stylesheet">
-    <link href="Resources/css/responsive.css" rel="stylesheet">
-    <link href="Resources/css/colormode.css" rel="stylesheet">
-    <style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet" />
 
-      .container-SiteBanner {
-        position: relative;
-        text-align: center;
-        color: white;
-      }
+    <!--Custom CSS File-->
+    <link href="Resources/css/style.css" rel="stylesheet" />
+    <link href="Resources/css/responsive.css" rel="stylesheet" />
+    <link href="Resources/css/colormode.css" rel="stylesheet" />
 
-      /* Centered text */
-      .centered-bannerText {
-   
-        font-size:calc(12px + 1.5vw);
-       
-        color: #ffed38;
-      }
+    <!-- Pricing Style Sheet (for pricing.html) -->
+    <link rel="stylesheet" href="Resources/css/pricing.css" />
 
-      .bannerTextDiv{
-        position: absolute;
-        top: 40%;
-        left: 0%;
-        background-color:rgba(0, 0, 0, 0.4);
-        width:100%;
-        height:auto;
-        
-      }
+    <!-- fontawesome icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet" />
 
-      .bannerText{
-        color:white;
-        font-size:20px;
-        font-family: 'Nova Flat';
-        font-style: italic;
-        
-      }
+    <!-- fontawesome 6 pro link -->
+    <link rel="stylesheet" href="Resources/fontawesome-pro-icons/css/all.css" />
 
-      .glowChurch {
-        font-family: 'Poiret One';
-        
-        font-weight: 600;
-        color: white;
-      }
-
-      
-
-      .glowBakery {
-        font-family: 'Lucida Handwriting';
-        color: #fff;
-        animation: glowBakery 1s ease-in-out infinite alternate;
-      }
-
-      
-      @-webkit-keyframes glowBakery {
-        from {
-          text-shadow: 0 0 5px black, 0 0 15px black, 0 0 25px #f250ff, 0 0 35px #f250ff, 0 0 45px #f250ff, 0 0 55px #f250ff, 0 0 65px #f250ff;
-        }
-        
-        to {
-          text-shadow: 0 0 15px black, 0 0 25px black, 0 0 35px #f3a4f9, 0 0 45px #f3a4f9, 0 0 55px #f3a4f9, 0 0 65px #f3a4f9, 0 0 75px #f3a4f9;
-        }
-      }
-
-      
-      .glowRealEstate {
-        font-family: 'Times New Roman';
-        color: #fff;
-        animation: glowRealEstate 1s ease-in-out infinite alternate;
-      }
-
-      
-      @-webkit-keyframes glowRealEstate {
-        from {
-          text-shadow: 0 0 5px black, 0 0 15px black, 0 0 25px #8c1f09, 0 0 35px #8c1f09, 0 0 45px #8c1f09, 0 0 55px #8c1f09, 0 0 65px #8c1f09;
-        }
-        
-        to {
-          text-shadow: 0 0 15px black, 0 0 25px black, 0 0 35px #4f1306, 0 0 45px #4f1306, 0 0 55px #4f1306, 0 0 65px #4f1306, 0 0 75px #4f1306;
-        }
-      }
-    </style>
+    <title>Document</title>
   </head>
-  <body>
- 
+  <body class="part1">
+    <!-- PreLoader Starts -->
+    <!-- <div class="preloader">
+      <div class="preloader_inner">0%</div>
+      <div class="loaderlogo">
+        <img
+          src="Resources/images/logo-white.svg"
+          alt="logo"
+          style="height: 100px" />
+      </div>
+    </div> -->
+    <!-- PreLoader Ends -->
 
-   
-      <!-- industry work start -->
-      <section class="industry-work section-space bg-efffect-1 bkbg3 pb300">
-         <div class="container index-up">
-            <div class="row">
-               <div class="col-lg-8">
-                  <span class="scriptheading dashbefore mb15">Pricing Control</span>
-                  <h2 class="text-gradient-1">Take control of your Project Budget</h2>
-                  <h6 class="text-gradient-1">Fill the sections below to your needs and get and idea of your vision price! Plus Enjoy a discounted price for being awesome ! </h4>
-               </div>
-               <div class="col-lg-4">
-                  <div class="counter-setdiv wow fadeIn" data-wow-delay="1.1s" data-wow-duration="1500ms">
-                        <p> $<span data-count-to="150" class="odometer"></span></p>
-                        <span class="countertag">Cost Per Month</span>
-                  </div>
-               </div>
+    <!-- Header starts -->
+    <!-- --- Header CODE HERE --- -->
+    <!-- Header ends -->
+
+    <!-- Pricing section starts -->
+    <div class="part-1">
+      <section class="pricing-section">
+        <div class="pricing-container">
+          <div class="pricing-header">
+            <div class="pricing-title">
+              <h1> Control your project budget </h1>
             </div>
-            <div class="row justify-content-between mt30">
-               <div class="col-lg-3 mt30">
-                  <div class="sw-tabs-links stickyposition-sw">
-                     <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                           <button class="nav-link active" id="sw1-tab" data-bs-toggle="tab" data-bs-target="#sw1" type="button" role="tab" aria-controls="sw1" aria-selected="true"><i class="fa-solid fa-cart-shopping"></i> Software Need</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                           <button class="nav-link" id="sw2-tab" data-bs-toggle="tab" data-bs-target="#sw2" type="button" role="tab" aria-controls="sw2" aria-selected="false"><i class="fa-solid fa-stethoscope"></i> Business Type</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                           <button class="nav-link" id="sw3-tab" data-bs-toggle="tab" data-bs-target="#sw3" type="button" role="tab" aria-controls="sw3" aria-selected="false"><i class="fa-solid fa-dumbbell"></i> Domain Handle</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                           <button class="nav-link" id="sw4-tab" data-bs-toggle="tab" data-bs-target="#sw4" type="button" role="tab" aria-controls="sw4" aria-selected="false"><i class="fa-solid fa-pizza-slice"></i> Design</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                           <button class="nav-link" id="sw5-tab" data-bs-toggle="tab" data-bs-target="#sw5" type="button" role="tab" aria-controls="sw5" aria-selected="false"><i class="fa-solid fa-house-chimney"></i> Responsive</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                           <button class="nav-link" id="sw6-tab" data-bs-toggle="tab" data-bs-target="#sw6" type="button" role="tab" aria-controls="sw6" aria-selected="false"><i class="fa-solid fa-users"></i> Internet Space Hosting</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                           <button class="nav-link" id="sw7-tab" data-bs-toggle="tab" data-bs-target="#sw7" type="button" role="tab" aria-controls="sw7" aria-selected="false"><i class="fa-solid fa-graduation-cap"></i> Database</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                           <button class="nav-link" id="sw8-tab" data-bs-toggle="tab" data-bs-target="#sw8" type="button" role="tab" aria-controls="sw8" aria-selected="false"><i class="fa-solid fa-guitar"></i> Security</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                           <button class="nav-link" id="sw8-tab" data-bs-toggle="tab" data-bs-target="#sw8" type="button" role="tab" aria-controls="sw8" aria-selected="false"><i class="fa-solid fa-guitar"></i> Email</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                           <button class="nav-link" id="sw8-tab" data-bs-toggle="tab" data-bs-target="#sw8" type="button" role="tab" aria-controls="sw8" aria-selected="false"><i class="fa-solid fa-guitar"></i> SEO toolkit</button>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="col-lg-8 mt30">
-                  <div class="sw-tabs-data">
-                     <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="sw1" role="tabpanel" aria-labelledby="sw1-tab">
-                           <div class="sw-work-data">
-                              <div class="work-title-block">
-                                 <h3 class="mb15">Software Need</h3>
-                                 <p>A powerful business needs a powerful software tool. Select what type of software your business to get started</p>
-                                 <div class="servicetags mt30">
-                                    <a href="#" class="btgs dotinswbdr">Customers Assistance</a>
-                                    <a href="#" class="btgs dotinswbdr">Admin Dashboard</a>
-                                    <a href="#" class="btgs dotinswbdr">Properties Listing</a>
-                                    <a href="#" class="btgs dotinswbdr">Photo Editor Software</a>
-                                    <a href="#" class="btgs dotinswbdr">Content Marketing</a>
-                                    <a href="#" class="btgs dotinswbdr">Website Optimization</a>
-                                 </div>
-                              </div>
-                              <div class="sw-work-preview mt45">
-                                 <div class="sw-left-slot"><img src="images/portfolio/retail-1.jpg" alt="work" class="w-100 roundimg"></div>
-                                 <div class="sw-right-slot"><img src="images/portfolio/retail-2.jpg" alt="work" class="w-100 roundimg"> <img src="images/portfolio/retail-3.jpg" alt="work" class="w-100 roundimg"></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="tab-pane fade" id="sw2" role="tabpanel" aria-labelledby="sw2-tab">
-                           <div class="sw-work-data">
-                              <div class="work-title-block">
-                                 <h3 class="mb15">Health Care</h3>
-                                 <p>A smart workflow remains at the center of any excellent experience. With a powerful digital solution, you can accelerate your digital transformation to match the particular demands of your industry.</p>
-                                 <div class="servicetags mt30">
-                                    <a href="#" class="btgs dotinswbdr">Customers Assistance</a>
-                                    <a href="#" class="btgs dotinswbdr">Admin Dashboard</a>
-                                    <a href="#" class="btgs dotinswbdr">Properties Listing</a>
-                                    <a href="#" class="btgs dotinswbdr">Photo Editor Software</a>
-                                    <a href="#" class="btgs dotinswbdr">Content Marketing</a>
-                                    <a href="#" class="btgs dotinswbdr">Website Optimization</a>
-                                 </div>
-                              </div>
-                              <div class="sw-work-preview mt45">
-                                 <div class="sw-left-slot"><img src="images/portfolio/healthCare-1.jpg" alt="work" class="w-100 roundimg"></div>
-                                 <div class="sw-right-slot"><img src="images/portfolio/healthCare-2.jpg" alt="work" class="w-100 roundimg"> <img src="images/portfolio/healthCare-3.jpg" alt="work" class="w-100 roundimg"></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="tab-pane fade" id="sw3" role="tabpanel" aria-labelledby="sw3-tab">
-                           <div class="sw-work-data">
-                              <div class="work-title-block">
-                                 <h3 class="mb15">Fitness</h3>
-                                 <p>A smart workflow remains at the center of any excellent experience. With a powerful digital solution, you can accelerate your digital transformation to match the particular demands of your industry.</p>
-                                 <div class="servicetags mt30">
-                                    <a href="#" class="btgs dotinswbdr">Customers Assistance</a>
-                                    <a href="#" class="btgs dotinswbdr">Admin Dashboard</a>
-                                    <a href="#" class="btgs dotinswbdr">Properties Listing</a>
-                                    <a href="#" class="btgs dotinswbdr">Photo Editor Software</a>
-                                    <a href="#" class="btgs dotinswbdr">Content Marketing</a>
-                                    <a href="#" class="btgs dotinswbdr">Website Optimization</a>
-                                 </div>
-                              </div>
-                              <div class="sw-work-preview mt45">
-                                 <div class="sw-left-slot"><img src="images/portfolio/fitness-1.jpg" alt="work" class="w-100 roundimg"></div>
-                                 <div class="sw-right-slot"><img src="images/portfolio/fitness-2.jpg" alt="work" class="w-100 roundimg"> <img src="images/portfolio/fitness-3.jpg" alt="work" class="w-100 roundimg"></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="tab-pane fade" id="sw4" role="tabpanel" aria-labelledby="sw4-tab">
-                           <div class="sw-work-data">
-                              <div class="work-title-block">
-                                 <h3 class="mb15">Food Delivery</h3>
-                                 <p>A smart workflow remains at the center of any excellent experience. With a powerful digital solution, you can accelerate your digital transformation to match the particular demands of your industry.</p>
-                                 <div class="servicetags mt30">
-                                    <a href="#" class="btgs dotinswbdr">Customers Assistance</a>
-                                    <a href="#" class="btgs dotinswbdr">Admin Dashboard</a>
-                                    <a href="#" class="btgs dotinswbdr">Properties Listing</a>
-                                    <a href="#" class="btgs dotinswbdr">Photo Editor Software</a>
-                                    <a href="#" class="btgs dotinswbdr">Content Marketing</a>
-                                    <a href="#" class="btgs dotinswbdr">Website Optimization</a>
-                                 </div>
-                              </div>
-                              <div class="sw-work-preview mt45">
-                                 <div class="sw-left-slot"><img src="images/portfolio/food-delivery-1.jpg" alt="work" class="w-100 roundimg"></div>
-                                 <div class="sw-right-slot"><img src="images/portfolio/food-delivery-2.jpg" alt="work" class="w-100 roundimg"> <img src="images/portfolio/food-delivery-3.jpg" alt="work" class="w-100 roundimg"></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="tab-pane fade" id="sw5" role="tabpanel" aria-labelledby="sw5-tab">
-                           <div class="sw-work-data">
-                              <div class="work-title-block">
-                                 <h3 class="mb15">Real Estate</h3>
-                                 <p>A smart workflow remains at the center of any excellent experience. With a powerful digital solution, you can accelerate your digital transformation to match the particular demands of your industry.</p>
-                                 <div class="servicetags mt30">
-                                    <a href="#" class="btgs dotinswbdr">Customers Assistance</a>
-                                    <a href="#" class="btgs dotinswbdr">Admin Dashboard</a>
-                                    <a href="#" class="btgs dotinswbdr">Properties Listing</a>
-                                    <a href="#" class="btgs dotinswbdr">Photo Editor Software</a>
-                                    <a href="#" class="btgs dotinswbdr">Content Marketing</a>
-                                    <a href="#" class="btgs dotinswbdr">Website Optimization</a>
-                                 </div>
-                              </div>
-                              <div class="sw-work-preview mt45">
-                                 <div class="sw-left-slot"><img src="images/portfolio/realestate-1.jpg" alt="work" class="w-100 roundimg"></div>
-                                 <div class="sw-right-slot"><img src="images/portfolio/realestate-2.jpg" alt="work" class="w-100 roundimg"> <img src="images/portfolio/realestate-3.jpg" alt="work" class="w-100 roundimg"></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="tab-pane fade" id="sw6" role="tabpanel" aria-labelledby="sw6-tab">
-                           <div class="sw-work-data">
-                              <div class="work-title-block">
-                                 <h3 class="mb15">Social Networking</h3>
-                                 <p>A smart workflow remains at the center of any excellent experience. With a powerful digital solution, you can accelerate your digital transformation to match the particular demands of your industry.</p>
-                                 <div class="servicetags mt30">
-                                    <a href="#" class="btgs dotinswbdr">Customers Assistance</a>
-                                    <a href="#" class="btgs dotinswbdr">Admin Dashboard</a>
-                                    <a href="#" class="btgs dotinswbdr">Properties Listing</a>
-                                    <a href="#" class="btgs dotinswbdr">Photo Editor Software</a>
-                                    <a href="#" class="btgs dotinswbdr">Content Marketing</a>
-                                    <a href="#" class="btgs dotinswbdr">Website Optimization</a>
-                                 </div>
-                              </div>
-                              <div class="sw-work-preview mt45">
-                                 <div class="sw-left-slot"><img src="images/portfolio/socialnetworking-1.jpg" alt="work" class="w-100 roundimg"></div>
-                                 <div class="sw-right-slot"><img src="images/portfolio/retail-3.jpg" alt="work" class="w-100 roundimg"> <img src="images/portfolio/socialnetworking-2.jpg" alt="work" class="w-100 roundimg"></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="tab-pane fade" id="sw7" role="tabpanel" aria-labelledby="sw7-tab">
-                           <div class="sw-work-data">
-                              <div class="work-title-block">
-                                 <h3 class="mb15">Education</h3>
-                                 <p>A smart workflow remains at the center of any excellent experience. With a powerful digital solution, you can accelerate your digital transformation to match the particular demands of your industry.</p>
-                                 <div class="servicetags mt30">
-                                    <a href="#" class="btgs dotinswbdr">Customers Assistance</a>
-                                    <a href="#" class="btgs dotinswbdr">Admin Dashboard</a>
-                                    <a href="#" class="btgs dotinswbdr">Properties Listing</a>
-                                    <a href="#" class="btgs dotinswbdr">Photo Editor Software</a>
-                                    <a href="#" class="btgs dotinswbdr">Content Marketing</a>
-                                    <a href="#" class="btgs dotinswbdr">Website Optimization</a>
-                                 </div>
-                              </div>
-                              <div class="sw-work-preview mt45">
-                                 <div class="sw-left-slot"><img src="images/portfolio/education-1.jpg" alt="work" class="w-100 roundimg"></div>
-                                 <div class="sw-right-slot"><img src="images/portfolio/education-2.jpg" alt="work" class="w-100 roundimg"> <img src="images/portfolio/education-3.jpg" alt="work" class="w-100 roundimg"></div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="tab-pane fade" id="sw8" role="tabpanel" aria-labelledby="sw8-tab">
-                           <div class="sw-work-data">
-                              <div class="work-title-block">
-                                 <h3 class="mb15">Entertainment</h3>
-                                 <p>A smart workflow remains at the center of any excellent experience. With a powerful digital solution, you can accelerate your digital transformation to match the particular demands of your industry.</p>
-                                 <div class="servicetags mt30">
-                                    <a href="#" class="btgs dotinswbdr">Customers Assistance</a>
-                                    <a href="#" class="btgs dotinswbdr">Admin Dashboard</a>
-                                    <a href="#" class="btgs dotinswbdr">Properties Listing</a>
-                                    <a href="#" class="btgs dotinswbdr">Photo Editor Software</a>
-                                    <a href="#" class="btgs dotinswbdr">Content Marketing</a>
-                                    <a href="#" class="btgs dotinswbdr">Website Optimization</a>
-                                 </div>
-                              </div>
-                              <div class="sw-work-preview mt45">
-                                 <div class="sw-left-slot"><img src="images/portfolio/entertainment-1.jpg" alt="work" class="w-100 roundimg"></div>
-                                 <div class="sw-right-slot"><img src="images/portfolio/entertainment-2.jpg" alt="work" class="w-100 roundimg"> <img src="images/portfolio/entertainment-3.jpg" alt="work" class="w-100 roundimg"></div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+            <div class="price-title">
+              <div class="cate-title">Design</div>
+              <div class="price-per-month">
+                <div class="price">
+                  <i class="fa-solid fa-dollar-sign"></i>
+                  <span class="charges">0</span>
+                  <span class="increase">+$110</span>
+                  <span class="decrease">-$5</span>
+                </div>
+                <p> Total cost per month </p>
+              </div>
             </div>
-         </div>
+          </div>
+          <div class="pricing-body">
+            <div class="pricing-sidebar">
+              <div class="pricing-category closed">
+                <div class="opener" title="Click to Expand"></div>
+                <div
+                  class="pricing-cate-title"
+                  title="Click to Close the section">
+                  <div>
+                    <p>Design</p>
+                    <span>
+                      Software Need - Business Type - Domain Handle - Design -
+                      Responsive
+                    </span>
+                  </div>
+                  <i class="fa-regular fa-chevron-down"></i>
+                </div>
+                <ul class="pricing-cate-ul">
+                  <li class="pricing-cate-li" title="Click to Edit">
+                    <div class="item-name">
+                      <i class="fa-regular fa-lightbulb"></i>
+                      <span>Software Need</span>
+                    </div>
+                    <div class="price-action">
+                      <div class="price">+$10</div>
+                      <div class="action">
+                        <i class="fa-regular fa-chevron-right"></i>
+                        <i class="fa-light fa-pen"></i>
+                      </div>
+                    </div>
+                    <div class="checkmark">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                    <!-- details -->
+                    <div class="details" style="display: none">
+                      <div class="question">questio no 1.</div>
+                      <!-- can leave no-desc attr in below .desc if need no description -->
+                      <div class="desc"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Nemo voluptatum ullam dolore earum velit autem
+                        consequuntur numquam?</div
+                      >
+                      <ul class="options" question-type="optional">
+                        <li class="option">
+                          <div class="text">Option no 1</div>
+                          <div class="price">200</div>
+                          <div class="desc">
+                            this is the description of the specific option
+                          </div>
+                        </li>
+                        <li class="option">
+                          <div class="text">This is another options </div>
+                          <div class="price">80</div>
+                          <div class="desc">This is the description. </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="pricing-cate-li" title="Click to Edit">
+                    <div class="item-name">
+                      <i class="fa-regular fa-hashtag"></i>
+                      <span>Business Type</span>
+                    </div>
+                    <div class="price-action">
+                      <div class="price">+$10</div>
+                      <div class="action">
+                        <i class="fa-regular fa-chevron-right"></i>
+                        <i class="fa-light fa-pen"></i>
+                      </div>
+                    </div>
+                    <div class="checkmark">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                    <!-- details -->
+                    <div class="details" style="display: none">
+                      <div class="question">questio no 2.</div>
+                      <div class="desc"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Nemo voluptatum ullam dolore earum velit autem
+                        consequuntur numquam?</div
+                      >
+                      <ul class="options" question-type="single-choice">
+                        <li class="option">
+                          <div class="text">Option no 1</div>
+                          <div class="price">50</div>
+                          <div class="desc">
+                            this is the description of the specific option
+                          </div>
+                        </li>
+                        <li class="option">
+                          <div class="text">This is another options </div>
+                          <div class="price">80</div>
+                          <div class="desc">This is the description. </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="pricing-cate-li" title="Click to Edit">
+                    <div class="item-name">
+                      <i class="fa-regular fa-earth-americas"></i>
+                      <span>Domain Handle</span>
+                    </div>
+                    <div class="price-action">
+                      <div class="price">+$10</div>
+                      <div class="action">
+                        <i class="fa-regular fa-chevron-right"></i>
+                        <i class="fa-light fa-pen"></i>
+                      </div>
+                    </div>
+                    <div class="checkmark">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                    <!-- details -->
+                    <div class="details" style="display: none">
+                      <div class="question">questio no 3.</div>
+                      <div class="desc"
+                        >This is the descriptionThis is the description This is
+                        the description This is the description</div
+                      >
+                      <ul class="options" question-type="multiple-choice">
+                        <li class="option">
+                          <div class="text">Option no 1</div>
+                          <div class="price">150</div>
+                          <div class="desc">
+                            this is the description of the specific option
+                          </div>
+                        </li>
+                        <li class="option">
+                          <div class="text">This is another options </div>
+                          <div class="price">55</div>
+                          <div class="desc">This is the description. </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="pricing-cate-li" title="Click to Edit">
+                    <div class="item-name">
+                      <i class="fa-regular fa-droplet"></i>
+                      <span>Design</span>
+                    </div>
+                    <div class="price-action">
+                      <div class="price">+$10</div>
+                      <div class="action">
+                        <i class="fa-regular fa-chevron-right"></i>
+                        <i class="fa-light fa-pen"></i>
+                      </div>
+                    </div>
+                    <div class="checkmark">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                    <!-- details -->
+                    <div class="details" style="display: none">
+                      <div class="question">questio no 4.</div>
+                      <div class="desc">This is the description</div>
+                      <ul class="options" question-type="single-choice">
+                        <li class="option">
+                          <div class="text">Option no 1</div>
+                          <div class="price">150</div>
+                          <div class="desc">
+                            this is the description of the specific option
+                          </div>
+                        </li>
+                        <li class="option">
+                          <div class="text">This is another options </div>
+                          <div class="price">55</div>
+                          <div class="desc">This is the description. </div>
+                        </li>
+                        <li class="option">
+                          <div class="text">This is another options </div>
+                          <div class="price">55</div>
+                          <div class="desc">This is the description. </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="pricing-cate-li" title="Click to Edit">
+                    <div class="item-name">
+                      <i class="fa-regular fa-tablet-screen-button"></i>
+                      <span>Responsive</span>
+                    </div>
+                    <div class="price-action">
+                      <div class="price">+$10</div>
+                      <div class="action">
+                        <i class="fa-regular fa-chevron-right"></i>
+                        <i class="fa-light fa-pen"></i>
+                      </div>
+                    </div>
+                    <div class="checkmark">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                    <!-- details -->
+                    <div class="details" style="display: none">
+                      <div class="question">questio no. 5</div>
+                      <div class="desc"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Nemo voluptatum ullam dolore earum velit autem
+                        consequuntur numquam?</div
+                      >
+                      <ul class="options" question-type="multiple-choice">
+                        <li class="option">
+                          <div class="text">Option no 1</div>
+                          <div class="price">150</div>
+                          <div class="desc">
+                            this is the description of the specific option
+                          </div>
+                        </li>
+                        <li class="option">
+                          <div class="text">This is another options </div>
+                          <div class="price">55</div>
+                          <div class="desc">This is the description. </div>
+                        </li>
+                        <li class="option">
+                          <div class="text">This is another options </div>
+                          <div class="price">100</div>
+                          <div class="desc">This is the description. </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+                <div class="category-error">
+                  <i class="fa-solid fa-circle-info"></i>
+                  <p>Text will change dynamically.</p>
+                </div>
+              </div>
+
+              <div class="pricing-category closed">
+                <div class="opener" title="Click to Expand"></div>
+                <div
+                  class="pricing-cate-title"
+                  title="Click to Close the section">
+                  <div>
+                    <p> Performance </p>
+                    <span>
+                      Internet Space Hosting - Database - Security - Email - SEO
+                      Toolkit
+                    </span>
+                  </div>
+                  <i class="fa-regular fa-chevron-down"></i>
+                </div>
+                <ul class="pricing-cate-ul">
+                  <li class="pricing-cate-li" title="Click to Edit">
+                    <div class="item-name">
+                      <i class="fa-regular fa-globe"></i>
+                      <span>Internet Space Hosting</span>
+                    </div>
+                    <div class="price-action">
+                      <div class="price">+$10</div>
+                      <div class="action">
+                        <i class="fa-regular fa-chevron-right"></i>
+                        <i class="fa-light fa-pen"></i>
+                      </div>
+                    </div>
+                    <div class="checkmark">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                    <!-- Details -->
+                    <div class="details" style="display: none">
+                      <div class="question">This is a question...</div>
+                      <div class="desc"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Nemo voluptatum ullam dolore earum velit autem
+                        consequuntur numquam?</div
+                      >
+                      <ul class="options" question-type="optional">
+                        <li class="option">
+                          <div class="text">This is a single option </div>
+                          <div class="price">80</div>
+                          <div class="desc">
+                            this is the description of the specific option
+                          </div>
+                        </li>
+                        <li class="option">
+                          <div class="text">This is another options </div>
+                          <div class="price">10</div>
+                          <div class="desc">This is the description. </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="pricing-cate-li" title="Click to Edit">
+                    <div class="item-name">
+                      <i class="fa-regular fa-database"></i>
+                      <span>Database</span>
+                    </div>
+                    <div class="price-action">
+                      <div class="price">+$10</div>
+                      <div class="action">
+                        <i class="fa-regular fa-chevron-right"></i>
+                        <i class="fa-light fa-pen"></i>
+                      </div>
+                    </div>
+                    <div class="checkmark">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                    <!-- Details -->
+                    <div class="details" style="display: none">
+                      <div class="question">This is a question...</div>
+                      <div class="desc"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Nemo voluptatum ullam dolore earum velit autem
+                        consequuntur numquam?</div
+                      >
+                      <ul class="options" question-type="single-choice">
+                        <li class="option">
+                          <div class="text">This is a single option </div>
+                          <div class="price">90</div>
+                          <div class="desc">
+                            this is the description of the specific option
+                          </div>
+                        </li>
+                        <li class="option">
+                          <div class="text">This is another options </div>
+                          <div class="price">41</div>
+                          <div class="desc">This is the description. </div>
+                        </li>
+                        <li class="option">
+                          <div class="text">This is another options </div>
+                          <div class="price">100</div>
+                          <div class="desc">This is the description. </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="pricing-cate-li" title="Click to Edit">
+                    <div class="item-name">
+                      <i class="fa-regular fa-lock"></i>
+                      <span>Security</span>
+                    </div>
+                    <div class="price-action">
+                      <div class="price">+$10</div>
+                      <div class="action">
+                        <i class="fa-regular fa-chevron-right"></i>
+                        <i class="fa-light fa-pen"></i>
+                      </div>
+                    </div>
+                    <div class="checkmark">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                    <!-- Details -->
+                    <div class="details" style="display: none">
+                      <div class="question">This is a question...</div>
+                      <div class="desc">This is the description</div>
+                      <ul class="options" question-type="optional">
+                        <li class="option">
+                          <div class="text">This is a single option </div>
+                          <div class="price">130</div>
+                          <div class="desc">
+                            this is the description of the specific option this
+                            is the description of the specific option this is
+                            the description of the specific option this is the
+                            description of the specific option this is the
+                            description of the specific option this is the
+                            description of the specific option
+                          </div>
+                        </li>
+                        <li class="option">
+                          <div class="text">This is another options </div>
+                          <div class="price">65</div>
+                          <div class="desc">This is the description. </div>
+                        </li>
+                        <li class="option">
+                          <div class="text">This is another options </div>
+                          <div class="price">121</div>
+                          <div class="desc">This is the description. </div>
+                        </li>
+                        <li class="option">
+                          <div class="text">This is another options </div>
+                          <div class="price">90</div>
+                          <div class="desc">This is the description. </div>
+                        </li>
+                        <li class="option">
+                          <div class="text">This is another options </div>
+                          <div class="price">75</div>
+                          <div class="desc">This is the description. </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="pricing-cate-li" title="Click to Edit">
+                    <div class="item-name">
+                      <i class="fa-regular fa-envelopes-bulk"></i>
+                      <span>Email</span>
+                    </div>
+                    <div class="price-action">
+                      <div class="price">+$10</div>
+                      <div class="action">
+                        <i class="fa-regular fa-chevron-right"></i>
+                        <i class="fa-light fa-pen"></i>
+                      </div>
+                    </div>
+                    <div class="checkmark">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                    <!-- Details -->
+                    <div class="details" style="display: none">
+                      <div class="question">This is a question...</div>
+                      <div class="desc"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Nemo voluptatum ullam dolore earum velit autem
+                        consequuntur numquam?</div
+                      >
+                      <ul class="options" question-type="single-choice">
+                        <li class="option">
+                          <div class="text">This is a single option </div>
+                          <div class="price">35</div>
+                          <div class="desc">
+                            this is the description of the specific option
+                          </div>
+                        </li>
+                        <li class="option">
+                          <div class="text">This is another options </div>
+                          <div class="price">80</div>
+                          <div class="desc">This is the description. </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="pricing-cate-li" title="Click to Edit">
+                    <div class="item-name">
+                      <i class="fa-regular fa-magnifying-glass"></i>
+                      <span>SEO toolkit</span>
+                    </div>
+                    <div class="price-action">
+                      <div class="price">+$10</div>
+                      <div class="action">
+                        <i class="fa-regular fa-chevron-right"></i>
+                        <i class="fa-light fa-pen"></i>
+                      </div>
+                    </div>
+                    <div class="checkmark">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                    <!-- Details -->
+                    <div class="details" style="display: none">
+                      <div class="question">This is a question...</div>
+                      <div class="desc"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Nemo voluptatum ullam dolore earum velit autem
+                        consequuntur numquam?</div
+                      >
+                      <ul class="options" question-type="multiple-choice">
+                        <li class="option">
+                          <div class="text">This is a single option </div>
+                          <div class="price">35</div>
+                          <div class="desc">
+                            this is the description of the specific option
+                          </div>
+                        </li>
+                        <li class="option">
+                          <div class="text">This is another options </div>
+                          <div class="price">80</div>
+                          <div class="desc">This is the description. </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+                <div class="category-error">
+                  <i class="fa-solid fa-circle-info"></i>
+                  <p>Text will change dynamically.</p>
+                </div>
+              </div>
+            </div>
+            <div class="pricing-question-placeholder-container">
+              <!-- Placeholder -->
+              <div class="pricing-placeholder-container">
+                <i class="fa-light fa-pen-ruler"></i>
+                <h1>We've got the tools to help you get job done.</h1>
+                <p>Order them in a few clicks</p>
+                <button>Get Started</button>
+              </div>
+
+              <!-- Actual Questions -->
+              <div class="pricing-questions-container">
+                <div class="pricing-category_cost-per-month">
+                  <!-- category -->
+                  <div class="question-category design">
+                    <div class="design">
+                      <i class="fa-solid fa-images"></i>
+                      <span> Design </span>
+                    </div>
+                    <div class="performance">
+                      <i class="fa-solid fa-gears"></i>
+                      <span> Performance </span>
+                    </div>
+                  </div>
+                  <div class="price-per-month">
+                    <div class="price">
+                      $<span class="charges">0</span>
+                      <span class="increase">+$10</span>
+                      <span class="decrease">-$5</span>
+                    </div>
+                    <p> Cost Per Month </p>
+                  </div>
+                </div>
+
+                <!-- questions -->
+                <ul class="pricing-question-list">
+                  <!-- Will update dynamically by JavaScript-->
+
+                  <!-- <li class="pricing-question-li"> 
+                  <div class="question-category-feature">
+                    <div class="question-index"> 1. </div>
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <span>Software Need</span>
+                  </div> 
+                  <div class="question-content">
+                    <div class="question"> What are your software needs? </div>
+                    <div class="question-desc">
+                      This is the question description and This is the question
+                      description. This is the question description.question
+                      description and This is the question description. This is
+                      the question description.question description and This is
+                      the question description. This is the question
+                      description.question description and This is the question
+                      description. This is the question description.
+                    </div>
+                    <div class="choose">You can choose as many as you like</div>
+                    <div class="question-options"> 
+                      <label class="question-option" for="a1">
+                        <input type="checkbox" id="a1" />
+                        <div class="checkmark">
+                          <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="index-name">
+                          <div>a</div>
+                          <p> This is an option. </p>
+                        </div>
+                        <div class="price-desc">
+                          <span> + $20 </span>
+                          <i class="fa-solid fa-circle-info"></i>
+                        </div>
+                        <div class="desc">
+                          this is the description of the option.
+                        </div>
+                      </label>
+                      <label class="question-option" for="a2">
+                        <input type="checkbox" id="a2" />
+                        <div class="checkmark">
+                          <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="index-name">
+                          <div>a</div>
+                          <p> This is an option. </p>
+                        </div>
+                        <div class="price-desc">
+                          <span> + $20 </span>
+                          <i class="fa-solid fa-circle-info"></i>
+                        </div>
+                        <div class="desc">
+                          this is the description of the option.
+                        </div>
+                      </label>
+                      <label class="question-option" for="a3">
+                        <input type="checkbox" id="a3" />
+                        <div class="checkmark">
+                          <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="index-name">
+                          <div>a</div>
+                          <p> This is an option. </p>
+                        </div>
+                        <div class="price-desc">
+                          <span> + $20 </span>
+                          <i class="fa-solid fa-circle-info"></i>
+                        </div>
+                        <div class="desc">
+                          this is the description of the option.
+                        </div>
+                      </label>
+                      <label class="question-option" for="a4">
+                        <input type="checkbox" id="a4" />
+                        <div class="checkmark">
+                          <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="index-name">
+                          <div>a</div>
+                          <p> This is an option. </p>
+                        </div>
+                        <div class="price-desc">
+                          <span> + $20 </span>
+                          <i class="fa-solid fa-circle-info"></i>
+                        </div>
+                        <div class="desc">
+                          this is the description of the option.this is the
+                          description of the option.this is the description of
+                          the option.this is the description of the option.this
+                          is the description of the option.this is the
+                          description of the option.
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </li>  -->
+                </ul>
+
+                <!-- buttons -->
+                <div class="pricing-question-action-buttons">
+                  <button class="prev"> Previous </button>
+                  <button class="next"> Next </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-      <!-- industry work end -->
+    </div>
 
-     
+    <!-- Part 2 -->
 
+    <div class="part-2">
+      <section class="part-2-section">
+        <div class="part-2-content">
+          <div class="developers-container">
+            <div class="part2-title">
+              Free Engineers <br />
+              given by us to help you
+            </div>
+            <div class="developers-team-container">
+              <!-- details -->
+              <div class="details" style="display: none">
+                <ul class="basic">
+                  <li img="Resources/images/team/team-member-musa.png">Musa</li>
+                  <li img="Resources/images/team/team-member-nick.png">Nick</li>
+                  <li img="Resources/images/team/team-member-awais.jpg"
+                    >Awais</li
+                  >
+                </ul>
+                <ul class="advance" extra-charges="150">
+                  <li img="Resources/images/team/team-member-musa.png">Musa</li>
+                  <li img="Resources/images/team/team-member-nick.png">Nick</li>
+                  <li img="Resources/images/team/team-member-awais.jpg"
+                    >Awais</li
+                  >
+                  <li img="Resources/images/team/team-member-musa.png">Musa</li>
+                  <li img="Resources/images/team/team-member-nick.png">Nick</li>
+                  <li img="Resources/images/team/team-member-awais.jpg"
+                    >Awais</li
+                  >
+                </ul>
+              </div>
+              <div class="developers-team">
+                <div class="developers" id="developers_team">
+                  <!-- <div class="developer-circle">
+                    <div>
+                      <img
+                        src="Resources/images/developer-manager-demi-img.png"
+                        alt="" />
+                      <span>Manager</span>
+                    </div>  
+                  </div>
+                  <div class="developer-circle">
+                    <div>
+                      <img
+                        src="Resources/images/designer-demi-img.png"
+                        alt="" />
+                      <span>Designer</span>
+                    </div>
+                  </div>
+                  <div class="developer-circle">
+                    <div>
+                      <img
+                        src="Resources/images/developer-demi-img.png"
+                        alt="" />
+                      <span>Developer</span>
+                    </div>
+                  </div>
+                  <div class="developer-circle">
+                    <div>
+                      <img
+                        src="Resources/images/developerdemi-img.png"
+                        alt="" />
+                      <span>Engineer</span>
+                    </div>
+                  </div>
+                  <div class="developer-circle">
+                    <div>
+                      <img
+                        src="Resources/images/tester-demi-img-2.png"
+                        alt="" />
+                      <span>Tester</span>
+                    </div>
+                  </div> -->
+                </div>
+                <div class="more-info">
+                  <span
+                    >Get faster with a bigger team <span>(+$150)</span></span
+                  >
+                  <label
+                    class="toggle-btn"
+                    for="super-fast-delivery-toggle-btn">
+                    <input
+                      type="checkbox"
+                      id="super-fast-delivery-toggle-btn" />
+                    <div class="circle"></div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="part2-commitments">
+              <div class="commitments-title">Our Commitments with you</div>
+              <ul>
+                <li>
+                  <i class="fa-regular fa-clipboard-check"></i>
+                  <span>No Credit Card needed</span>
+                </li>
+                <li>
+                  <i class="fa-regular fa-clipboard-check"></i>
+                  <span>Cancel any time</span>
+                </li>
+                <li>
+                  <i class="fa-regular fa-clipboard-check"></i>
+                  <span>1 month of Free Trial</span>
+                </li>
+                <li>
+                  <i class="fa-regular fa-clipboard-check"></i>
+                  <span>No Hidden Fees </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-container basic">
+            <div>
+              <div class="part2-title">Time Frame</div>
+              <ul class="timeline-ul">
+                <li>
+                  <div class="circle">
+                    <div class="content">
+                      <div class="basic">
+                        <span>
+                          <small>Day </small>
+                          <span> 1-5</span>
+                        </span>
+                        <div class="hover">
+                          This is the description of basic package.
+                        </div>
+                      </div>
+                      <div class="advance">
+                        <span>
+                          <small>Day </small>
+                          <span> 1-3</span>
+                        </span>
+                        <div class="hover">
+                          This is the description of advanced & super fast
+                          delivery package.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="circle">
+                    <div class="content">
+                      <div class="basic">
+                        <span>
+                          <small>Day </small>
+                          <span> 6-10</span>
+                        </span>
+                        <div class="hover">
+                          This is the description of basic package.
+                        </div>
+                      </div>
+                      <div class="advance">
+                        <span>
+                          <small>Day </small>
+                          <span> 4-5</span>
+                        </span>
+                        <div class="hover">
+                          This is the description of advanced & super fast
+                          delivery package.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="circle">
+                    <div class="content">
+                      <div class="basic">
+                        <span>
+                          <small>Day </small>
+                          <span> 11-12</span>
+                        </span>
+                        <div class="hover">
+                          This is the description of basic package.
+                        </div>
+                      </div>
+                      <div class="advance">
+                        <span>
+                          <small>Day </small>
+                          <span> 6-7</span>
+                        </span>
+                        <div class="hover">
+                          This is the description of advanced & super fast
+                          delivery package.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="circle">
+                    <div class="content">
+                      <div class="basic">
+                        <span>
+                          <small>Day </small>
+                          <span> 13-14</span>
+                        </span>
+                        <div class="hover">
+                          This is the description of basic package.
+                        </div>
+                      </div>
+                      <div class="advance">
+                        <span>
+                          <small>Day </small>
+                          <span> 8-9</span>
+                        </span>
+                        <div class="hover">
+                          This is the description of advanced & super fast
+                          delivery package.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="timeline-info">
+                <div class="basic">Estimated Time 2 weeks</div>
+                <div class="advance">Estimated Time 1.5 weeks</div>
+              </div>
+            </div>
+          </div>
+          <div class="features-budget-container">
+            <div class="feature-monthly-cost">
+              <div>
+                <i class="fa-regular fa-dollar-sign"></i>
+                <span>544</span>
+              </div>
+              <span> Total cost per month </span>
+            </div>
+            <div class="features-container">
+              <div class="features-title">Included Features</div>
+              <div class="feature-cate">
+                <div class="feature-title">Your Design Needs</div>
+                <ul class="features-ul">
+                  <!-- <li>
+                    <div>
+                      <i class="fa-regular fa-database"></i>
+                      <p>Option 1</p>
+                    </div>
+                    <span>
+                      <i class="fa-regular fa-dollar-sign"></i>
+                      <div> 10 </div>
+                    </span>
+                    <i class="fa-solid fa-check"></i>
+                  </li>  -->
+                </ul>
+              </div>
+              <div class="feature-cate">
+                <div class="feature-title">Your Performance Needs</div>
+                <ul class="features-ul">
+                  <!-- <li>
+                    <div>
+                      <i class="fa-regular fa-database"></i>
+                      <p>Option 1</p>
+                    </div>
+                    <span>
+                      <i class="fa-regular fa-dollar-sign"></i>
+                      <div> 10 </div>
+                    </span>
+                    <i class="fa-solid fa-check"></i>
+                  </li>  -->
+                </ul>
+              </div>
+              <div class="part2-btns">
+                <button class="edit-btn">Edit Plan</button>
+                <button class="confirm-btn">Confirm Plan</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
 
-      <!-- /sw-blueket-footer -->
-      <!--Plugin Js Files -->    
-      <script src="Resources/js/jquery.min.js"></script>    
-      <script src="Resources/js/bootstrap.bundle.min.js"></script>
-      <script src="Resources/js/blueket.plugin.js"></script>  
-      <script src="Resources/js/theme.darkmode.js"></script> 
-      <script src="Resources/js/preloader.js"></script> 
-      <!--Custom Js File -->
-      <script src="Resources/js/custom.js"></script>    
-   </body>
+    <div class="price-loader">
+      <div class="logo">
+        <img src="Resources/images/logos/logo-white.svg" alt="" />
+      </div>
+      <div class="wrapper">
+        <div class="box-wrap">
+          <div class="box one"></div>
+          <div class="box two"></div>
+          <div class="box three"></div>
+          <div class="box four"></div>
+          <div class="box five"></div>
+          <div class="box six"></div>
+        </div>
+      </div>
+      <span>
+        Thank You for submitting the information. We will start working on your
+        project.
+      </span>
+    </div>
+    <!-- Pricing section ends-->
+
+    <!-- Footer Starts -->
+    <!-- --- Footer CODE HERE --- -->
+    <!-- Footer Ends -->
+
+    <!-- Pricing JavaScript File (only for Pricing.html) -->
+    <script src="Resources/js/pricing.js"></script>
+  </body>
 </html>
