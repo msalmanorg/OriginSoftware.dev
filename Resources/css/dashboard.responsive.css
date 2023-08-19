@@ -1,0 +1,240 @@
+@media (max-width: 1400px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1275px) {
+  .chat-projects-todos {
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "chat-members project-range  "
+      "chat-members completed-projects  "
+      "chat-members completed-projects "
+      "todos todos";
+  }
+  .tasks-related-content {
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas:
+      "needed-tasks upcoming-tasks"
+      "needed-tasks upcoming-tasks"
+      "timeline timeline";
+  }
+}
+
+@media (max-width: 1000px) {
+  .header-right-content .search-input {
+    margin-right: 12vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .header-right-content .search-input {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 860px) {
+  header > .responsive-hamburger-btn {
+    display: flex;
+  }
+  .header-right-content .search-input {
+    margin: 0;
+  }
+  .responsive-hamburger-close-btn {
+    display: flex;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 22px;
+  }
+  .header-right-content {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    display: flex;
+    flex-direction: column-reverse;
+    transition: all 0.3s ease;
+    z-index: 10;
+    padding: 10px;
+    min-width: 240px;
+  }
+  .header-right-content .user-info {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin: 10px 0;
+  }
+  .navigation-sidebar-container {
+    position: fixed;
+    top: 125px;
+    right: -100vw;
+    transition: all 0.3s ease;
+    height: calc(100vh - 125px);
+    overflow-y: scroll;
+  }
+  header:has(
+      .responsive-hamburger-btn.responsive-hamburger-btn
+        input#responsive-hamburger-checkbox:checked
+    )
+    .header-right-content {
+    right: 0;
+  }
+  body:has(
+      header
+        .responsive-hamburger-btn.responsive-hamburger-btn
+        input#responsive-hamburger-checkbox:checked
+    )
+    .navigation-sidebar-container {
+    right: 0;
+    z-index: 10;
+    width: 40%;
+  }
+  .main-content-container {
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 1275px) and (min-width: 625px) {
+  .upcoming-tasks-container ul.upcoming-tasks {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  ul.upcoming-tasks li {
+    width: 100%;
+  }
+}
+@media (max-width: 625px) {
+  .chat-projects-todos {
+    display: flex;
+    flex-direction: column;
+  }
+  .chat-projects-todos .task-range-container,
+  .completed-projects-container {
+    padding: 20px;
+  }
+  .tasks-related-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 575px) {
+  .upcoming-tasks-container ul.upcoming-tasks {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+  ul.upcoming-tasks li {
+    width: 47%;
+  }
+}
+@media (max-width: 500px) {
+  ul.timeline-bar li {
+    width: 50px;
+  }
+}
+@media (max-width: 425px) {
+  .upcoming-tasks-container ul.upcoming-tasks {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  ul.upcoming-tasks li {
+    width: 100%;
+    aspect-ratio: unset;
+    padding: 20px 0;
+  }
+  .chat-projects-todos .task-range-container {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    row-gap: 20px;
+  }
+  .task-range-container .range {
+    margin: auto;
+  }
+  .main-content-container .category-header {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+  .task-range-container .text {
+    margin: 0;
+  }
+  .main-content-container:has(.category-content-container) {
+    padding: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .todo-table thead tr td:nth-child(3) {
+    display: none;
+  }
+  .todo-table tbody tr {
+    display: grid;
+    grid-template-columns: auto min-content;
+    grid-template-rows: auto auto;
+    grid-template-areas: "name time" "per per";
+    row-gap: 10px;
+  }
+
+  .todo-table tbody tr td:nth-child(1) {
+    width: auto;
+    grid-area: name;
+  }
+  .todo-table tbody tr td:nth-child(2) {
+    grid-area: time;
+    width: min-content;
+  }
+
+  .todo-table tbody tr td:nth-child(3) {
+    grid-area: per;
+    width: 100%;
+  }
+}
+@media (max-width: 340px) {
+  .todo-table tbody tr {
+    grid-template-rows: auto auto;
+    grid-template-columns: 70% min-content;
+    grid-template-areas: "name name" "per time";
+  }
+
+  .todo-table tbody tr td:nth-child(3) {
+    min-width: 80%;
+  }
+  .chat-projects-todos .task-range-container {
+    min-width: unset;
+  }
+  .timeline-container ul.timeline-bar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 50px;
+  }
+  ul.timeline-bar li {
+    width: 70px;
+  }
+  ul.timeline-bar::before {
+    width: 5px;
+    height: 100%;
+  }
+  ul.timeline-bar::after {
+    width: 5px;
+    height: 0;
+    top: 0;
+  }
+  ul.timeline-bar:has(li:nth-child(2)[active])::after {
+    width: 5px;
+    height: 33%;
+  }
+  ul.timeline-bar:has(li:nth-child(3)[active])::after {
+    width: 5px;
+    height: 66%;
+  }
+  ul.timeline-bar:has(li:nth-child(4)[active])::after {
+    width: 5px;
+    height: 99%;
+  }
+}
