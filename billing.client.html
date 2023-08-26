@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Website Favicon Logo-->
+    <link href="Resources/images/logos/favicon.png" rel="icon" />
+
+    <!-- Custom CSS link only for dashboard files -->
+    <link rel="stylesheet" href="Resources/css/dashboard.css" />
+
+    <!-- Custom CSS link only for dashboard files for responsive -->
+    <link rel="stylesheet" href="Resources/css/dashboard.responsive.css" />
+
+    <!-- Local Font Awesome Pro Icons link -->
+    <link
+      rel="stylesheet"
+      href="Resources/fontawesome-pro-icons/css/all.min.css" />
+
+    <!-- Title -->
+    <title>Billing & Invoices | Origin Software</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div class="header-container">
+      <header class="container">
+        <div class="logo">
+          <a href="#">
+            <img
+              src="Resources/images/logos/O-origin-blue-logo.png"
+              alt="Logo"
+              title="Origin Software" />
+          </a>
+        </div>
+        <div class="header-right-content">
+          <div class="search-input">
+            <input type="text" placeholder="Search Project..." />
+            <i class="fa-regular fa-magnifying-glass"></i>
+          </div>
+          <div class="user-info">
+            <div
+              class="notifications new-notifications"
+              data-notifications="14">
+              <i class="fa-solid fa-bell"></i>
+            </div>
+            <div class="user-profile">
+              <span>Jason Clark</span>
+              <div class="user-photo">
+                <img
+                  src="Resources/images/team/team-member-nick.png"
+                  alt="User Photo" />
+              </div>
+            </div>
+            <label
+              class="responsive-hamburger-close-btn"
+              for="responsive-hamburger-checkbox">
+              <i class="fa-regular fa-xmark"></i>
+            </label>
+          </div>
+        </div>
+        <label
+          class="responsive-hamburger-btn"
+          for="responsive-hamburger-checkbox">
+          <i class="fa-solid fa-bars"></i>
+          <input type="checkbox" id="responsive-hamburger-checkbox" />
+        </label>
+      </header>
+    </div>
+
+    <!-- Main Content -->
+    <section class="main-container">
+      <main class="container">
+        <!-- Sidebar -->
+        <aside class="navigation-sidebar-container">
+          <ul>
+            <li>
+              <a href="projects.client.html">
+                <i class="fa-light fa-folders"></i>
+                <span>Projects</span>
+              </a>
+            </li>
+            <li>
+              <a href="tickets.client.html">
+                <i class="fa-light fa-memo-pad"></i>
+                <span>Tickets</span>
+              </a>
+            </li>
+            <li lass="active">
+              <a href="messages.client.html">
+                <i class="fa-light fa-message-dots"></i>
+                <span>Messages</span>
+              </a>
+            </li>
+            <li>
+              <a href="tasks.client.html">
+                <i class="fa-light fa-list-check"></i>
+                <span>Tasks</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="billing.client.html">
+                <i class="fa-light fa-clipboard-list"></i>
+                <span>Billings & Invoices</span>
+              </a>
+            </li>
+          </ul>
+          <!-- Help Center Black Box -->
+          <div class="help-center-container">
+            <i class="fa-regular fa-question"></i>
+            <div class="help-center">
+              <p>Help Center</p>
+              <span>
+                Having Trouble in Learning. Please contact us for more
+                questions.
+              </span>
+              <a href="#">Go To Help Center</a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main content -->
+        <div class="main-content-container">
+          <!-- header -->
+          <div class="category-header">
+            <p class="category-title"> Billings & Invoices</p>
+            <div class="content-layout-change-btn">
+              <div class="layout-change-btn">
+                <label for="blocks-layout-change-btn">
+                  <input
+                    type="radio"
+                    name="layout-change-btn-input"
+                    id="blocks-layout-change-btn"
+                    checked />
+                  <i class="fa-regular fa-table-cells-large"></i>
+                </label>
+                <label for="fullwidth-layout-change-btn">
+                  <input
+                    type="radio"
+                    name="layout-change-btn-input"
+                    id="fullwidth-layout-change-btn" />
+                  <i class="fa-regular fa-bars"></i>
+                </label>
+              </div>
+              <a href="#" class="add-task-btn">
+                <i class="fa-regular fa-circle-plus"></i>
+                <span>Create Task</span>
+              </a>
+            </div>
+          </div>
+          <!-- main -->
+
+          <div class="category-content-container">
+            <div class="transaction-list">
+              <div class="transaction-heading">
+                <h2>Transaction List</h2>
+                <p>You can download your previous transaction pdf</p>
+              </div>
+              <div class="table-head">
+                <table class="transaction-table">
+                  <thead>
+                    <tr>
+                      <th>Project</th>
+                      <th>ID</th>
+                      <th>Date</th>
+                      <th>Transaction Type</th>
+                      <th>Total Amount</th>
+                      <th>Currency</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td> Create Prototype </td>
+                      <td>LMS74867356</td>
+                      <td>12 Dec 2021</td>
+                      <td>Wire Transfer</td>
+                      <td>$130.89</td>
+                      <td>USD</td>
+                      <td>
+                        <a href="#">
+                          <span>Download PDF</span>
+                          <i class="fa-regular fa-arrow-down-to-bracket"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td> Create Prototype </td>
+                      <td>LMS74867356</td>
+                      <td>12 Dec 2021</td>
+                      <td>Wire Transfer</td>
+                      <td>$130.89</td>
+                      <td>USD</td>
+                      <td>
+                        <a href="#">
+                          <span>Download PDF</span>
+                          <i class="fa-regular fa-arrow-down-to-bracket"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td> Create Prototype </td>
+                      <td>LMS74867356</td>
+                      <td>12 Dec 2021</td>
+                      <td>Wire Transfer</td>
+                      <td>$130.89</td>
+                      <td>USD</td>
+                      <td>
+                        <a href="#">
+                          <span>Download PDF</span>
+                          <i class="fa-regular fa-arrow-down-to-bracket"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td> Create Prototype </td>
+                      <td>LMS74867356</td>
+                      <td>12 Dec 2021</td>
+                      <td>Wire Transfer</td>
+                      <td>$130.89</td>
+                      <td>USD</td>
+                      <td>
+                        <a href="#">
+                          <span>Download PDF</span>
+                          <i class="fa-regular fa-arrow-down-to-bracket"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td> Create Prototype </td>
+                      <td>LMS74867356</td>
+                      <td>12 Dec 2021</td>
+                      <td>Wire Transfer</td>
+                      <td>$130.89</td>
+                      <td>USD</td>
+                      <td>
+                        <a href="#">
+                          <span>Download PDF</span>
+                          <i class="fa-regular fa-arrow-down-to-bracket"></i>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="pagination-head">
+                <p>Showing 6 out of 37</p>
+                <ul class="pagination">
+                  <a href="#">
+                    <i class="fa-light fa-angle-left"></i>
+                  </a>
+                  <li class="active"> 1 </li>
+                  <li> 2 </li>
+                  <li> 3 </li>
+                  <li> 4 </li>
+                  <li> 5 </li>
+                  <li> 6 </li>
+                  <a href="#">
+                    <i class="fa-light fa-angle-right"></i>
+                  </a>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>

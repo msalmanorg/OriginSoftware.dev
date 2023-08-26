@@ -1,6 +1,27 @@
-@media (max-width: 1400px) {
+@media (max-width: 1650px) {
   .container {
     width: 100%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .projects-messsages-timeline-container {
+    grid-template-columns: auto 500px;
+    grid-template-rows: auto 400px;
+    grid-template-areas: "projects messages" "chart chart";
+  }
+  .projects-messsages-timeline-container .all-projects-container {
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(2, calc(50% - 10px));
+    grid-area: projects;
+    row-gap: 20px;
+    aspect-ratio: 1/1;
+  }
+  .projects-messsages-timeline-container .messages-holder-container {
+    grid-area: messages;
+  }
+  .projects-messsages-timeline-container .projects-timeline-container {
+    grid-area: chart;
   }
 }
 
@@ -21,6 +42,44 @@
       "needed-tasks upcoming-tasks"
       "needed-tasks upcoming-tasks"
       "timeline timeline";
+  }
+}
+
+@media (max-width: 1200px) {
+  .projects-messsages-timeline-container .all-projects-container {
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 100%;
+    /* grid-area: projects; */
+    row-gap: 20px;
+    /* aspect-ratio: 1/1; */
+  }
+  .projects-messsages-timeline-container {
+    grid-template-columns: minmax(0, max-content) auto;
+  }
+}
+
+@media (max-width: 1150px) and (min-width: 961px),
+  (max-width: 860px) and (min-width: 751px),
+  (max-width: 500px) {
+  .payment-method-container .card-details-btn,
+  .billing-plan-container .billing-buttons {
+    flex-direction: column;
+    align-items: baseline;
+    row-gap: 15px;
+  }
+  .card-details-btn .card-btn,
+  .card-details-btn .card-btn a,
+  .billing-plan-container .billing-buttons a {
+    width: 100%;
+  }
+}
+@media (max-width: 960px) and (min-width: 861px), (max-width: 750px) {
+  .billing-plans-container .billing-payment-container {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .billing-plans-container .billing-payment-container > * {
+    width: 100%;
   }
 }
 
@@ -98,6 +157,83 @@
   .main-content-container {
     border-radius: 0;
   }
+  .navigation-sidebar-container {
+    max-height: calc(100vh - 125px);
+    min-height: calc(100vh - 125px);
+  }
+}
+
+@media (max-width: 768px) {
+  .transaction-list .table-head {
+    border: none;
+  }
+  .transaction-table thead {
+    display: none;
+  }
+  .transaction-table tbody tr {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-bottom: 20px;
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+  }
+  .transaction-table tbody td {
+    width: 100%;
+    text-align: end;
+    position: relative;
+  }
+  .transaction-table thead th,
+  .transaction-table tbody tr:not(:last-child) td {
+    border-bottom: unset;
+  }
+  .transaction-table thead th,
+  .transaction-table tbody tr td:not(:last-child) {
+    border-bottom: 1px solid #d3d3d3;
+  }
+  .transaction-table tbody td::before {
+    position: absolute;
+    left: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: black;
+  }
+  .transaction-table tbody td:first-child {
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+  }
+  .transaction-table tbody td:last-child {
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    border-bottom: none;
+  }
+  .transaction-table tbody td:nth-child(1)::before {
+    content: "Project";
+  }
+  .transaction-table tbody td:nth-child(2)::before {
+    content: "ID";
+  }
+  .transaction-table tbody td:nth-child(3)::before {
+    content: "Date";
+  }
+  .transaction-table tbody td:nth-child(4)::before {
+    content: "Transaction Type";
+  }
+  .transaction-table tbody td:nth-child(5)::before {
+    content: "Total Amount";
+  }
+  .transaction-table tbody td:nth-child(6)::before {
+    content: "Currency";
+  }
+  .pagination-head {
+    margin-top: 0px;
+  }
+  .transaction-table tbody td:has(input) img {
+    margin-left: auto;
+  }
+  .transaction-table tbody td:has(input)::before {
+    left: 50px;
+  }
 }
 
 @media (max-width: 1275px) and (min-width: 625px) {
@@ -109,6 +245,7 @@
     width: 100%;
   }
 }
+
 @media (max-width: 625px) {
   .chat-projects-todos {
     display: flex;
@@ -121,6 +258,61 @@
   .tasks-related-content {
     display: flex;
     flex-direction: column;
+  }
+  .category-content-container {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-messsages-timeline-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .projects-messsages-timeline-container .messages-holder-container {
+    min-height: 400px;
+  }
+  .projects-messsages-timeline-container .all-projects-container {
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: unset;
+  }
+  .all-projects-container .related-project {
+    aspect-ratio: unset;
+    padding: 20px 30px;
+    display: grid;
+    grid-template-columns: 70px auto;
+    grid-template-rows: max-content max-content;
+    grid-template-areas: "icon type" "icon number";
+    justify-content: left;
+  }
+  .all-projects-container .related-project i {
+    grid-area: icon;
+  }
+  .all-projects-container .related-project span {
+    grid-area: type;
+    margin: 0;
+  }
+  .all-projects-container .related-project h2 {
+    grid-area: number;
+    margin: 3px 0 0 0;
+  }
+  .messages-holder-container .messages-holder {
+    min-height: 400px;
+  }
+  .tickets-form .ticket-inputs-container {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .ticket-inputs-container .ticket-input-group {
+    width: 100%;
+  }
+  .ticket-message-container {
+    margin: 20px 0 0 0;
+  }
+  .category-content-container .tickets-container {
+    padding: 20px;
   }
 }
 
@@ -137,7 +329,23 @@
   ul.timeline-bar li {
     width: 50px;
   }
+  .billing-details .billing-pricings div h1 {
+    font-size: 24px;
+  }
+  .billing-details .billing-pricings div i {
+    font-size: 18px;
+    margin-right: 3px;
+  }
+  .billing-details .billing-pricings p {
+    font-size: 10px;
+  }
 }
+@media (max-width: 450px) {
+  section.popup-section .popup-container {
+    width: 90%;
+  }
+}
+
 @media (max-width: 425px) {
   .upcoming-tasks-container ul.upcoming-tasks {
     flex-direction: column;
@@ -167,8 +375,7 @@
   .main-content-container:has(.category-content-container) {
     padding: 20px;
   }
-}
-@media (max-width: 425px) {
+
   .todo-table thead tr td:nth-child(3) {
     display: none;
   }
@@ -192,6 +399,43 @@
   .todo-table tbody tr td:nth-child(3) {
     grid-area: per;
     width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  section.popup-section .popup-main {
+    padding: 50px 0;
+  }
+  .popup-info-container li.popup-info {
+    width: 100%;
+    border: none !important;
+  }
+  .popup-container .popup-header {
+    flex-wrap: wrap;
+  }
+  .popup-header div {
+    margin: 5px 0 0 auto;
+  }
+}
+
+@media (max-width: 380px) {
+  .card-details-btn .card-info {
+    flex-direction: column;
+    row-gap: 10px;
+    width: 100%;
+    align-items: baseline;
+  }
+  .billing-plan-container .billing-details {
+    flex-direction: column;
+    row-gap: 5px;
+    margin-top: 15px;
+    align-items: baseline;
+  }
+  .billing-details .billing-pricings {
+    margin-left: auto;
+  }
+  .card-info .card-details {
+    margin: 0;
   }
 }
 @media (max-width: 340px) {

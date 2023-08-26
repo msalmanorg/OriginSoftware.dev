@@ -151,17 +151,50 @@
           </div>
           <!-- main -->
 
-          <div
-            class="category-content-container"
-            style="
-              background: rgba(128, 128, 128, 0.388);
-              border-radius: 20px;
-              height: 400px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-            ">
-            <h1>Tickets (Origin Team)</h1>
+          <!-- Ticket Messages Section -->
+          <div class="category-content-container">
+            <div class="tickets-container">
+              <h2 class="ticket-title">Details</h2>
+              <form class="tickets-form">
+                <div class="ticket-inputs-container">
+                  <div class="ticket-input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Type your name" />
+                  </div>
+                  <div class="ticket-input-group">
+                    <label for="requester">Requester</label>
+                    <select id="requester">
+                      <option selected disabled>Select requester</option>
+                      <option value="Option 1">Option 2</option>
+                      <option value="Option 1">Option 3</option>
+                      <option value="Option 1">Option 4</option>
+                      <option value="Option 1">Option 5</option>
+                    </select>
+                  </div>
+                  <div class="ticket-input-group">
+                    <label for="ticket-type">Type</label>
+                    <select id="ticket-type">
+                      <option selected disabled>Select type</option>
+                      <option value="Option 1">Option 1</option>
+                      <option value="Option 1">Option 2</option>
+                      <option value="Option 1">Option 3</option>
+                      <option value="Option 1">Option 4</option>
+                      <option value="Option 1">Option 5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="ticket-message-container">
+                  <label for="message">Type Message</label>
+                  <textarea
+                    id="message"
+                    placeholder="Type your message"></textarea>
+                </div>
+                <div class="tickets-form-buttons">
+                  <button type="submit">Submit</button>
+                  <button type="reset">Cancel</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </main>
