@@ -1921,6 +1921,7 @@ ul.popup-tab-navigation > label:hover {
 /*  */
 .projects-main-container {
   padding: 20px;
+  border-radius: 10px;
   background: white;
 }
 .projects-main-container .projects-container {
@@ -2007,8 +2008,8 @@ ul.popup-tab-navigation > label:hover {
 .project-container .project-timeline {
   /* background-color: #233eff29; */
 }
-.project-container .project-team-members {
-  /* background-color: #ff23de; */
+.project-container .project-name {
+  width: 150px;
 }
 
 .project-container .project-team-members ul li {
