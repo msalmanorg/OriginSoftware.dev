@@ -238,6 +238,7 @@
     margin-bottom: 20px;
     border: 1px solid #d3d3d3;
     border-radius: 10px;
+    overflow: hidden;
   }
   .transaction-table tbody td {
     width: 100%;
@@ -251,6 +252,9 @@
   .transaction-table thead th,
   .transaction-table tbody tr td:not(:last-child) {
     border-bottom: 1px solid #d3d3d3;
+  }
+  .transaction-table tbody tr td:first-child {
+    background-color: #f4f4f4e2;
   }
   .transaction-table tbody td::before {
     position: absolute;
