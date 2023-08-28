@@ -58,6 +58,54 @@
   }
 }
 
+@media (max-width: 1100px) {
+  .projects-main-container .projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 10px));
+    grid-template-rows: repeat(auto-fill, max-content);
+    gap: 20px;
+  }
+  .projects-container .project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(auto-fill, max-content);
+    position: relative;
+    padding: 0;
+  }
+  .project-container .project-name,
+  .project-container .project-serial {
+    background: #f4f4f4e2;
+    border-bottom: inherit;
+  }
+  .project-container .project-name {
+    border-top-right-radius: inherit;
+  }
+  .project-container .project-serial {
+    border-top-left-radius: inherit;
+    padding: 15px 10px;
+  }
+  .project-container .project-name > * {
+    position: relative;
+    left: -60%;
+  }
+  .project-container .project-range,
+  .project-container .project-timeline,
+  .project-container .project-team-members,
+  .project-container .project-button {
+    padding: 10px;
+  }
+  .project-container .project-team-members,
+  .project-container .project-button {
+    border-top: inherit;
+  }
+  .project-container .project-timeline {
+    display: flex;
+    flex-direction: column;
+    max-width: max-content;
+    margin-left: auto;
+  }
+}
+
 @media (max-width: 1150px) and (min-width: 961px),
   (max-width: 860px) and (min-width: 751px),
   (max-width: 500px) {

@@ -490,7 +490,8 @@ ul.chat-members li a i {
   min-width: max-content;
   justify-content: center;
 }
-.task-range-container .range {
+.task-range-container .range,
+.project-range .range {
   width: 90px;
   aspect-ratio: 1/1;
   padding: 2px;
@@ -500,7 +501,8 @@ ul.chat-members li a i {
     #cceee0 var(--per) 360deg
   );
 }
-.task-range-container .range span {
+.task-range-container .range span,
+.project-range .range span {
   border-radius: 50%;
   width: 100%;
   aspect-ratio: 1/1;
@@ -703,7 +705,7 @@ ul.chat-members li a i {
 .needed-tasks-container ul.needed-tasks::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
-ul.needed-tasks li.needed-task {
+li.needed-task {
   padding: 10px;
   display: flex;
   border: 1px solid #83808052;
@@ -734,6 +736,10 @@ li.needed-task .task-header span.green {
   color: var(--green-color);
   background: var(--light-green-color);
 }
+li.needed-task .task-header span.red {
+  color: var(--red-color);
+  background: var(--light-red-color);
+}
 li.needed-task .task-header > i {
   width: 16px;
   font-size: 12px;
@@ -757,6 +763,9 @@ li.needed-task .task-main b {
   font-weight: 500;
   color: black;
   margin: 10px 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 li.needed-task .task-main img {
   border-radius: 3px;
@@ -1438,7 +1447,9 @@ ul.popup-tab-navigation > label:hover {
 
 .tickets-container .ticket-title,
 .billings-page-main .billing-title h2,
-.transaction-heading h2 {
+.transaction-heading h2,
+.main-tasks-container h2,
+.projects-header h2 {
   font-weight: 500;
   font-size: 17px;
 }
@@ -1500,7 +1511,8 @@ ul.popup-tab-navigation > label:hover {
 }
 .tickets-form .tickets-form-buttons button,
 .billing-plan-container .billing-buttons a,
-.card-details-btn .card-btn a {
+.card-details-btn .card-btn a,
+.project-container .project-button a {
   border-radius: 50px;
   padding: 8px 20px;
   border: 1px solid;
@@ -1514,12 +1526,14 @@ ul.popup-tab-navigation > label:hover {
 }
 .tickets-form .tickets-form-buttons button[type="submit"],
 .billing-plan-container .billing-buttons a:first-child:hover,
-.card-details-btn .card-btn a:hover {
+.card-details-btn .card-btn a:hover,
+.project-container .project-button a:hover {
   background-color: var(--blue-color);
   color: white;
 }
 .tickets-form .tickets-form-buttons button[type="submit"]:hover,
 .billing-plan-container .billing-buttons a:first-child,
+.project-container .project-button a,
 .card-details-btn .card-btn a {
   color: var(--blue-color);
   background-color: white;
@@ -1552,11 +1566,13 @@ ul.popup-tab-navigation > label:hover {
   margin-bottom: 20px;
 }
 .billings-page-main .billing-title h2,
-.transaction-heading h2 {
+.transaction-heading h2,
+.projects-header h2 {
   margin-bottom: 3px;
 }
 .billings-page-main .billing-title p,
-.transaction-heading p {
+.transaction-heading p,
+.projects-header p {
   font-size: 12px;
   color: var(--text-color);
   font-weight: 400;
@@ -1880,4 +1896,140 @@ ul.popup-tab-navigation > label:hover {
 .pagination-head .pagination li:hover {
   background: var(--blue-color);
   color: #fff;
+}
+
+/*  */
+.main-tasks-container {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+}
+.main-tasks-container ul.all-tasks-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, auto));
+  grid-template-rows: repeat(auto-fill, max-content);
+  gap: 20px;
+}
+
+.main-tasks-container ul.all-tasks-container li.needed-task {
+  width: unset;
+}
+.main-tasks-container ul.all-tasks-container li.needed-task .task-main b {
+  max-width: 220px;
+}
+/*  */
+.projects-main-container {
+  padding: 20px;
+  background: white;
+}
+.projects-main-container .projects-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  row-gap: 20px;
+}
+.projects-container .project-container {
+  border: 1px solid rgba(128, 128, 128, 0.408);
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  padding: 20px;
+}
+.project-container > * {
+  min-width: max-content;
+}
+.project-container .project-name p,
+.project-container .project-team-members p,
+.project-container .project-timeline p {
+  font-size: 12px;
+  color: var(--text-color);
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+.project-container .project-name b,
+.project-container .project-range h5,
+.project-container .project-timeline b {
+  font-size: 12px;
+  color: black;
+  font-weight: 500;
+}
+.project-container .project-range h5 {
+  max-width: 100px;
+  margin-left: 10px;
+}
+
+.project-container .project-serial {
+  display: flex;
+  align-items: center;
+}
+.project-container .project-serial h1 {
+  font-size: 20px;
+  color: white;
+  width: 40px;
+  font-weight: 400;
+  aspect-ratio: 1/1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 50%;
+}
+.project-container .project-serial h1.yellow {
+  background: var(--yellow-color);
+}
+.project-container .project-serial h1.green {
+  background: var(--green-color);
+}
+.project-container .project-serial h1.blue {
+  background: var(--blue-color);
+}
+.project-container .project-serial h1.red {
+  background: var(--red-color);
+}
+.project-container .project-name,
+.project-container .project-timeline,
+.project-container .project-team-members {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.project-container .project-range,
+.project-container .project-team-members ul {
+  display: flex;
+  align-items: center;
+}
+.project-container .project-range .range {
+  width: 40px;
+}
+.project-container .project-range .range span {
+  font-size: 10px;
+}
+.project-container .project-timeline {
+  /* background-color: #233eff29; */
+}
+.project-container .project-team-members {
+  /* background-color: #ff23de; */
+}
+
+.project-container .project-team-members ul li {
+  width: 30px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+}
+.project-container .project-team-members ul li img {
+  border: 2px solid white;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  width: 100%;
+}
+.project-container .project-team-members ul li:not(:first-child) {
+  margin-left: -10px;
+}
+
+.project-container .project-button {
+  align-items: center;
+  display: flex;
+  justify-content: right;
 }
