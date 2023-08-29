@@ -290,6 +290,26 @@
   .transaction-table tbody td:nth-child(6)::before {
     content: "Currency";
   }
+
+  .billings-page-main .transaction-table tbody td:nth-child(1)::before {
+    content: "Invoice";
+  }
+  .billings-page-main .transaction-table tbody td:nth-child(2)::before {
+    content: "Billing Date";
+  }
+  .billings-page-main .transaction-table tbody td:nth-child(3)::before {
+    content: "Amount";
+  }
+  .billings-page-main .transaction-table tbody td:nth-child(4)::before {
+    content: "Plan";
+  }
+  .billings-page-main .transaction-table tbody td:nth-child(5)::before {
+    content: "Users";
+  }
+  .billings-page-main .transaction-table tbody td:nth-child(6)::before {
+    content: "Status";
+  }
+
   .pagination-head {
     margin-top: 0px;
   }

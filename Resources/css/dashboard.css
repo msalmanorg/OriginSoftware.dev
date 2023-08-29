@@ -22,7 +22,6 @@
   list-style: none;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
-  tap-highlight-color: transparent;
 }
 ::-webkit-scrollbar {
   width: 7px;
@@ -2033,4 +2032,15 @@ ul.popup-tab-navigation > label:hover {
   align-items: center;
   display: flex;
   justify-content: right;
+}
+/*  */
+.category-content-container:has(.chanting-page-container) {
+  background-color: red;
+  display: grid;
+}
+.chanting-page-container {
+  display: grid;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
 }
