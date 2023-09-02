@@ -121,7 +121,7 @@
   </head>
   <body>
     <!-- preloader code -->
-    <div class="preloader">
+    <!-- <div class="preloader">
       <div class="preloader_inner">0%</div>
       <div class="loaderlogo">
         <img
@@ -129,7 +129,7 @@
           alt="logo"
           style="height: 100px" />
       </div>
-    </div>
+    </div> -->
     <!-- preloader code -->
     <!--Start header -->
     <header class="header animation">
@@ -263,7 +263,7 @@
     <!--Drive Informatino for this section: https://drive.google.com/drive/folders/1sKfPJtwsOb-GDlTfJGIQPDhBpQU2r1Qa?usp=share_link-->
 
     <section class="hero-section" id="hero_section">
-      <div class="hero-section-container">
+      <div class="hero-section-container container">
         <div class="hero-section-desktop" data-aos="fade-right">
           <div class="sw-shape-1">
             <img
@@ -277,37 +277,19 @@
           </div>
 
           <div class="hero-title" data-aos="fade-up" data-aos-delay="500">
-            <div>
-              Enhance <br />
-              your website <br />
-              flow
-            </div>
+            <div> Enhance your website flow </div>
           </div>
-          <div class="hero-video mobile-video">
-            <i class="fas fa-volume-mute"></i>
-            <video muted autoplay loop>
-              <source
-                src="Resources/images/videos/Origin-Software-Announcement-COMPLETED.mp4"
-                type="video/mp4" />
-            </video>
-          </div>
+
           <div class="hero-desc" data-aos="fade-down" data-aos-delay="500">
             Let us transform your ideas into powerful software at a low cost.
           </div>
           <div class="hero-btn">
-            <a href="#contact-origin" class="sw-btn sw-blue-btn"
-              >Let's do this! <i class="fa-solid fa-arrow-trend-up"></i
-            ></a>
+            <a href="#contact-origin" class="sw-btn sw-blue-btn">
+              Let's do this! <i class="fa-solid fa-arrow-trend-up"> </i>
+            </a>
           </div>
         </div>
-        <div class="hero-video desktop-video" data-aos="fade-left">
-          <i class="fas fa-volume-mute"></i>
-          <video muted autoplay loop>
-            <source
-              src="Resources/images/videos/Origin-Software-Announcement-COMPLETED.mp4"
-              type="video/mp4" />
-          </video>
-        </div>
+        <div class="hero-img-section"> </div>
         <div
           class="navigate-next-btn floating-y wow fadeInRight"
           data-wow-delay="3.3s">
@@ -326,8 +308,8 @@
         <div class="services-header">
           <h2 class="section-title">Service we provided</h2>
           <p class="section-title-desc">
-            Our team focuses managing and developing quality services.</p
-          >
+            Our team focuses managing and developing quality services.
+          </p>
         </div>
 
         <div class="services-content">
@@ -341,10 +323,10 @@
               <div class="service-cate-icon">
                 <i class="fa-regular fa-globe"></i>
               </div>
-              <p
-                >Website <br />
-                Development</p
-              >
+              <p>
+                Website <br />
+                Development
+              </p>
             </label>
             <label
               class="service-cate"
@@ -930,32 +912,6 @@
           });
         });
       });
-
-      mobileVideoBtn.addEventListener("click", () => {
-        mobileVideo.muted = !mobileVideo.muted;
-        desktopVideo.muted = true;
-      });
-
-      desktopVideoBtn.addEventListener("click", () => {
-        desktopVideo.muted = !desktopVideo.muted;
-        mobileVideo.muted = true;
-      });
-
-      function manageVideos() {
-        if (videoMuted) return;
-        const winWidth = window.innerWidth;
-
-        if (winWidth >= 1000) {
-          mobileVideo.muted = true;
-          desktopVideo.muted = false;
-        } else {
-          mobileVideo.muted = false;
-          desktopVideo.muted = true;
-        }
-      }
-
-      window.onload = () => manageVideos();
-      window.addEventListener("resize", manageVideos);
 
       // --- navigate from top section to next
       const navBtn = document.querySelector(".navigate-next-btn");

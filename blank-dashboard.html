@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Website Favicon Logo-->
+    <link href="Resources/images/logos/favicon.png" rel="icon" />
+
+    <!-- Custom CSS link only for dashboard files -->
+    <link rel="stylesheet" href="Resources/css/dashboard.css" />
+
+    <!-- Custom CSS link only for dashboard files for responsive -->
+    <link rel="stylesheet" href="Resources/css/dashboard.responsive.css" />
+
+    <!-- Local Font Awesome Pro Icons link -->
+    <link
+      rel="stylesheet"
+      href="Resources/fontawesome-pro-icons/css/all.min.css" />
+
+    <!-- Title -->
+    <title>Tickets | Origin Software</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div class="header-container">
+      <header class="container">
+        <div class="logo">
+          <a href="#">
+            <img
+              src="Resources/images/logos/O-origin-blue-logo.png"
+              alt="Logo"
+              title="Origin Software" />
+          </a>
+        </div>
+        <div class="header-right-content">
+          <div class="search-input">
+            <input type="text" placeholder="Search Project..." />
+            <i class="fa-regular fa-magnifying-glass"></i>
+          </div>
+          <div class="user-info">
+            <div
+              class="notifications new-notifications"
+              data-notifications="14">
+              <i class="fa-solid fa-bell"></i>
+            </div>
+            <div class="user-profile">
+              <span>Jason Clark</span>
+              <div class="user-photo">
+                <img
+                  src="Resources/images/team/team-member-nick.png"
+                  alt="User Photo" />
+              </div>
+            </div>
+            <label
+              class="responsive-hamburger-close-btn"
+              for="responsive-hamburger-checkbox">
+              <i class="fa-regular fa-xmark"></i>
+            </label>
+          </div>
+        </div>
+        <label
+          class="responsive-hamburger-btn"
+          for="responsive-hamburger-checkbox">
+          <i class="fa-solid fa-bars"></i>
+          <input type="checkbox" id="responsive-hamburger-checkbox" />
+        </label>
+      </header>
+    </div>
+
+    <!-- Main Content -->
+    <section class="main-container">
+      <main class="container">
+        <!-- Sidebar -->
+        <aside class="navigation-sidebar-container">
+          <ul>
+            <li>
+              <a href="dashboard.team.html">
+                <i class="fa-light fa-cubes"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="projects.team.html">
+                <i class="fa-light fa-layer-group"></i>
+                <span>Project Managing</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="tickets.team.html">
+                <i class="fa-light fa-memo-pad"></i>
+                <span>Tickets</span>
+              </a>
+            </li>
+            <li>
+              <a href="billing.team.html">
+                <i class="fa-light fa-clipboard-list"></i>
+                <span>Billing and Invoices</span>
+              </a>
+            </li>
+            <li>
+              <a href="questions.team.html">
+                <i class="fa-light fa-message-question"></i>
+                <span>Questions & Info</span>
+              </a>
+            </li>
+          </ul>
+          <!-- Help Center Black Box -->
+          <div class="help-center-container">
+            <i class="fa-regular fa-question"></i>
+            <div class="help-center">
+              <p>Help Center</p>
+              <span>
+                Having Trouble in Learning. Please contact us for more
+                questions.
+              </span>
+              <a href="#">Go To Help Center</a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main content -->
+        <div class="main-content-container">
+          <!-- header -->
+          <div class="category-header">
+            <p class="category-title"> Tickets </p>
+            <div class="content-layout-change-btn">
+              <div class="layout-change-btn">
+                <label for="blocks-layout-change-btn">
+                  <input
+                    type="radio"
+                    name="layout-change-btn-input"
+                    id="blocks-layout-change-btn"
+                    checked />
+                  <i class="fa-regular fa-table-cells-large"></i>
+                </label>
+                <label for="fullwidth-layout-change-btn">
+                  <input
+                    type="radio"
+                    name="layout-change-btn-input"
+                    id="fullwidth-layout-change-btn" />
+                  <i class="fa-regular fa-bars"></i>
+                </label>
+              </div>
+              <a href="#" class="add-task-btn">
+                <i class="fa-regular fa-circle-plus"></i>
+                <span>Create Task</span>
+              </a>
+            </div>
+          </div>
+          <!-- main -->
+
+          <!-- Ticket Messages Section -->
+          <div
+            class="category-content-container"
+            style="
+              width: 100%;
+              height: 500px;
+              border-radius: 20px;
+              color: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: rgb(252, 59, 59);
+            ">
+            <h1>Section</h1>
+          </div>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>

@@ -5373,16 +5373,27 @@ a.btgs {
   width: 100%;
   margin: auto;
   position: relative;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  background: linear-gradient(to right, #f4f7ff 50%, #275eeb 50%);
 }
 
 .hero-section .hero-section-container {
-  min-height: 100vh;
+  min-height: auto;
+  max-height: 100vh;
   display: flex;
+  height: 800px;
 }
-
 .hero-section-container > div {
   width: 50%;
+}
+.hero-section-container > .hero-img-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: url(../images/hero-section-desktop-img.png);
+  background-repeat: no-repeat;
+  background-size: 95% auto;
+  background-position: left center;
 }
 .hero-section-container > .navigate-next-btn {
   position: absolute;
@@ -5417,7 +5428,6 @@ a.btgs {
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  padding: 0 150px 0 95px;
 }
 .hero-section-desktop > div > img {
   width: 100%;
@@ -5428,11 +5438,12 @@ a.btgs {
   transform: rotateY(180deg);
 }
 .hero-section-desktop .sw-shape-2 {
-  width: 50%;
   position: absolute;
   transform: rotateY(180deg);
-  top: 90vh;
+
   left: 0;
+  top: 84%;
+  width: 90%;
 }
 .hero-section-desktop .hero-title {
   width: max-content;
@@ -5445,6 +5456,7 @@ a.btgs {
   text-align: left;
   font-size: 55px;
   color: rgb(18, 18, 18);
+  width: 360px;
 }
 .hero-section-desktop .hero-btn {
   grid-area: btn;
@@ -5455,34 +5467,7 @@ a.btgs {
   z-index: -1;
   position: absolute;
 }
-.hero-section-container .hero-video.desktop-video {
-  display: flex;
-  background: var(--blue-colo3);
-}
-.hero-section-container .hero-video.desktop-video video {
-  width: 100%;
-}
-.hero-section-container .hero-video {
-  position: relative;
-}
-.hero-section-container .hero-video i {
-  position: absolute;
-  background: #beb8b8b0;
-  width: 8%;
-  aspect-ratio: 1/1;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  left: 20px;
-  bottom: 18px;
-  cursor: pointer;
-  z-index: 2;
-  transition: all 0.3s ease;
-  font-size: 200%;
-}
-.hero-section-container .hero-video i:hover {
-  transform: scale(1.1);
-}
+
 .hero-section-desktop .hero-desc {
   line-height: 1.5;
   font-weight: 500;
@@ -5923,35 +5908,13 @@ a.btgs {
   }
 }
 
-@media screen and (max-width: 1750px) {
-  .hero-section-container .hero-video i {
-    font-size: 150%;
-  }
-}
 @media screen and (max-width: 1300px) {
   .hero-section-desktop .sw-shape-1 {
     width: 36%;
   }
 }
-@media screen and (max-width: 1100px) {
-  .hero-section-container .hero-video i {
-    font-size: 20px;
-    width: 45px;
-  }
-}
+
 @media screen and (max-width: 1000px) {
-  .hero-section-desktop .hero-video.mobile-video video {
-    width: 100%;
-  }
-  .hero-section-container .hero-video.desktop-video {
-    display: none;
-  }
-  .hero-section-container .hero-section-desktop {
-    width: 100%;
-    padding: 100px;
-    display: grid;
-    grid-template-areas: "title video" "desc video" "btn video";
-  }
   .hero-section-desktop .hero-video.mobile-video {
     opacity: 1;
     z-index: auto;
@@ -5979,10 +5942,9 @@ a.btgs {
     line-height: 1.2;
     margin-top: 20px;
     font-size: 45px;
+    width: 280px;
   }
-  .hero-section-container > .navigate-next-btn {
-    left: 35%;
-  }
+
   /* services section media queries */
   .services-content {
     flex-direction: column;
@@ -6033,14 +5995,9 @@ a.btgs {
 }
 
 @media screen and (max-width: 800px) {
-  .hero-section-container .hero-section-desktop {
-    padding: 100px 50px;
-  }
-  .hero-section-container > .navigate-next-btn {
-    width: 50px;
-  }
   .hero-section-desktop .hero-title div {
     font-size: 40px;
+    width: 250px;
   }
   .hero-section-desktop .sw-shape-2 {
     width: 80%;
@@ -6048,18 +6005,10 @@ a.btgs {
   }
 }
 @media screen and (max-width: 750px) {
-  .hero-section-container .hero-section-desktop {
-    display: flex;
-  }
-  .hero-section-desktop .hero-video.mobile-video {
-    margin: 50px 0;
-  }
   .hero-section-desktop .hero-btn {
     margin: 15px auto 0;
   }
-  .hero-section-container > .navigate-next-btn {
-    left: 85%;
-  }
+
   .hero-section-desktop .sw-shape-1 {
     width: 60%;
     transform: rotateY(180deg) translate(-90%, -157%);
@@ -6143,5 +6092,88 @@ a.btgs {
     bottom: -15px;
   }
 }
+@media screen and (max-width: 1199px) {
+  .hero-section .hero-section-container {
+    min-height: 100vh;
+    max-height: 550px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-section .hero-section-container {
+    flex-direction: column;
+    max-height: unset;
+    min-height: 570px;
+    height: unset;
+    background: #275eeb;
+  }
+  .hero-section-container > div {
+    width: 100%;
+    padding-top: 100px;
+  }
+  .hero-section {
+    background: #275eeb;
+  }
+  .hero-section-desktop .hero-title {
+    width: 100%;
+  }
+  .hero-section-desktop .hero-title div,
+  .hero-section-desktop .hero-desc {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    margin: 0;
+  }
+  .hero-section-desktop .hero-desc {
+    font-size: 16px;
+    margin: 20px 0 30px;
+  }
+  .hero-section-desktop .hero-btn {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+  .hero-section-desktop .hero-btn a {
+    background: var(--white-color);
+    color: #275eeb;
+  }
+  .hero-section-desktop .hero-btn a::after {
+    display: none;
+  }
+  .hero-section-container > .hero-img-section {
+    background-size: 100% auto;
+    width: 90vw;
+    position: absolute;
+    left: 5vw;
+    top: 320px;
+    aspect-ratio: 1/0.3;
+    background-position: top;
+  }
+  .animation .brandlogo .dark,
+  .animation.sticky .brandlogo .light {
+    display: none;
+  }
+  .animation.sticky .brandlogo .dark,
+  .animation .brandlogo .light {
+    display: block;
+  }
+}
 
+@media (max-width: 768px) and (min-width: 521px) {
+  .hero-section-container > .hero-img-section {
+    background-image: url(../images/hero-section-mobile-img.png);
+  }
+}
+@media (max-width: 520px) {
+  .hero-section-container > .hero-img-section {
+    aspect-ratio: 1/1;
+    position: static;
+    margin: 50px 0;
+    width: 100%;
+  }
+  .hero-section .hero-section-container {
+    height: auto;
+    max-width: unset;
+  }
+}
 /* top section CSS by Salman ends*/

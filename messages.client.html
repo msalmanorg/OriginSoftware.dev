@@ -122,33 +122,6 @@
 
         <!-- Main content -->
         <div class="main-content-container">
-          <!-- header -->
-          <div class="category-header">
-            <p class="category-title"> Messages</p>
-            <div class="content-layout-change-btn">
-              <div class="layout-change-btn">
-                <label for="blocks-layout-change-btn">
-                  <input
-                    type="radio"
-                    name="layout-change-btn-input"
-                    id="blocks-layout-change-btn"
-                    checked />
-                  <i class="fa-regular fa-table-cells-large"></i>
-                </label>
-                <label for="fullwidth-layout-change-btn">
-                  <input
-                    type="radio"
-                    name="layout-change-btn-input"
-                    id="fullwidth-layout-change-btn" />
-                  <i class="fa-regular fa-bars"></i>
-                </label>
-              </div>
-              <a href="#" class="add-task-btn">
-                <i class="fa-regular fa-circle-plus"></i>
-                <span>Create Task</span>
-              </a>
-            </div>
-          </div>
           <!-- main -->
 
           <div class="category-content-container">
@@ -168,13 +141,29 @@
                         <img src="Resources/images/team/team-member-musa.png" />
                       </div>
                       <div class="icons">
-                        <a href="#">
+                        <a href="#" title="Voice Call">
                           <i class="fa-solid fa-phone"></i>
+                        </a>
+                        <a href="#" title="Video Call">
                           <i class="fa-solid fa-video"></i>
                         </a>
                       </div>
                     </div>
                     <div class="chat-all-messages">
+                      <div class="message outgoing">
+                        <img
+                          class="profile-img"
+                          src="Resources/images/team/team-member-ana.png" />
+                        <div class="msg">
+                          <p>Hello Frontend Developer 👋 </p>
+                        </div>
+                        <span>8:32pm</span>
+                      </div>
+                      <div class="date-divider">
+                        <hr />
+                        <span>10 Augest</span>
+                        <hr />
+                      </div>
                       <div class="message incoming">
                         <img
                           class="profile-img"
@@ -184,7 +173,72 @@
                         </div>
                         <span>8:32pm</span>
                       </div>
-                      <div class="message outgoining">
+                      <div class="message outgoing">
+                        <img
+                          class="profile-img"
+                          src="Resources/images/team/team-member-ana.png" />
+                        <div class="msg">
+                          <img
+                            src="Resources/images/dashboard/task-img-5.png" />
+                        </div>
+                        <span>8:32pm</span>
+                      </div>
+                      <div class="message incoming">
+                        <img
+                          class="profile-img"
+                          src="Resources/images/team/team-member-ana.png" />
+                        <div class="msg">
+                          <p> That's awesome image slider! </p>
+                        </div>
+                        <span>8:32pm</span>
+                      </div>
+                      <div class="message outgoing">
+                        <img
+                          class="profile-img"
+                          src="Resources/images/team/team-member-ana.png" />
+                        <div class="msg">
+                          <p> Good Night 😀</p>
+                        </div>
+                        <span>8:32pm</span>
+                      </div>
+                      <div class="date-divider">
+                        <hr />
+                        <span>11 Augest</span>
+                        <hr />
+                      </div>
+                      <div class="message incoming">
+                        <img
+                          class="profile-img"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAADAFBMVEUAAACPjXemn5MaHA2krq2HcVyGU0khJxUQDgZSWDavlXO6nJOkk3aYdGKxp5wrLRmrvMQ7SCmcn5K1vMG1rKGwubysqJthXUWso5isopp0eFY6Rh+hopR8clgODwUWFgkhKhOId2CyvL9CUS4TGAmsmo2FhXCbfVeZoZW3dXe7saoMCwe3tK+ZfVaskG+4cnetknI4RSJKOiAUFAgjKxMYGwpNWDEtORomLxc6RyQgJxBGUzM2QyYqNBZTXjdDTCg0Px4REgcfIw4bHgtZZkJSXz5jKx0iEwqxoZE5Qh4oFw5pcVQ/TCxEUiswNBYoKRMaEQfIdnFqd1VYLB4rMxwsGhMbIg6znH6xmHnJe3dxeV1fbkkUGAgMCgWzqJvNhoJmcUswOh89JRw7OhsrLxSqusHCpZyzopjMjIiUlX6CiXF9hWhERSYzPCMTDwSwuLrJn6CvnYusl4OLi3PDbGhKWzcyNxjNm5mpj292f2RcaEhaZjp0PzmGQi0wIAwcFwycpJ2mpJXDkJG1jIu9iIqrk3jFZGA5SCw7GhKlsrW2sKu5kJLMkZCdnIyuhYS1n4OKj3p0f1i1VVVRVztETi9uLiEmHg61v8K+k5SbmoTHlIKVjnied22Ad2CaXFFjZUOATkNdaz5cXT2gUzlQUjaQSTE7PyZOLSREPx9XIBdCHRQ7KRLFsKzMsarPqKHHmpeUnZaPmY28gIHLgHq3hnine3OrZGOAallkak1ibkOqOT2FPTqWNjeBSDZcXjNkNS53OCU2KiIyFw6eqajOnI/Qkou5oYqMloSlgH/HgX3CjXO+dnONgW+7a2iucGRvfGKKd2G8YF6beFVyZ0qrRkdqUUZmXDZ2NzCDNC1QTSpHNCgsJh9ELBxOIRfMtrGRp6q1p6WxraN3iHqJiWF+WFGyZEyUTUt5Yj6OUT1eUDFqQjBOQiw8NSp3KSeDIiW/v8SqpaG7mpB5kouHkICzaFhyeVOkY0mUWj9FPTgwLiWYhHmufWG5dl1ZbFaJbEZtVjVKvSmpAAAANHRSTlMAECCN/R/9H+Pb08OPcN/fz8+6pJqPin9fP+fn38fHv5+YZ19f7+/v39/Pz7+vn49gYGBAULrJ2AAAB91JREFUSMeF1mVcU1EYBvAp2N3d3XVj3eG6p2zDbWwCK4bMjUZCBAMUKUGlBATs7sLu7u7ubs+w+/mwfdj9/57z7sa5mN9To3Xzvg17mHNyGvZv0bo65r+p1rJ9pPPypLicHKs5bpo550rvlv9WbZrmzN53Ne5yinVUnDkl5dLl2CU7Y582+zuq3pSvVjutFot5mmWaMyXu0aVHKZadS7Z6Z/8NNegZZ+bPnL1aHxnhdFrUZov50cGDAF9yPHS07/on0WVmXFyKk4/kswh8s3OmOWWa7Kn5+UFN+KSH2RMd2S1+H7uJYF8AqGC5yAJNmsxqdTpT1BF8mV49bbEje4kje3Tjar8KhYBy6A3RkEQgRJit4RFpaeFq/j6+JjxcZomN3bk1e/Svps5GIYWLQ5OIOCTtahpBoJFpwq0yJlNjtWoOWmWLY70nAvOj8MIiG3HpLJerkCjU6yMRop7pYupZLAJLI5Px8+O8s2MXA/PDPN1RLLqRzGKS1+jXMO1JAiERIRI0ETKNQVDIXL06cmbsxFggRju+/W+1GilUaoprDRlHIAjtCoKMKHARXBqyIAknZFr5szWWJTsneo8evdXh/fX8dKZDUHopsbCQSEgiYPFJBAoWaycKI8lEIgtHRXERar5s8cWLE7c6HM2+lIghFaSwZZCL7BmlWAU2iYVgFaWnccI1eNQlYOKEhZZw9ZUnFy8u9nY42nwuYcAkFV5kRChYMjFdQFhTpLj36t6r2xsNEJRkl7mQyLRwGev9kyeLvSdubVpVQlJo8VoSDuK6TG4VZLCfFr8+u+X48agNdxQGIpZAIJOf69PU/J1XriyJXRJeDRAvOkxHVTCK11KFbixs31j2unjLtYD5i17kfYSIKA4SkPlpM/X7ApwHLfyn6laANII5eDcXVlG1NKoAxYpM4lez7yTMX3Bh0a2Xp1EiyUBByPpDiEbN5097H85vC9ZFn3euTGSCaGIaRLLfLSIbXt87s+Hx/PkXlhdEHylGqKoihMJk4SL1MrVFnbpqdQ3M0DKjyJhFEtNoEEqFjh+lGM6eBST1rf/j5Qdu3VTQ8TgKikQWgouHxVx9vIjQDePlS8sSmUQisZiLh3FY2KA4e1a5ecXxFZceXlhwq4ChgnBCKo5KQZAIMvPN0YiMVphOQZJxIpJbRddS3DQ8XUUUbNnCYSf4z/f3X7gw744dKoWoKBUlIeTnsyOKilnpTTC1YyQMiKuFTfPOiRl4BowV3zujPL9i/gX/3O3bar4sQ8lkChUXSUHX5F/VR6QX59fBBPE4MWKIzrDNk8fQoRgJTbxlrp+8YHnu8uXbFtQsOUEVFlIRLhWCKEKkGFxA+rYYcRZnnsQXptvosEgEx5hEpX6AnDuwJ9d/wYJN0R+oQkQopJi4+Nn7UFZGuoGVj+EyYuZJgmgM9ziJWwQzxO67gGzhZL44sDy3gF1yhEo1GG0UEq5ox6EMJsJiIhmYdhDHYyRcLh6PdYskkjN+cyuUks3X3+3Zw2ZHv7XR8aKbRpU9bFZ+UgYzHxEAwuVSssbBdJKWxDXNywqS+J3blFnhu06au23PZvbmF7fFWvQ0F4JX2SDbaRKF7KqD6QhDNhyEx5O4VG4ML4bD8zsXlVnOWb9/d+6e6FOZJe/yVlFw4HwRiWTk6glBpKADxivI16gIMpFIbq4xSCIBLXM3RMt598dKpdIJp9jR1/fOCLApaHgsVUg2UgilkBdmCMpA0SAaFs9AYyRwUNCZufINJZWc+9JAHSCZJXPGjl+wikbDGghYu+dWtHfD1EK1eBKdpoXdeBP49ru2SV6ygcNhS6eETtFFsaPnXI8PTRgHQyoCiYE1EFnMGhhMbZpKq6XRGCYGiUQ1XksAh8k5vOS80EWL4qPkm+fMORC6cNXRdFupray4mJBex3OLgYN9VQosCU+n0+/OSo1ib67g8ZTrpgQHx2+Se2q2LxzlSUDITKc1pz4g1RgwBEN0CHwwsq6tmBzFZlcqecqTgcHB4zfJk9kv5yxbuGNMwKjLk6pS9VjqBDO0kNhkvG0sM65KWHqjXM5T8rLkPoCcrEyuYEc/W7gjMSwsMSQkZHhAc4wnw8TaMpHxhO0o9sSJWQfGryyXc5TKrORnwcFLT3J4nGR2Sa7/8KqMGTMGDO/JgI9HbuNv3hQdPTRyVur4lWw5B9T4rVu0aOmN5Irk8yfnbAMkIMAzT/OvW3CvIx/uhoVtPDR1x67JM5ayy8H0yorM3cHxe2+sP6YLlW7zHwM6gGlY/duWB1Y6csSIEYAkxC89eV4JyPnM/aGhoVN2L9seOmG7/5gqE9Aa8y31w0aOHDEVBLSMj0rm8CqTT03QBYLodLrdEwL9Q0I8qCXmh9QFBLRUkYKKysry9RN8fHyW+fiAK20tIIkeU+/nja8uICAekld+vnz99MNjqyLdf2rtBF0wICH1qmF+NZ6iFQkz4peuu/9g/drph6dPPyz10e29D0hoWGJih1+EZ56RICtSJ8+YsvLB2mPHpo8FC9MFbn+WuX762MAjs+pj/pDBdRMTZ6VOjq8iYGFSHylAefJ1+wMDa7b6ywvJwLAvBIj9e8H8u3XLbt1ZOT64Xo2/v8V0SU2In1LTl+O3KWpdQc2aBVFz/fIS6rXB/Cs1BvXZe8MXhEYb54lvowbfx/57VQOvjrUBGle7n1f3Wr///gm0+n8EKiUzfwAAAABJRU5ErkJggg==" />
+                        <div class="msg">
+                          <p> This is a one line message. </p>
+                        </div>
+                        <span>8:32pm</span>
+                      </div>
+                      <div class="message incoming">
+                        <img
+                          class="profile-img"
+                          src="data:image/png;base64,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" />
+                        <div class="msg">
+                          <p>
+                            This is a multiple line message breaking the text
+                            into multiple lines. This is a message which is
+                            coming to a team member.
+                          </p>
+                        </div>
+                        <span>8:32pm</span>
+                      </div>
+                      <div class="message incoming">
+                        <img
+                          class="profile-img"
+                          src="Resources/images/team/team-member-ana.png" />
+                        <div class="msg">
+                          <img
+                            src="Resources/images/dashboard/task-img-8.png" />
+                        </div>
+                        <span>8:32pm</span>
+                      </div>
+                      <div class="message outgoing">
                         <img
                           class="profile-img"
                           src="Resources/images/team/team-member-ana.png" />
@@ -195,9 +249,12 @@
                       </div>
                     </div>
                     <div class="send-message-input-container">
-                      <div class="media-icon">
-                        <i class="fa-light fa-paperclip"></i>
-                      </div>
+                      <a class="media-icon">
+                        <label
+                          class="fa-light fa-paperclip"
+                          for="message-file-uploader"></label>
+                        <input type="file" id="message-file-uploader" />
+                      </a>
                       <div class="input-btn">
                         <input type="text" />
                         <button>
@@ -207,7 +264,7 @@
                         </button>
                       </div>
                       <div class="voice-icon">
-                        <i class="fa-light fa-microphone"></i>
+                        <i class="fa-solid fa-microphone"></i>
                       </div>
                     </div>
                   </div>
