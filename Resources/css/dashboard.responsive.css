@@ -15,7 +15,7 @@
     grid-template-columns: repeat(2, calc(50% - 10px));
     grid-area: projects;
     row-gap: 20px;
-    aspect-ratio: 1/1;
+    /* aspect-ratio: 1/1; */
   }
   .projects-messsages-timeline-container .messages-holder-container {
     grid-area: messages;
@@ -53,8 +53,14 @@
     row-gap: 20px;
     /* aspect-ratio: 1/1; */
   }
+  .projects-messsages-timeline-container
+    .messages-holder-container
+    .chat-messages-container
+    .chat-all-messages {
+    max-height: 100vh;
+  }
   .projects-messsages-timeline-container {
-    grid-template-columns: minmax(0, max-content) auto;
+    grid-template-columns: 200px auto;
   }
 }
 
@@ -398,6 +404,13 @@
   }
   .category-content-container .tickets-container {
     padding: 20px;
+  }
+  .projects-messsages-timeline-container .projects-timeline-container {
+    height: 300px;
+  }
+  .chat-messages-container {
+    min-width: unset;
+    width: 100%;
   }
 }
 

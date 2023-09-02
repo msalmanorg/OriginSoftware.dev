@@ -1312,8 +1312,8 @@ ul.popup-tab-navigation > label:hover {
 /* Dashboard Page Styles Ended here */
 .projects-messsages-timeline-container {
   display: grid;
-  grid-template-columns: 70% auto;
-  grid-template-rows: auto 300px;
+  grid-template-columns: 65% auto;
+  grid-template-rows: 200px auto;
   gap: 20px;
   grid-template-areas: "projects messages" "timeline messages";
 }
@@ -1335,7 +1335,7 @@ ul.popup-tab-navigation > label:hover {
   flex-direction: column;
   justify-content: center;
   padding: 0px 0 0 15%;
-  aspect-ratio: 1/1.1;
+  /* aspect-ratio: 1/1.1; */
 }
 .all-projects-container .related-project i {
   width: 45px;
@@ -2035,23 +2035,23 @@ ul.popup-tab-navigation > label:hover {
 }
 /*  */
 .main-content-container:has(
-    .category-content-container .chanting-page-container
+    .category-content-container .chating-page-container
   ) {
   display: grid;
   padding: 0;
   grid-auto-rows: auto;
 }
-.category-content-container:has(.chanting-page-container) {
+.category-content-container:has(.chating-page-container) {
   margin: 0;
 }
-.chanting-page-container {
+.chating-page-container {
   display: grid;
   background: white;
   border-top-left-radius: 10px;
   padding-left: 20px;
   display: flex;
 }
-.chanting-page-container .team-developers-container {
+.chating-page-container .team-developers-container {
   width: 40%;
   background: linear-gradient(
     45deg,
@@ -2066,7 +2066,7 @@ ul.popup-tab-navigation > label:hover {
   justify-content: center;
   border-top-left-radius: 10px;
 }
-.chanting-page-container .chating-container {
+.chating-page-container .chating-container {
   width: 60%;
   background-color: pink;
   display: grid;
@@ -2188,10 +2188,26 @@ ul.popup-tab-navigation > label:hover {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  overflow-y: scroll;
+}
+.projects-messsages-timeline-container
+  .messages-holder-container
+  .chat-messages-container
+  .chat-all-messages {
+  min-height: max-content;
+  max-height: 80vh;
+}
+.projects-messsages-timeline-container
+  .messages-holder-container
+  .messages-holder {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #80808057;
+}
+.chating-page-container .chat-messages-container .chat-all-messages {
   height: calc(100vh - 188px);
   min-height: calc(100vh - 188px);
   max-height: calc(100vh - 188px);
-  overflow-y: scroll;
 }
 
 .chat-all-messages .message {
