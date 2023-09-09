@@ -122,17 +122,17 @@
   <body>
     <!-- preloader code -->
     <!-- <div class="preloader">
-      <div class="preloader_inner">0%</div>
-      <div class="loaderlogo">
-        <img
-          src="Resources/images/logos/logo-white.svg"
-          alt="logo"
-          style="height: 100px" />
-      </div>
-    </div> -->
+          <div class="preloader_inner">0%</div>
+          <div class="loaderlogo">
+            <img
+              src="Resources/images/logos/logo-white.svg"
+              alt="logo"
+              style="height: 100px" />
+          </div>
+        </div> -->
     <!-- preloader code -->
     <!--Start header -->
-    <header class="header animation">
+    <header class="header animation sticky">
       <div class="container">
         <div class="wrapper">
           <!-- header logo -->
@@ -150,7 +150,10 @@
           </div>
           <!-- header nav -->
           <div class="header-item-center">
-            <div class="overlay"></div>
+            <div class="overlay"><a href="#">Home</a></div>
+            <div class="overlay"><a href="#">About</a></div>
+            <div class="overlay"><a href="#">Contact</a></div>
+            <div class="overlay"><a href="#">Gallery</a></div>
             <nav class="menu animation" id="menu">
               <div class="menu-mobile-header">
                 <button type="button" class="menu-mobile-arrow"
@@ -161,7 +164,12 @@
                   ><i class="fa-solid fa-xmark"></i
                 ></button>
               </div>
-              <ul class="menu-section"> </ul>
+              <ul class="menu-section">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Gallery</a></li>
+              </ul>
             </nav>
           </div>
           <!-- header action -->
@@ -962,19 +970,20 @@
       $(document).ready(function () {
         $(".owl-carousel").owlCarousel({
           loop: true,
+          rtl: true,
           margin: 20,
           nav: true,
           autoplay: true,
-          autoplayTimeout: 3000,
+          autoplayTimeout: 300000,
           autoplayHoverPause: true,
           center: true,
           navText: [
-            `<span class="portfolio-splider-btn prev">
-            <i class="fa-regular fa-chevron-left"></i>
-          </span>`,
             `<span class="portfolio-splider-btn next">
-            <i class="fa-regular fa-chevron-right"></i>
-          </span>`,
+                <i class="fa-regular fa-chevron-right"></i>
+              </span>`,
+            `<span class="portfolio-splider-btn prev">
+                <i class="fa-regular fa-chevron-left"></i>
+              </span>`,
           ],
 
           responsive: {
@@ -996,11 +1005,12 @@
           },
         });
       });
-
-      window.onload = () => {
+      setTimeout(() => {
         let activeItem = document.querySelector(
-          ".owl-carousel  .owl-item.active.center"
+          ".owl-stage  .owl-item.active.center "
         );
+
+        console.log(activeItem);
 
         const observer = new MutationObserver((mutationsList, observer) => {
           for (let mutation of mutationsList) {
@@ -1008,10 +1018,8 @@
               mutation.type === "attributes" &&
               mutation.attributeName === "class"
             ) {
-              console.log("active item" + activeItem);
-
               activeItem = document.querySelector(
-                ".owl-carousel  .owl-item.active.center"
+                ".owl-stage  .owl-item.active.center"
               );
 
               document.querySelectorAll(".owl-item").forEach((item) => {
@@ -1030,10 +1038,9 @@
             }
           }
         });
-
         observer.observe(activeItem, { attributes: true });
         document.querySelector(".portfolio-splider-btn.next").click();
-      };
+      }, 1000);
     </script>
 
     <!-- Extnal JS link for onscroll animation -->

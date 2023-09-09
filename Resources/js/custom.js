@@ -12,9 +12,9 @@
   //Sticky Header
   function updateScroll() {
     if ($(window).scrollTop() >= 80) {
-      $(".header").addClass("sticky");
+//      $(".header").addClass("sticky");
     } else {
-      $(".header").removeClass("sticky");
+//      $(".header").removeClass("sticky");
     }
   }
   $(function () {
