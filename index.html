@@ -40,84 +40,6 @@
 
     <!-- Extnal CSS link for onscroll animation -->
     <link href="Resources/css/aos.min.css" rel="stylesheet" />
-
-    <style>
-      .container-SiteBanner {
-        position: relative;
-        text-align: center;
-        color: white;
-      }
-
-      /* Centered text */
-      .centered-bannerText {
-        font-size: calc(12px + 1.5vw);
-
-        color: #ffed38;
-      }
-
-      .bannerTextDiv {
-        position: absolute;
-        top: 40%;
-        left: 0%;
-        background-color: rgba(0, 0, 0, 0.4);
-        width: 100%;
-        height: auto;
-      }
-
-      .bannerText {
-        color: white;
-        font-size: 20px;
-        font-family: "Nova Flat";
-        font-style: italic;
-      }
-
-      .glowChurch {
-        font-family: "Poiret One";
-
-        font-weight: 600;
-        color: white;
-      }
-
-      .glowBakery {
-        font-family: "Lucida Handwriting";
-        color: #fff;
-        animation: glowBakery 1s ease-in-out infinite alternate;
-      }
-
-      @-webkit-keyframes glowBakery {
-        from {
-          text-shadow: 0 0 5px black, 0 0 15px black, 0 0 25px #f250ff,
-            0 0 35px #f250ff, 0 0 45px #f250ff, 0 0 55px #f250ff,
-            0 0 65px #f250ff;
-        }
-
-        to {
-          text-shadow: 0 0 15px black, 0 0 25px black, 0 0 35px #f3a4f9,
-            0 0 45px #f3a4f9, 0 0 55px #f3a4f9, 0 0 65px #f3a4f9,
-            0 0 75px #f3a4f9;
-        }
-      }
-
-      .glowRealEstate {
-        font-family: "Times New Roman";
-        color: #fff;
-        animation: glowRealEstate 1s ease-in-out infinite alternate;
-      }
-
-      @-webkit-keyframes glowRealEstate {
-        from {
-          text-shadow: 0 0 5px black, 0 0 15px black, 0 0 25px #8c1f09,
-            0 0 35px #8c1f09, 0 0 45px #8c1f09, 0 0 55px #8c1f09,
-            0 0 65px #8c1f09;
-        }
-
-        to {
-          text-shadow: 0 0 15px black, 0 0 25px black, 0 0 35px #4f1306,
-            0 0 45px #4f1306, 0 0 55px #4f1306, 0 0 65px #4f1306,
-            0 0 75px #4f1306;
-        }
-      }
-    </style>
   </head>
   <body>
     <!-- preloader code -->
@@ -131,145 +53,163 @@
           </div>
         </div> -->
     <!-- preloader code -->
+
     <!--Start header -->
-    <header class="header animation sticky">
-      <div class="container">
-        <div class="wrapper">
-          <!-- header logo -->
-          <div class="header-item-left">
-            <a href="index.html" class="brandlogo">
-              <img
-                src="Resources/images/logos/logo-white.svg"
-                alt="logo"
-                class="light" />
-              <img
-                src="Resources/images/logos/logo-black.svg"
-                alt="logo"
-                class="dark" />
-            </a>
-          </div>
-          <!-- header nav -->
-          <div class="header-item-center">
-            <div class="overlay"><a href="#">Home</a></div>
-            <div class="overlay"><a href="#">About</a></div>
-            <div class="overlay"><a href="#">Contact</a></div>
-            <div class="overlay"><a href="#">Gallery</a></div>
-            <nav class="menu animation" id="menu">
-              <div class="menu-mobile-header">
-                <button type="button" class="menu-mobile-arrow"
-                  ><i class="fa-solid fa-angle-left"></i
-                ></button>
-                <div class="menu-mobile-title"></div>
-                <button type="button" class="menu-mobile-close"
-                  ><i class="fa-solid fa-xmark"></i
-                ></button>
+    <div class="header-container">
+      <header>
+        <div class="nav-res-toggle-btn">
+          <label for="nav-res-toggle-input">
+            <input type="checkbox" id="nav-res-toggle-input" />
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        <a href="/" class="logo">
+          <img src="Resources/images/logos/logo-black.svg" />
+        </a>
+        <div class="navbar-container">
+          <ul class="header-navbar">
+            <li>
+              <a href="#">Pricing</a>
+            </li>
+            <li class="nav-link-dropdown" tabindex="0">
+              <div class="nav-dropdown-a">
+                <a href="#">
+                  <span>About Us</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </a>
               </div>
-              <ul class="menu-section">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Gallery</a></li>
-              </ul>
-            </nav>
+              <div class="nav-dropdown">
+                <ul>
+                  <li>
+                    <a href="#">Dropdown Item</a>
+                  </li>
+                  <li>
+                    <a href="#">Dropdown Item</a>
+                  </li>
+                  <li>
+                    <a href="#">Dropdown Item</a>
+                  </li>
+                  <li>
+                    <a href="#">Dropdown Item</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-link-dropdown" tabindex="0">
+              <div class="nav-dropdown-a">
+                <a href="#">
+                  <span>Services</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </a>
+              </div>
+              <div class="nav-dropdown">
+                <ul>
+                  <li>
+                    <a href="#">Dropdown Item</a>
+                  </li>
+                  <li>
+                    <a href="#">Dropdown Item</a>
+                  </li>
+                  <li>
+                    <a href="#">Dropdown Item</a>
+                  </li>
+                  <li>
+                    <a href="#">Dropdown Item</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-link-dropdown" tabindex="0">
+              <div class="nav-dropdown-a">
+                <a href="#">
+                  <span>Portfolio</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </a>
+              </div>
+              <div class="nav-dropdown">
+                <ul>
+                  <li>
+                    <a href="#">Dropdown Item</a>
+                  </li>
+                  <li>
+                    <a href="#">Dropdown Item</a>
+                  </li>
+                  <li>
+                    <a href="#">Dropdown Item</a>
+                  </li>
+                  <li>
+                    <a href="#">Dropdown Item</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-link-dropdown" tabindex="0">
+              <div class="nav-dropdown-a">
+                <a href="#">
+                  <span>Blogs</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </a>
+              </div>
+              <div class="nav-dropdown">
+                <ul>
+                  <li>
+                    <a href="#">Dropdown Item</a>
+                  </li>
+                  <li>
+                    <a href="#">Dropdown Item</a>
+                  </li>
+                  <li>
+                    <a href="#">Dropdown Item</a>
+                  </li>
+                  <li>
+                    <a href="#">Dropdown Item</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-link-dropdown" tabindex="0">
+              <div class="nav-dropdown-a">
+                <a href="#">
+                  <span>Contact Us</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </a>
+              </div>
+              <div class="nav-dropdown">
+                <ul>
+                  <li>
+                    <a href="#">Dropdown Item</a>
+                  </li>
+                  <li>
+                    <a href="#">Dropdown Item</a>
+                  </li>
+                  <li>
+                    <a href="#">Dropdown Item</a>
+                  </li>
+                  <li>
+                    <a href="#">Dropdown Item</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <div class="header-buttons">
+            <a href="#">Login</a>
+            <a href="#">Signup</a>
           </div>
-          <!-- header action -->
-          <div class="header-item-right headeraction">
-            <ul>
-              <li
-                ><a
-                  href="#"
-                  data-bs-toggle="offcanvas"
-                  data-bs-target="#offcanvasRight"
-                  aria-controls="offcanvasRight"
-                  class="menu-icon"
-                  ><i class="fa-solid fa-phone"></i
-                ></a>
-              </li>
-              <li
-                ><a
-                  href="#contact-origin"
-                  class="sw-btn sw-orange-btn header-btn"
-                  >Get Started <i class="fa-solid fa-arrow-trend-up"></i></a
-              ></li>
-              <li
-                ><button type="button" class="menu-mobile-toggle">
-                  <span></span> <span></span> <span></span> <span></span>
-                </button>
-              </li>
-            </ul>
-          </div>
+          <!-- <a href="#" class="header-profile">
+            <img
+              src="https://www.upwork.com/profile-portraits/c11wLgFUvCy9910z-SzI8tZPWQGa_mbRu8ICnfR8WHQuUecrljeVJCC2pwbXx78KW_"
+              class="profile-img" />
+            <span>Saimer Nieves</span>
+          </a> -->
         </div>
-      </div>
-    </header>
-    <!--End header -->
-    <!-- sidebar menu -->
-    <div
-      class="offcanvas offcanvas-end sidebar-offcanvas"
-      tabindex="-1"
-      id="offcanvasRight">
-      <div class="offcanvas-header">
-        <div class="sidebarlogooff">
-          <img
-            src="Resources/images/logo-white.svg"
-            alt="logo"
-            class="sidewhitelogo" />
-          <img
-            src="Resources/images/logos/logo-black.svg"
-            alt="logo"
-            class="sidedarklogo" />
-        </div>
-        <div class="cbtn">
-          <div class="btnclose">
-            <button
-              type="button"
-              class="btn-close text-reset"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"></button
-          ></div>
-        </div>
-      </div>
-      <div class="offcanvas-body">
-        <div class="sidebarbody">
-          <h4 class="mb10">Get In Touch</h4>
-          <!-- <p>Please fill out the form below if you have a plan or project in mind that you'd like to share with us.</p> -->
-          <div class="sidebarcontactblock mt50">
-            <div class="contactnumberdiv mt30">
-              <p class="mb5 linktitle">Send Us an Email:</p>
-              <a href="mailto:Origin@originsoftware.dev"
-                ><i class="fa-solid fa-envelope mr10"></i>
-                origin@originSoftware.dev</a
-              >
-            </div>
-            <div class="social-link-sw mt30">
-              <span class="linktitle">Follow Us</span>
-              <ul class="footer-social-sw mt10 sw-hover-2">
-                <li
-                  ><a href="#"
-                    ><i class="fab fa-twitter" aria-hidden="true"></i></a
-                ></li>
-                <!-- <li> <a href="#" ><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li> -->
-                <li
-                  ><a href="#"
-                    ><i class="fab fa-youtube" aria-hidden="true"></i></a
-                ></li>
-                <!-- <li><a href="#" ><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li> -->
-                <li>
-                  <a href="#"
-                    ><i class="fab fa-instagram" aria-hidden="true"></i
-                  ></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+      </header>
     </div>
-    <!-- sidebar menu -->
+    <!--End header -->
 
-    <!--Salman Muhammad - COMPLETE THIS SECTION BELOW ACCORDING TO THE GOOGLE DRIVE DESIGN YOU CAN REMOVE THE SECTION BELOW BUT LEAVE THE REST-->
-    <!--Feel free to reuse the font and text and button icons as is below to adjust and meet the design-->
-    <!--Drive Informatino for this section: https://drive.google.com/drive/folders/1sKfPJtwsOb-GDlTfJGIQPDhBpQU2r1Qa?usp=share_link-->
-
+    <!-- Hero section -->
     <section class="hero-section" id="hero_section">
       <div class="hero-section-container container">
         <div class="hero-section-desktop" data-aos="fade-right">
@@ -433,12 +373,10 @@
       <div class="portfolio-container">
         <img
           src="Resources/images/shapes/horizontal-+-signs.png"
-          class="portfolio-bg-img-1"
-          alt="" />
+          class="portfolio-bg-img-1" />
         <img
           src="Resources/images/shapes/multi-triangle-bg-img.png"
-          class="portfolio-bg-img-2"
-          alt="" />
+          class="portfolio-bg-img-2" />
         <div
           class="portfolio-header"
           data-aos="flip-up"
@@ -457,31 +395,31 @@
           data-aos-duration="700">
           <div class="owl-carousel">
             <div class="slider-card">
-              <img src="Resources/images/portfolio-img-1.png" alt="" />
+              <img src="Resources/images/portfolio-img-1.png" />
               <a href="#" title="Click to see more">
                 <span>BEAUTY</span>
               </a>
             </div>
             <div class="slider-card">
-              <img src="Resources/images/portfolio-img-2.png" alt="" />
+              <img src="Resources/images/portfolio-img-2.png" />
               <a href="#" title="Click to see more">
                 <span>DIGITAL AGENCY</span>
               </a>
             </div>
             <div class="slider-card">
-              <img src="Resources/images/portfolio-img-3.png" alt="" />
+              <img src="Resources/images/portfolio-img-3.png" />
               <a href="#" title="Click to see more">
                 <span>TRAVEL</span>
               </a>
             </div>
             <div class="slider-card">
-              <img src="Resources/images/portfolio-img-4.png" alt="" />
+              <img src="Resources/images/portfolio-img-4.png" />
               <a href="#" title="Click to see more">
                 <span>FAST FOOD</span>
               </a>
             </div>
             <div class="slider-card">
-              <img src="Resources/images/portfolio-img-5.png" alt="" />
+              <img src="Resources/images/portfolio-img-5.png" />
               <a href="#" title="Click to see more">
                 <span>RAEL ESTATE</span>
               </a>
@@ -620,13 +558,13 @@
             href="#"
             title="click to see more about it"
             class="feature-project">
-            <img src="Resources/images/featured-project-1.png" alt="" />
+            <img src="Resources/images/featured-project-1.png" />
           </a>
           <a
             href="#"
             title="click to see more about it"
             class="feature-project">
-            <img src="Resources/images/featured-project-2.png" alt="" />
+            <img src="Resources/images/featured-project-2.png" />
           </a>
         </div>
       </div>
@@ -652,16 +590,16 @@
               <div class="card-wrapper swiper-wrapper">
                 <!-- items -->
                 <a href="#" class="swiper-slide">
-                  <img src="Resources/images/blog-img-1.png" alt="" />
+                  <img src="Resources/images/blog-img-1.png" />
                 </a>
                 <a href="#" class="swiper-slide">
-                  <img src="Resources/images/blog-img-2.png" alt="" />
+                  <img src="Resources/images/blog-img-2.png" />
                 </a>
                 <a href="#" class="swiper-slide">
-                  <img src="Resources/images/blog-img-3.png" alt="" />
+                  <img src="Resources/images/blog-img-3.png" />
                 </a>
                 <a href="#" class="swiper-slide">
-                  <img src="Resources/images/blog-img-2.png" alt="" />
+                  <img src="Resources/images/blog-img-2.png" />
                 </a>
               </div>
             </div>
@@ -974,7 +912,7 @@
           margin: 20,
           nav: true,
           autoplay: true,
-          autoplayTimeout: 300000,
+          autoplayTimeout: 2000,
           autoplayHoverPause: true,
           center: true,
           navText: [
