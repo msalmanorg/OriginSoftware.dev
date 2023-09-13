@@ -5772,6 +5772,9 @@ a.btgs {
     position: static;
     width: 100%;
   }
+  .header-navbar .nav-link-dropdown:focus .nav-dropdown {
+    display: block;
+  }
 }
 
 @media (max-width: 1000px) and (min-width: 501px) {
