@@ -5819,7 +5819,7 @@ a.btgs {
     max-height: calc(100vh - 77px);
     overflow: scroll;
 
-    justify-content: stretch;
+    justify-content: start;
     align-items: stretch;
     padding: 10px;
   }
