@@ -97,6 +97,9 @@
   .chating-page-container .chating-container {
     grid-template-columns: 290px auto;
   }
+  .chating-container .message-members-container {
+    border-top-left-radius: 8px;
+  }
   .responsive-message-toggle-btns {
     display: flex;
     column-gap: 10px;
@@ -305,6 +308,9 @@
   .navigation-sidebar-container {
     max-height: calc(100vh - 125px);
     min-height: calc(100vh - 125px);
+  }
+  .chating-container .message-members-container {
+    border-top-left-radius: 0px;
   }
 }
 

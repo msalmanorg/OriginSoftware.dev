@@ -93,7 +93,6 @@ header
 }
 
 .header-right-content {
-  /* background-color: pink; */
   display: flex;
 }
 
@@ -2159,7 +2158,6 @@ ul.popup-tab-navigation > label:hover {
 }
 .chating-page-container .chating-container {
   width: 60%;
-  background-color: pink;
   display: grid;
   grid-template-columns: 300px auto;
 }
