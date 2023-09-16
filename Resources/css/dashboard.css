@@ -75,7 +75,7 @@ header > .responsive-hamburger-btn::before {
   inset: 0;
   background-color: #2261ff19;
   display: none;
-  z-index: 5;
+  z-index: 8;
 }
 header
   > .responsive-hamburger-btn.responsive-hamburger-btn:has(
@@ -2051,6 +2051,7 @@ ul.popup-tab-navigation > label:hover {
   border-left: 1px solid #d3d3d3;
   border-top: 1px solid #d3d3d3;
   display: flex;
+  background: #f6f6f6;
 }
 .chating-page-container .team-developers-container {
   width: 40%;
@@ -2064,12 +2065,28 @@ ul.popup-tab-navigation > label:hover {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
+}
+.responsive-developer-team-toggle-label,
+.responsive-developer-team-toggle-open-btn,
+.responsive-message-toggle-btns,
+.responsive-prev-chat-toggle-open-btn,
+.responsive-prev-chat-toggle-close-btn {
+  display: none;
+}
+.chating-page-container .team-developers-container::before {
+  content: "";
+  background-color: #ffffff53;
+  position: absolute;
+  inset: 0;
 }
 .team-developers-container .team-developers {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 20px;
+  row-gap: 30px;
+  z-index: 3;
+  padding: 30px;
 }
 .team-developers-container .team-developers > a {
   font-size: 14px;
@@ -2086,7 +2103,9 @@ ul.popup-tab-navigation > label:hover {
   width: 400px;
   aspect-ratio: 1/1;
   background-color: #ffffff;
+  box-shadow: 2px 2px 8px #3d3d3d3d;
   border-radius: 50%;
+  cursor: pointer;
   position: relative;
 }
 .team-developers-circle-container ul {
@@ -2097,7 +2116,7 @@ ul.popup-tab-navigation > label:hover {
 .team-developers-circle-container ul li {
   border-radius: inherit;
   position: absolute;
-  inset: 30px;
+  inset: 34px;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -2117,7 +2136,7 @@ ul.popup-tab-navigation > label:hover {
 }
 .team-developers-circle-container ul li div span {
   position: absolute;
-  top: 60px;
+  top: 52px;
   color: black;
   font-weight: 500;
   font-size: 12px;
@@ -2129,15 +2148,19 @@ ul.popup-tab-navigation > label:hover {
   justify-content: center;
   flex-direction: column;
   position: absolute;
-  inset: 50px;
+  inset: 55px;
   border-radius: inherit;
   border: 1px dashed rgba(58, 58, 58, 0.231);
+  font-size: 16px;
+  font-weight: 600;
+}
+.team-developers-circle-container .more-info p {
+  color: var(--blue-color);
 }
 .chating-page-container .chating-container {
   width: 60%;
   background-color: pink;
   display: grid;
-  border-radius: 0px 10px 10px 0px;
   grid-template-columns: 300px auto;
 }
 .chating-container .message-members-container {
@@ -2369,6 +2392,7 @@ ul.popup-tab-navigation > label:hover {
 .prev-chat-header .team-info {
   display: flex;
   align-items: center;
+  column-gap: 10px;
 }
 .prev-chat-header .team-info .imgs {
   display: flex;
@@ -2384,7 +2408,6 @@ ul.popup-tab-navigation > label:hover {
 }
 .prev-chat-header .team-info span {
   font-weight: 500;
-  margin-left: 10px;
 }
 .message-members-container .chat-members {
   overflow-y: scroll;

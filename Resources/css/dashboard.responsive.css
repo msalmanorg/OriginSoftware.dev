@@ -6,7 +6,14 @@
     /* grid-template-columns: 250px auto; */
   }
 }
-
+@media (max-width: 1350px) and (min-width: 1281px) {
+  .team-developers .team-developers-circle-container {
+    width: 350px;
+  }
+  .chating-page-container .team-developers-container {
+    width: 39.1%;
+  }
+}
 @media (max-width: 1300px) {
   .projects-messsages-timeline-container {
     grid-template-columns: auto 500px;
@@ -25,6 +32,74 @@
   }
   .projects-messsages-timeline-container .projects-timeline-container {
     grid-area: chart;
+  }
+}
+@media (max-width: 1280px) {
+  .chating-page-container .team-developers-container::before {
+    inset: 0;
+    height: calc(100vh - 80px);
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+  .chating-page-container {
+    position: relative;
+  }
+  .chating-page-container .team-developers-container {
+    position: absolute;
+    width: 100%;
+    max-height: calc(100vh - 80px);
+    inset: 0;
+    overflow-y: scroll;
+    z-index: 5;
+    transform: scale(0);
+    /* left: -100vw; */
+    transition: all 0.3s ease;
+  }
+  .chating-page-container
+    .team-developers-container:has(
+      input#responsive-developer-team-toggle:checked
+    ) {
+    transform: scale(1);
+    /* left: 0; */
+  }
+  .team-developers-container .team-developers {
+    position: absolute;
+    top: 0;
+  }
+  .responsive-developer-team-toggle-label input {
+    display: none;
+  }
+  .responsive-developer-team-toggle-label {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 24px;
+    display: block;
+    z-index: 5;
+  }
+  .responsive-developer-team-toggle-open-btn {
+    display: flex;
+  }
+  .responsive-developer-team-toggle-open-btn,
+  .responsive-prev-chat-toggle-open-btn {
+    width: 35px;
+    aspect-ratio: 1/1;
+    border: 1px solid grey;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+  .chating-page-container .chating-container {
+    width: 100%;
+  }
+  .chating-page-container .chating-container {
+    grid-template-columns: 290px auto;
+  }
+  .responsive-message-toggle-btns {
+    display: flex;
+    column-gap: 10px;
   }
 }
 
@@ -340,6 +415,41 @@
   }
 }
 
+@media (max-width: 650px) {
+  .responsive-prev-chat-toggle-open-btn {
+    display: flex;
+  }
+  .responsive-prev-chat-toggle-close-btn {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 18px;
+    display: flex;
+  }
+  .responsive-prev-chat-toggle-close-btn input {
+    display: none;
+  }
+  .chating-container .message-members-container {
+    position: absolute;
+    width: 100%;
+    z-index: 6;
+    transition: all 0.3s ease;
+    /* left: -100vw; */
+    transform: scale(0);
+  }
+  .chating-page-container .chating-container {
+    grid-template-columns: 100%;
+  }
+  .message-members-container:has(input#responsive-prev-chat-toggle:checked) {
+    /* left: 0; */
+    transform: scale(1);
+  }
+  .all-prev-chats-container .prev-chat-header > i {
+    position: absolute;
+    z-index: 4;
+    right: 60px;
+  }
+}
 @media (max-width: 625px) {
   .chat-projects-todos {
     display: flex;
@@ -438,6 +548,29 @@
     margin-right: 3px;
   }
   .billing-details .billing-pricings p {
+    font-size: 10px;
+  }
+  .team-developers-container .team-developers {
+    padding: 30px 10px;
+    max-width: 300px;
+    overflow: hidden;
+
+    top: 10vh;
+  }
+  .team-developers .team-developers-circle-container {
+    width: 290px;
+  }
+  .team-developers-circle-container ul li {
+    inset: 24px;
+  }
+  .team-developers-circle-container ul li div img {
+    width: 40px;
+  }
+  .team-developers-circle-container .more-info {
+    inset: 45px;
+  }
+  .team-developers-circle-container ul li div span {
+    top: 42px;
     font-size: 10px;
   }
 }
