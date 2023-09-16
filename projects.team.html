@@ -321,8 +321,8 @@
               </div>
               <div class="projects-timeline-container">
                 <div class="project-page-heading"> Project Timeline </div>
-                <div class="timeline-chart">
-                  Timeline Chart will be added !
+                <div class="timeline-chart" id="timeline-chart">
+                  <div class="grid-container"></div>
                 </div>
               </div>
             </div>
@@ -330,5 +330,60 @@
         </div>
       </main>
     </section>
+    <script type="application/json" id="timeline-chart-content-data">
+      {
+        "contentData": [
+          {
+            "date": "2023-09-03",
+            "content": "Content Prototyping",
+            "start_date": "2023-09-04",
+            "end_date": "2023-09-07",
+            "avatars": [
+              "https://www.w3schools.com/howto/img_avatar2.png",
+              "https://www.w3schools.com/howto/img_avatar2.png",
+              "https://www.w3schools.com/howto/img_avatar2.png"
+            ],
+            "content_type": "null"
+          },
+          {
+            "date": "2023-09-08",
+            "content": "12 Screen Development",
+            "start_date": "2023-09-09",
+            "end_date": "2023-09-12",
+            "avatars": [
+              "https://www.w3schools.com/howto/img_avatar2.png",
+              "https://www.w3schools.com/howto/img_avatar2.png",
+              "https://www.w3schools.com/howto/img_avatar2.png"
+            ],
+            "content_type": "content-type-2"
+          },
+          {
+            "date": "2023-09-13",
+            "content": "Overflow Post",
+            "start_date": "2023-09-14",
+            "end_date": "2023-09-17",
+            "avatars": [
+              "https://www.w3schools.com/howto/img_avatar2.png",
+              "https://www.w3schools.com/howto/img_avatar2.png",
+              "https://www.w3schools.com/howto/img_avatar2.png"
+            ],
+            "content_type": "content-type-3"
+          },
+          {
+            "date": "2023-09-17",
+            "content": "Overflow Post",
+            "start_date": "2023-09-17",
+            "end_date": "2023-09-21",
+            "avatars": [
+              "https://www.w3schools.com/howto/img_avatar2.png",
+              "https://www.w3schools.com/howto/img_avatar2.png",
+              "https://www.w3schools.com/howto/img_avatar2.png"
+            ],
+            "content_type": "content-type-3"
+          }
+        ]
+      }
+    </script>
+    <script src="Resources/js/dashboard.js"></script>
   </body>
 </html>

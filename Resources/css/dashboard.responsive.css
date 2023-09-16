@@ -17,7 +17,7 @@
 @media (max-width: 1300px) {
   .projects-messsages-timeline-container {
     grid-template-columns: auto 500px;
-    grid-template-rows: auto 400px;
+    grid-template-rows: auto 500px;
     grid-template-areas: "projects messages" "chart chart";
   }
   .projects-messsages-timeline-container .all-projects-container {
@@ -524,12 +524,13 @@
   .category-content-container .tickets-container {
     padding: 20px;
   }
-  .projects-messsages-timeline-container .projects-timeline-container {
-    height: 300px;
-  }
+
   .chat-messages-container {
     min-width: unset;
     width: 100%;
+  }
+  .projects-timeline-container .timeline-chart {
+    height: 400px;
   }
 }
 
