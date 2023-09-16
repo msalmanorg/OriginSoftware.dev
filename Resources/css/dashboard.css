@@ -2048,34 +2048,101 @@ ul.popup-tab-navigation > label:hover {
   display: grid;
   background: white;
   border-top-left-radius: 10px;
-  padding-left: 20px;
+  border-left: 1px solid #d3d3d3;
+  border-top: 1px solid #d3d3d3;
   display: flex;
 }
 .chating-page-container .team-developers-container {
   width: 40%;
-  background: linear-gradient(
-    45deg,
-    var(--blue-color),
-    var(--green-color),
-    var(--red-color),
-    var(--yellow-color)
-  );
   background: #e2e1e1;
+  background-image: url(../images/shapes/message-team-circle-bg-img.png);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  border-top-left-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top-left-radius: 10px;
+  flex-direction: column;
+}
+.team-developers-container .team-developers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+.team-developers-container .team-developers > a {
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  padding: 5px 10px;
+  color: black;
+  transition: all 0.3s ease;
+}
+.team-developers-container .team-developers > a:hover {
+  background-color: rgb(221, 219, 219);
+}
+.team-developers .team-developers-circle-container {
+  width: 400px;
+  aspect-ratio: 1/1;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: relative;
+}
+.team-developers-circle-container ul {
+  position: absolute;
+  inset: 0px;
+  border-radius: inherit;
+}
+.team-developers-circle-container ul li {
+  border-radius: inherit;
+  position: absolute;
+  inset: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  z-index: 3;
+}
+.team-developers-circle-container ul li div {
+  align-items: start;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+.team-developers-circle-container ul li div img {
+  width: 50px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.team-developers-circle-container ul li div span {
+  position: absolute;
+  top: 60px;
+  color: black;
+  font-weight: 500;
+  font-size: 12px;
+  min-width: max-content;
+}
+.team-developers-circle-container .more-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  inset: 50px;
+  border-radius: inherit;
+  border: 1px dashed rgba(58, 58, 58, 0.231);
 }
 .chating-page-container .chating-container {
   width: 60%;
   background-color: pink;
   display: grid;
   border-radius: 0px 10px 10px 0px;
-  grid-template-columns: auto auto;
+  grid-template-columns: 300px auto;
 }
 .chating-container .message-members-container {
-  background-color: #f5f5f5;
   width: auto;
+  background-color: white;
 }
 
 .chating-container .chat-message-holder-container {
@@ -2083,16 +2150,16 @@ ul.popup-tab-navigation > label:hover {
   width: auto;
   display: flex;
   border-left: 1px solid #d3d3d3;
+  background: #f6f6f6;
 }
 .chat-messages-container {
   width: 100%;
   min-width: 300px;
-  background: #ffffff;
   display: flex;
   flex-direction: column;
 }
 .chat-messages-container > * {
-  padding: 10px 15px;
+  padding: 13px 15px;
 }
 .chat-messages-container .chat-header {
   display: flex;
@@ -2123,7 +2190,7 @@ ul.popup-tab-navigation > label:hover {
   background-color: #f6f6f6;
   display: grid;
   grid-template-columns: max-content auto max-content;
-  align-items: center;
+  align-items: stretch;
   column-gap: 10px;
 }
 .send-message-input-container .media-icon {
@@ -2205,9 +2272,9 @@ ul.popup-tab-navigation > label:hover {
   border: 1px solid #80808057;
 }
 .chating-page-container .chat-messages-container .chat-all-messages {
-  height: calc(100vh - 188px);
-  min-height: calc(100vh - 188px);
-  max-height: calc(100vh - 188px);
+  height: calc(100vh - 204px);
+  min-height: calc(100vh - 204px);
+  max-height: calc(100vh - 204px);
 }
 
 .chat-all-messages .message {
@@ -2233,17 +2300,12 @@ ul.popup-tab-navigation > label:hover {
   color: var(--text-color);
   align-self: center;
 }
-.chat-all-messages .message.incoming {
-}
 .chat-all-messages .message.outgoing {
   flex-direction: row-reverse;
   margin-left: auto;
   border-radius: 10px 10px 0 10px;
 }
-.chat-all-messages .message.incoming + .message.incoming,
-.chat-all-messages .message.outgoing + .message.outgoing {
-  /* margin: 5px 0; */
-}
+
 .chat-all-messages .message.incoming .msg {
   border-radius: 10px 10px 10px 0;
 }
@@ -2273,4 +2335,154 @@ ul.popup-tab-navigation > label:hover {
   height: 1px;
   align-self: center;
   background: var(--text-color);
+  border: none;
 }
+
+.all-prev-chats-container .prev-chat-header {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.all-prev-chats-container .prev-chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 59px;
+  border-bottom: 1px solid #d3d3d3;
+}
+.all-prev-chats-container .prev-chat-header > i,
+.all-chats-container .all-chats-header span > i {
+  width: 25px;
+  aspect-ratio: 1/1;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  transform: translateX(10px);
+}
+.all-prev-chats-container .prev-chat-header > i:hover,
+.all-chats-container .all-chats-header span > i:hover {
+  background-color: #ebebeb;
+}
+.prev-chat-header .team-info {
+  display: flex;
+  align-items: center;
+}
+.prev-chat-header .team-info .imgs {
+  display: flex;
+}
+.prev-chat-header .team-info .imgs img {
+  width: 32px;
+  aspect-ratio: 1/1;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+.prev-chat-header .team-info .imgs img:not(:first-child) {
+  margin-left: -15px;
+}
+.prev-chat-header .team-info span {
+  font-weight: 500;
+  margin-left: 10px;
+}
+.message-members-container .chat-members {
+  overflow-y: scroll;
+  padding: 20px 15px;
+  /* margin: 0 5px 0 0; */
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.message-members-container .chat-members a {
+  background: #f9f9f9;
+  border-radius: 5px;
+  display: flex;
+  padding: 15px;
+  column-gap: 10px;
+  transition: all 0.3s ease;
+}
+.message-members-container .chat-members a:hover {
+  background: #ededed;
+}
+.message-members-container .chat-members a img {
+  width: 40px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+  align-self: center;
+}
+.message-members-container .chat-members a > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.message-members-container .chat-members a > div > div {
+  display: flex;
+  justify-content: space-between;
+}
+.message-members-container .chat-members a > div > div b {
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+}
+.message-members-container .chat-members a > div > div span {
+  font-size: 10px;
+  color: #b2b7c1;
+}
+.message-members-container .chat-members a > div p {
+  font-size: 10px;
+  margin-top: 2px;
+  color: #6a7488;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+}
+
+.all-prev-chats-container .chat-members {
+  max-height: calc(50vh - 115px);
+}
+.all-chats-container .chat-members {
+  max-height: calc(50vh - 120px);
+}
+.all-chats-container .all-chats-header {
+  border-top: 1px solid #d3d3d3;
+  padding: 10px 15px;
+}
+
+.all-chats-container .all-chats-header span {
+  display: flex;
+  justify-content: space-between;
+}
+.all-chats-container .all-chats-header span b {
+  font-weight: 500;
+}
+.all-chats-container .all-chats-header div {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.all-chats-container .all-chats-header div input {
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid #d3d3d3;
+  padding: 7px 32px 7px 12px;
+  font-size: 12px;
+  color: rgb(22, 22, 22);
+  outline: none;
+  transition: all 0.3s ease;
+}
+.all-chats-container .all-chats-header div input:focus {
+  border: 1px solid #acacac;
+}
+.all-chats-container .all-chats-header div i {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Circle */
